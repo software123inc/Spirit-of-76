@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7262E9C23BBC59300240183 /* JQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7262E9B23BBC59300240183 /* JQuote.swift */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
 		C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39A23BA945200C062DC /* SceneDelegate.swift */; };
 		C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39C23BA945200C062DC /* FirstViewController.swift */; };
@@ -34,13 +35,13 @@
 		C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3C23BAEDD400E15CDD /* JCity.swift */; };
 		C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */; };
 		C7EA7F4123BAF06800E15CDD /* JEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4023BAF06800E15CDD /* JEvent.swift */; };
-		C7EA7F4323BB027D00E15CDD /* JQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4223BB027D00E15CDD /* JQuote.swift */; };
 		C7EA7F4523BB074400E15CDD /* JState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4423BB074400E15CDD /* JState.swift */; };
 		C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4623BB085000E15CDD /* JTopic.swift */; };
 		C7EA7F4923BB08E700E15CDD /* JWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4823BB08E700E15CDD /* JWriting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7262E9B23BBC59300240183 /* JQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQuote.swift; sourceTree = "<group>"; };
 		C73B199A23BAC65E0047EA7C /* Spirit of 76.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spirit of 76.entitlements"; sourceTree = "<group>"; };
 		C761C39523BA945200C062DC /* Spirit of 76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spirit of 76.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761C39823BA945200C062DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		C7EA7F3C23BAEDD400E15CDD /* JCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCity.swift; sourceTree = "<group>"; };
 		C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCountry.swift; sourceTree = "<group>"; };
 		C7EA7F4023BAF06800E15CDD /* JEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEvent.swift; sourceTree = "<group>"; };
-		C7EA7F4223BB027D00E15CDD /* JQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQuote.swift; sourceTree = "<group>"; };
 		C7EA7F4423BB074400E15CDD /* JState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JState.swift; sourceTree = "<group>"; };
 		C7EA7F4623BB085000E15CDD /* JTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTopic.swift; sourceTree = "<group>"; };
 		C7EA7F4823BB08E700E15CDD /* JWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWriting.swift; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 		C761C3B123BAAD0D00C062DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C761C3A823BA945400C062DC /* LaunchScreen.storyboard */,
 				C761C3B723BABDD500C062DC /* Main.storyboard */,
 			);
 			path = Views;
@@ -176,11 +175,11 @@
 				C7EA7F3C23BAEDD400E15CDD /* JCity.swift */,
 				C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */,
 				C7EA7F4023BAF06800E15CDD /* JEvent.swift */,
-				C7EA7F4223BB027D00E15CDD /* JQuote.swift */,
 				C7EA7F3323BADA3B00E15CDD /* JSigner.swift */,
 				C7EA7F4423BB074400E15CDD /* JState.swift */,
 				C7EA7F4623BB085000E15CDD /* JTopic.swift */,
 				C7EA7F4823BB08E700E15CDD /* JWriting.swift */,
+				C7262E9B23BBC59300240183 /* JQuote.swift */,
 			);
 			path = JOBJ;
 			sourceTree = "<group>";
@@ -189,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C7EA7F3623BADC0400E15CDD /* JsonManager.swift */,
+				C761C3A823BA945400C062DC /* LaunchScreen.storyboard */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -300,13 +300,13 @@
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
 				C7EA7F4923BB08E700E15CDD /* JWriting.swift in Sources */,
 				C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */,
-				C7EA7F4323BB027D00E15CDD /* JQuote.swift in Sources */,
 				C7EA7F4123BAF06800E15CDD /* JEvent.swift in Sources */,
 				C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */,
 				C7EA7F3423BADA3B00E15CDD /* JSigner.swift in Sources */,
 				C7EA7F3123BAD70500E15CDD /* SpiritOf76.xcdatamodeld in Sources */,
 				C7EA7F4523BB074400E15CDD /* JState.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
+				C7262E9C23BBC59300240183 /* JQuote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

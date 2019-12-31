@@ -2,7 +2,7 @@
 //  JQuote.swift
 //  Spirit of 76
 //
-//  Created by Tim W. Newton on 12/30/19.
+//  Created by Tim W. Newton on 12/31/19.
 //  Copyright © 2019 Tim W. Newton. All rights reserved.
 //
 
@@ -14,7 +14,8 @@ struct JQuotes: Codable, Equatable {
 
 struct JQuote: Codable, Equatable {
     let id: UInt
-    let writingID: UInt?
     let quotation: String
+    let context: String?
     let signerID: UInt
+    let writingID: UInt?
 }
