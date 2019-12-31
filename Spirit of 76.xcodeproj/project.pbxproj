@@ -15,6 +15,29 @@
 		C761C3A723BA945400C062DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A623BA945400C062DC /* Assets.xcassets */; };
 		C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A823BA945400C062DC /* LaunchScreen.storyboard */; };
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
+		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
+		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
+		C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1923BAD5A800E15CDD /* cities.json */; };
+		C7EA7F2523BAD5AB00E15CDD /* signerEducation.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1A23BAD5A900E15CDD /* signerEducation.json */; };
+		C7EA7F2623BAD5AB00E15CDD /* signerProfessions.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1B23BAD5A900E15CDD /* signerProfessions.json */; };
+		C7EA7F2723BAD5AB00E15CDD /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1C23BAD5A900E15CDD /* states.json */; };
+		C7EA7F2823BAD5AB00E15CDD /* signerWritings.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1D23BAD5A900E15CDD /* signerWritings.json */; };
+		C7EA7F2923BAD5AB00E15CDD /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1E23BAD5A900E15CDD /* quotes.json */; };
+		C7EA7F2A23BAD5AB00E15CDD /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1F23BAD5AA00E15CDD /* topics.json */; };
+		C7EA7F2B23BAD5AB00E15CDD /* signers_default.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F2023BAD5AA00E15CDD /* signers_default.json */; };
+		C7EA7F2C23BAD5AB00E15CDD /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F2123BAD5AB00E15CDD /* countries.json */; };
+		C7EA7F2E23BAD5C300E15CDD /* writings.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F2D23BAD5C300E15CDD /* writings.json */; };
+		C7EA7F3123BAD70500E15CDD /* SpiritOf76.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F2F23BAD70500E15CDD /* SpiritOf76.xcdatamodeld */; };
+		C7EA7F3423BADA3B00E15CDD /* JSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3323BADA3B00E15CDD /* JSigner.swift */; };
+		C7EA7F3723BADC0400E15CDD /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3623BADC0400E15CDD /* JsonManager.swift */; };
+		C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */; };
+		C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3C23BAEDD400E15CDD /* JCity.swift */; };
+		C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */; };
+		C7EA7F4123BAF06800E15CDD /* JEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4023BAF06800E15CDD /* JEvent.swift */; };
+		C7EA7F4323BB027D00E15CDD /* JQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4223BB027D00E15CDD /* JQuote.swift */; };
+		C7EA7F4523BB074400E15CDD /* JState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4423BB074400E15CDD /* JState.swift */; };
+		C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4623BB085000E15CDD /* JTopic.swift */; };
+		C7EA7F4923BB08E700E15CDD /* JWriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4823BB08E700E15CDD /* JWriting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +52,29 @@
 		C761C3A923BA945400C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761C3AB23BA945400C062DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
+		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
+		C7EA7F1923BAD5A800E15CDD /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		C7EA7F1A23BAD5A900E15CDD /* signerEducation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerEducation.json; sourceTree = "<group>"; };
+		C7EA7F1B23BAD5A900E15CDD /* signerProfessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerProfessions.json; sourceTree = "<group>"; };
+		C7EA7F1C23BAD5A900E15CDD /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = states.json; sourceTree = "<group>"; };
+		C7EA7F1D23BAD5A900E15CDD /* signerWritings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerWritings.json; sourceTree = "<group>"; };
+		C7EA7F1E23BAD5A900E15CDD /* quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
+		C7EA7F1F23BAD5AA00E15CDD /* topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topics.json; sourceTree = "<group>"; };
+		C7EA7F2023BAD5AA00E15CDD /* signers_default.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signers_default.json; sourceTree = "<group>"; };
+		C7EA7F2123BAD5AB00E15CDD /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		C7EA7F2D23BAD5C300E15CDD /* writings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = writings.json; sourceTree = "<group>"; };
+		C7EA7F3023BAD70500E15CDD /* SpiritOf76.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpiritOf76.xcdatamodel; sourceTree = "<group>"; };
+		C7EA7F3323BADA3B00E15CDD /* JSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSigner.swift; sourceTree = "<group>"; };
+		C7EA7F3623BADC0400E15CDD /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
+		C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String Enhanced.swift"; sourceTree = "<group>"; };
+		C7EA7F3C23BAEDD400E15CDD /* JCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCity.swift; sourceTree = "<group>"; };
+		C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCountry.swift; sourceTree = "<group>"; };
+		C7EA7F4023BAF06800E15CDD /* JEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEvent.swift; sourceTree = "<group>"; };
+		C7EA7F4223BB027D00E15CDD /* JQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQuote.swift; sourceTree = "<group>"; };
+		C7EA7F4423BB074400E15CDD /* JState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JState.swift; sourceTree = "<group>"; };
+		C7EA7F4623BB085000E15CDD /* JTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTopic.swift; sourceTree = "<group>"; };
+		C7EA7F4823BB08E700E15CDD /* JWriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWriting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +113,10 @@
 				C761C39A23BA945200C062DC /* SceneDelegate.swift */,
 				C761C3A623BA945400C062DC /* Assets.xcassets */,
 				C761C3B223BAAD1A00C062DC /* Controllers */,
+				C7EA7F3923BADCCC00E15CDD /* Extensions */,
 				C761C3B323BAAD2B00C062DC /* Model */,
+				C7EA7F3523BADBF000E15CDD /* Objects */,
+				C7EA7F3823BADC3300E15CDD /* Protocols */,
 				C761C3B123BAAD0D00C062DC /* Views */,
 			);
 			path = "Spirit of 76";
@@ -94,9 +143,69 @@
 		C761C3B323BAAD2B00C062DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C7EA7F3223BADA1900E15CDD /* JOBJ */,
+				C7EA7F1623BAD58F00E15CDD /* JSON */,
 				C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */,
+				C7EA7F2F23BAD70500E15CDD /* SpiritOf76.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C7EA7F1623BAD58F00E15CDD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA7F1923BAD5A800E15CDD /* cities.json */,
+				C7EA7F2123BAD5AB00E15CDD /* countries.json */,
+				C7EA7F1823BAD5A800E15CDD /* events.json */,
+				C7EA7F1E23BAD5A900E15CDD /* quotes.json */,
+				C7EA7F1A23BAD5A900E15CDD /* signerEducation.json */,
+				C7EA7F1723BAD5A800E15CDD /* signerFacts.json */,
+				C7EA7F1B23BAD5A900E15CDD /* signerProfessions.json */,
+				C7EA7F2023BAD5AA00E15CDD /* signers_default.json */,
+				C7EA7F1D23BAD5A900E15CDD /* signerWritings.json */,
+				C7EA7F1C23BAD5A900E15CDD /* states.json */,
+				C7EA7F1F23BAD5AA00E15CDD /* topics.json */,
+				C7EA7F2D23BAD5C300E15CDD /* writings.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		C7EA7F3223BADA1900E15CDD /* JOBJ */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA7F3323BADA3B00E15CDD /* JSigner.swift */,
+				C7EA7F3C23BAEDD400E15CDD /* JCity.swift */,
+				C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */,
+				C7EA7F4023BAF06800E15CDD /* JEvent.swift */,
+				C7EA7F4223BB027D00E15CDD /* JQuote.swift */,
+				C7EA7F4423BB074400E15CDD /* JState.swift */,
+				C7EA7F4623BB085000E15CDD /* JTopic.swift */,
+				C7EA7F4823BB08E700E15CDD /* JWriting.swift */,
+			);
+			path = JOBJ;
+			sourceTree = "<group>";
+		};
+		C7EA7F3523BADBF000E15CDD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA7F3623BADC0400E15CDD /* JsonManager.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		C7EA7F3823BADC3300E15CDD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C7EA7F3923BADCCC00E15CDD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +266,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EA7F2823BAD5AB00E15CDD /* signerWritings.json in Resources */,
+				C7EA7F2B23BAD5AB00E15CDD /* signers_default.json in Resources */,
+				C7EA7F2A23BAD5AB00E15CDD /* topics.json in Resources */,
+				C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */,
 				C761C3B923BABDD500C062DC /* Main.storyboard in Resources */,
+				C7EA7F2523BAD5AB00E15CDD /* signerEducation.json in Resources */,
+				C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */,
+				C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */,
+				C7EA7F2E23BAD5C300E15CDD /* writings.json in Resources */,
+				C7EA7F2623BAD5AB00E15CDD /* signerProfessions.json in Resources */,
+				C7EA7F2923BAD5AB00E15CDD /* quotes.json in Resources */,
 				C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */,
 				C761C3A723BA945400C062DC /* Assets.xcassets in Resources */,
+				C7EA7F2C23BAD5AB00E15CDD /* countries.json in Resources */,
+				C7EA7F2723BAD5AB00E15CDD /* states.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,10 +291,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */,
 				C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */,
+				C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */,
+				C7EA7F3723BADC0400E15CDD /* JsonManager.swift in Sources */,
+				C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */,
 				C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
+				C7EA7F4923BB08E700E15CDD /* JWriting.swift in Sources */,
+				C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */,
+				C7EA7F4323BB027D00E15CDD /* JQuote.swift in Sources */,
+				C7EA7F4123BAF06800E15CDD /* JEvent.swift in Sources */,
 				C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */,
+				C7EA7F3423BADA3B00E15CDD /* JSigner.swift in Sources */,
+				C7EA7F3123BAD70500E15CDD /* SpiritOf76.xcdatamodeld in Sources */,
+				C7EA7F4523BB074400E15CDD /* JState.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +519,16 @@
 			);
 			currentVersion = C761C3A423BA945200C062DC /* Spirit_of_76.xcdatamodel */;
 			path = Spirit_of_76.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C7EA7F2F23BAD70500E15CDD /* SpiritOf76.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C7EA7F3023BAD70500E15CDD /* SpiritOf76.xcdatamodel */,
+			);
+			currentVersion = C7EA7F3023BAD70500E15CDD /* SpiritOf76.xcdatamodel */;
+			path = SpiritOf76.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

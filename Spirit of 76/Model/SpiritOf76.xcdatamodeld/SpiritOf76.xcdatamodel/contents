@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="1.0" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="City" representedClassName="City" parentEntity="S76_item" syncable="YES">
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="cities" inverseEntity="Country" syncable="YES"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="cities" inverseEntity="State" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="Country" parentEntity="S76_item" syncable="YES">
+        <attribute name="flagImageFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mapImageFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="birthFounders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="birthCountry" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="country" inverseEntity="City" syncable="YES"/>
+        <relationship name="states" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="State" inverseName="country" inverseEntity="State" syncable="YES"/>
+    </entity>
+    <entity name="Education" representedClassName="Education" parentEntity="Incident" syncable="YES">
+        <relationship name="founder" maxCount="1" deletionRule="Nullify" destinationEntity="Founder" inverseName="education" inverseEntity="Founder" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" parentEntity="Incident" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endYear" optional="YES" attributeType="Integer 16" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Fact" representedClassName="Fact" parentEntity="Incident" syncable="YES">
+        <relationship name="founder" maxCount="1" deletionRule="Nullify" destinationEntity="Founder" inverseName="facts" inverseEntity="Founder" syncable="YES"/>
+    </entity>
+    <entity name="Founder" representedClassName="Founder" parentEntity="S76_item" syncable="YES">
+        <attribute name="biography" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateOfDeath" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="descriptiveText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="middleName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="namePrefix" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameSuffix" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeOfBirth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeOfDeath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="signerDOI" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="signerUSC" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="birthCountry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="birthFounders" inverseEntity="Country" syncable="YES"/>
+        <relationship name="birthState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="birthFounders" inverseEntity="State" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="parents" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="education" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Education" inverseName="founder" inverseEntity="Education" syncable="YES"/>
+        <relationship name="facts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Fact" inverseName="founder" inverseEntity="Fact" syncable="YES"/>
+        <relationship name="parents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="children" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="professions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Profession" inverseName="founder" inverseEntity="Profession" syncable="YES"/>
+        <relationship name="quotes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Quote" inverseName="founder" inverseEntity="Quote" syncable="YES"/>
+        <relationship name="residenceState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="residentFounders" inverseEntity="State" syncable="YES"/>
+        <relationship name="spouse" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="spouse" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="writings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Writing" inverseName="founders" inverseEntity="Writing" syncable="YES"/>
+    </entity>
+    <entity name="Incident" representedClassName="Incident" isAbstract="YES" parentEntity="S76_item" syncable="YES">
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Profession" representedClassName="Profession" parentEntity="Incident" syncable="YES">
+        <relationship name="founder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Founder" inverseName="professions" inverseEntity="Founder" syncable="YES"/>
+    </entity>
+    <entity name="Quote" representedClassName="Quote" parentEntity="S76_item" syncable="YES">
+        <attribute name="context" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quotation" attributeType="String" minValueString="1" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" indexed="YES" syncable="YES"/>
+        <relationship name="founder" maxCount="1" deletionRule="Nullify" destinationEntity="Founder" inverseName="quotes" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="writing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Writing" inverseName="quotes" inverseEntity="Writing" syncable="YES"/>
+    </entity>
+    <entity name="S76_item" representedClassName="S76_item" isAbstract="YES" syncable="YES">
+        <attribute name="imageFileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavorite" attributeType="Integer 16" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="legacyId" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
+        <attribute name="recordType" attributeType="String" minValueString="1" defaultValueString="S76_item" indexed="YES" syncable="YES"/>
+        <attribute name="releaseStatus" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="State" representedClassName="State" parentEntity="S76_item" syncable="YES">
+        <attribute name="abbreviation" optional="YES" attributeType="String" minValueString="2" indexed="YES" syncable="YES"/>
+        <relationship name="birthFounders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="birthState" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="cities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="City" inverseName="state" inverseEntity="City" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="states" inverseEntity="Country" syncable="YES"/>
+        <relationship name="residentFounders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="residenceState" inverseEntity="Founder" syncable="YES"/>
+    </entity>
+    <entity name="Topic" representedClassName="Topic" parentEntity="Incident" syncable="YES"/>
+    <entity name="Writing" representedClassName="Writing" parentEntity="Incident" syncable="YES">
+        <attribute name="authorNames" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="webLink" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="founders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Founder" inverseName="writings" inverseEntity="Founder" syncable="YES"/>
+        <relationship name="quotes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Quote" inverseName="writing" inverseEntity="Quote" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="358" positionY="-576" width="128" height="73"/>
+        <element name="Country" positionX="-81" positionY="-621" width="128" height="118"/>
+        <element name="Education" positionX="-137" positionY="-58" width="128" height="58"/>
+        <element name="Event" positionX="-387" positionY="239" width="128" height="103"/>
+        <element name="Fact" positionX="-119" positionY="14" width="128" height="58"/>
+        <element name="Founder" positionX="115" positionY="-396" width="128" height="418"/>
+        <element name="Incident" positionX="-450" positionY="-37" width="128" height="73"/>
+        <element name="Profession" positionX="-90" positionY="95" width="128" height="58"/>
+        <element name="Quote" positionX="234" positionY="170" width="128" height="118"/>
+        <element name="S76_item" positionX="-324" positionY="-379" width="128" height="133"/>
+        <element name="State" positionX="135" positionY="-666" width="128" height="118"/>
+        <element name="Topic" positionX="-531" positionY="153" width="128" height="45"/>
+        <element name="Writing" positionX="-92" positionY="216" width="128" height="103"/>
+    </elements>
+</model>

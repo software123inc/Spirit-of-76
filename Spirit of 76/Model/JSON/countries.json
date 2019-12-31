@@ -1,0 +1,64 @@
+{
+    "records":[
+        {
+            "id":1,
+            "name":"United States",
+            "img_flag":"flag_usa.png",
+            "img_map":""
+        },
+        {
+            "id":2,
+            "name":"British American Colonies",
+            "img_flag":"flag_england.png",
+            "img_map":""
+        },
+        {
+            "id":3,
+            "name":"Great Britain",
+            "img_flag":"flag_england.png",
+            "img_map":""
+        },
+        {
+            "id":4,
+            "name":"French American Colonies",
+            "img_flag":"flag_france.png",
+            "img_map":""
+        },
+        {
+            "id":5,
+            "name":"France",
+            "img_flag":"flag_france.png",
+            "img_map":""
+        },
+        {
+            "id":6,
+            "name":"Spain",
+            "img_flag":"flag_spain.png",
+            "img_map":""
+        },
+        {
+            "id":7,
+            "name":"Spanish American Colonies",
+            "img_flag":"flag_spain.png",
+            "img_map":""
+        },
+        {
+            "id":8,
+            "name":"Ireland",
+            "img_flag":"flag_ireland.png",
+            "img_map":""
+        },
+        {
+            "id":9,
+            "name":"Scotland",
+            "img_flag":"flag_scotland.png",
+            "img_map":""
+        },
+        {
+            "id":10,
+            "name":"Wales",
+            "img_flag":"flag_wales.png",
+            "img_map":""
+        }
+    ]
+}
