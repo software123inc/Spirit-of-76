@@ -83,6 +83,12 @@ class JSONManager {
                 print("key: \(key) \(firstRec[key].int32 != nil ? "+" : "-")")
             case .integer64AttributeType:
                 print("key: \(key) \(firstRec[key].int64 != nil ? "+" : "-")")
+            case .decimalAttributeType:
+                print("key: \(key) \(firstRec[key].number?.decimalValue != nil ? "+" : "-")")
+            case .doubleAttributeType:
+                print("key: \(key) \(firstRec[key].double != nil ? "+" : "-")")
+            case .floatAttributeType:
+                print("key: \(key) \(firstRec[key].float != nil ? "+" : "-")")
             case .dateAttributeType:
                 if let dateString = firstRec[key].string {
                     let dateFormatter = DateFormatter()
