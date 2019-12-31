@@ -40,6 +40,11 @@
         <attribute name="middleName" optional="YES" attributeType="String"/>
         <attribute name="namePrefix" optional="YES" attributeType="String"/>
         <attribute name="nameSuffix" optional="YES" attributeType="String"/>
+        <attribute name="placeOfBirth" optional="YES" attributeType="String"/>
+        <attribute name="placeOfDeath" optional="YES" attributeType="String"/>
+        <attribute name="release_status" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="signerDOI" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="signerUSC" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Profession" representedClassName="Profession" syncable="YES" codeGenerationType="class">
@@ -70,14 +75,14 @@
     <elements>
         <element name="City" positionX="-63" positionY="-18" width="128" height="103"/>
         <element name="Country" positionX="-54" positionY="18" width="128" height="73"/>
+        <element name="Education" positionX="-9" positionY="90" width="128" height="73"/>
         <element name="Event" positionX="-36" positionY="36" width="128" height="163"/>
+        <element name="Fact" positionX="0" positionY="99" width="128" height="73"/>
+        <element name="Person" positionX="18" positionY="117" width="128" height="298"/>
+        <element name="Profession" positionX="9" positionY="108" width="128" height="88"/>
         <element name="Quote" positionX="-18" positionY="99" width="128" height="58"/>
         <element name="State" positionX="0" positionY="108" width="128" height="88"/>
         <element name="Topic" positionX="18" positionY="117" width="128" height="88"/>
         <element name="Writing" positionX="36" positionY="126" width="128" height="118"/>
-        <element name="Education" positionX="-9" positionY="90" width="128" height="73"/>
-        <element name="Fact" positionX="0" positionY="99" width="128" height="73"/>
-        <element name="Profession" positionX="9" positionY="108" width="128" height="88"/>
-        <element name="Person" positionX="18" positionY="117" width="128" height="223"/>
     </elements>
 </model>

@@ -6,68 +6,53 @@
 //  Copyright © 2019 Tim W. Newton. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreData
+import SwiftyJSON
 
 class JSONManager {
-    static func doImport() {
+    private static let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private static let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    static func importRootData() {
         let files = Bundle.main.paths(forResourcesOfType: "json", inDirectory: nil)
-        var results:Decodable?
         for file in files.sorted() {
             let filename = file.lastPathComponenSansExtension
-            
-            let f = DefaultFiles.init(rawValue: filename)
-            
-            switch f {
-            case .cities:
-                let _ = JSONManager.importJson(filename, type:JCities.self)
-            //                print(results as Any)
-            case .countries:
-                let _ = JSONManager.importJson(filename, type:JCountries.self)
-            //                print(results as Any)
-            case .events:
-                let _ = JSONManager.importJson(filename, type:JEvents.self)
-            //                print(results as Any)
-            case .quotes:
-                let _ = JSONManager.importJson(filename, type:JQuotes.self)
-            //                print(results as Any)
-            case .signerEducation:
-                results = JSONManager.importJson(filename, type:JSignerEducations.self)
-            //                print(results as Any)
-            case .signerFacts:
-                results = JSONManager.importJson(filename, type:JSignerFacts.self)
-            //                print(results as Any)
-            case .signerProfessions:
-                results = JSONManager.importJson(filename, type:JSignerProfessions.self)
-            //                print(results as Any)
-            case .signerWritings:
-                results = JSONManager.importJson(filename, type:JSignerWritings.self)
-            //                print(results as Any)
-            case .states:
-                results = JSONManager.importJson(filename, type:JStates.self)
-            //                print(results as Any)
-            case .topics:
-                results = JSONManager.importJson(filename, type:JTopics.self)
-            //                print(results as Any)
-            case .writings:
-                results = JSONManager.importJson(filename, type:JWritings.self)
-            //                print(results as Any)
-            case .signers_default:
-                results = JSONManager.importJson(filename, type:JSigners.self)
-            default:
-                print("Unhandled file '\(filename)'")
+            if let f = RootFiles.init(rawValue: filename) {
+                switch f {
+                case .countries:
+                    if let json = JSONManager.importSwiftyJSON(filename) {
+                        JSONManager.seedJsonResultsToCoreData(json, type: Country.self)
+                    }
+                case .events:
+                    if let json = JSONManager.importSwiftyJSON(filename) {
+                        JSONManager.seedJsonResultsToCoreData(json, type: Event.self)
+                    }
+                case .states:
+                    if let json = JSONManager.importSwiftyJSON(filename) {
+                        JSONManager.seedJsonResultsToCoreData(json, type: State.self)
+                    }
+                case .topics:
+                    if let json = JSONManager.importSwiftyJSON(filename) {
+                        JSONManager.seedJsonResultsToCoreData(json, type: Topic.self)
+                    }
+                case .writings:
+                    if let json = JSONManager.importSwiftyJSON(filename) {
+                        JSONManager.seedJsonResultsToCoreData(json, type: Writing.self)
+                    }
+                }
             }
         }
     }
     
-    static func importJson<T: Decodable>(_ filename:String, type: T.Type) -> T? {
-        var results:T?
+    private static func importSwiftyJSON(_ filename:String) -> JSON? {
+        var json:JSON?
         
         if let filepath = Bundle.main.path(forResource: filename, ofType: "json") {
             do {
-                guard let data = try String(contentsOfFile: filepath).data(using: .utf8) else { return nil }
-                
-                let decoder = JSONDecoder()
-                results = try? decoder.decode(type, from: data)
+                if let dataFromString = try String(contentsOfFile: filepath).data(using: .utf8, allowLossyConversion: false) {
+                    json = try JSON(data: dataFromString)["records"]
+                }
             } catch {
                 debugPrint(error.localizedDescription)
             }
@@ -75,21 +60,74 @@ class JSONManager {
             debugPrint("File not found.")
         }
         
-        return results
+        return json
+    }
+    
+    private static func seedJsonResultsToCoreData<T:NSManagedObject>(_ json: JSON, type:T.Type) {
+        let newManObj = type.init(context: JSONManager.viewContext)
+        
+        let firstRec = json[0]
+        
+        for att in newManObj.entity.attributesByName {
+            let key = att.key
+            let type = att.value.attributeType
+            
+            switch type {
+            case .stringAttributeType:
+                print("key: \(key) \(firstRec[key].string != nil ? "+" : "-")")
+            case .booleanAttributeType:
+                print("key: \(key) \(firstRec[key].bool != nil ? "+" : "-")")
+            case .integer16AttributeType:
+                print("key: \(key) \(firstRec[key].int16 != nil ? "+" : "-")")
+            case .integer32AttributeType:
+                print("key: \(key) \(firstRec[key].int32 != nil ? "+" : "-")")
+            case .integer64AttributeType:
+                print("key: \(key) \(firstRec[key].int64 != nil ? "+" : "-")")
+            case .dateAttributeType:
+                if let dateString = firstRec[key].string {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let dateFromString: Date? = dateFormatter.date(from: dateString)
+                    dateFormatter.dateFormat = "MMM dd, yyyy"
+                    print("key: \(key) \(firstRec[key].string != nil ? "*" : "-")  \(dateFormatter.string(from: dateFromString ?? Date()))")
+                }
+                else {
+                    print("key: \(key) \(firstRec[key].string != nil ? "!" : "-")")
+                }
+            default:
+                debugPrint("key: \(key) !")
+            }
+        }
+        
+        //                for (_, subJson):(String, JSON) in json {
+        //                    for key in newManObj.entity.attributesByName.keys {
+        //                        print("key: \(key) \(subJson[key].string != nil ? "+" : "-")")
+        //                    }
+        //                }
     }
 }
 
-enum DefaultFiles:String {
-    case cities,
+fileprivate enum RootFiles:String {
+    case
     countries,
     events,
-    quotes,
-    signerEducation,
-    signerFacts,
-    signerProfessions,
-    signerWritings,
-    signers_default,
     states,
     topics,
     writings
+}
+
+fileprivate enum SecondaryCountryStateFiles:String {
+    case cities,
+    signers
+}
+
+fileprivate enum TertiarySignerFiles:String {
+    case signerEducation,
+    signerFacts,
+    signerProfessions,
+    signerWritings
+}
+
+fileprivate enum QuarterlyFiles:String {
+    case quotes
 }
