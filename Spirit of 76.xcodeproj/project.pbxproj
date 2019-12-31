@@ -173,11 +173,11 @@
 		C7EA7F3223BADA1900E15CDD /* JOBJ */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA7F3323BADA3B00E15CDD /* JSigner.swift */,
 				C7EA7F3C23BAEDD400E15CDD /* JCity.swift */,
 				C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */,
 				C7EA7F4023BAF06800E15CDD /* JEvent.swift */,
 				C7EA7F4223BB027D00E15CDD /* JQuote.swift */,
+				C7EA7F3323BADA3B00E15CDD /* JSigner.swift */,
 				C7EA7F4423BB074400E15CDD /* JState.swift */,
 				C7EA7F4623BB085000E15CDD /* JTopic.swift */,
 				C7EA7F4823BB08E700E15CDD /* JWriting.swift */,
@@ -452,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -459,6 +460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.eduserve.Spirit-of-76";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -473,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -480,6 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.eduserve.Spirit-of-76";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

@@ -16,8 +16,8 @@ struct JCity: Codable, Equatable {
     let id: UInt
     let name: String
     let img_portrait: String?
-    let stateID: UInt
-    let countryID: UInt
     let synopsis: String?
     let notes: String?
+    let stateID: UInt
+    let countryID: UInt?
 }

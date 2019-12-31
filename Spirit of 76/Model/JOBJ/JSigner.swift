@@ -31,10 +31,10 @@ struct JSignerWritings: Codable, Equatable {
 struct JSigner: Codable, Equatable {
     let id: UInt
     let dateModified: String
-    let namePrefix: String?
     let firstName: String
     let middleName: String?
     let lastName: String
+    let namePrefix: String?
     let nameSuffix: String?
     let title: String?
     let dateOfBirth: String

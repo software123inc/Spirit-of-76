@@ -16,7 +16,7 @@ struct JEvent: Codable, Equatable {
     let id: UInt
     let name: String
     let year: UInt
-    let date: String
+    let asOfDate: String
     let synopsis: String
     let notes: String
     let endDate: String?

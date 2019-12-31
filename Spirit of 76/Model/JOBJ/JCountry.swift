@@ -16,5 +16,4 @@ struct JCountry: Codable, Equatable {
     let id: UInt
     let name: String
     let img_flag: String
-    let img_map: String?
 }
