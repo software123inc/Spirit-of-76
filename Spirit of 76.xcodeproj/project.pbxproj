@@ -17,7 +17,6 @@
 		C761C3A723BA945400C062DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A623BA945400C062DC /* Assets.xcassets */; };
 		C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A823BA945400C062DC /* LaunchScreen.storyboard */; };
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
-		C7D870E323BD33C3006544D6 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D870E223BD33C3006544D6 /* JSONManager.swift */; };
 		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
 		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
 		C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1923BAD5A800E15CDD /* cities.json */; };
@@ -54,7 +53,6 @@
 		C761C3A923BA945400C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761C3AB23BA945400C062DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C7D870E223BD33C3006544D6 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
 		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		C7EA7F1923BAD5A800E15CDD /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				C761C3A823BA945400C062DC /* LaunchScreen.storyboard */,
-				C7D870E223BD33C3006544D6 /* JSONManager.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */,
-				C7D870E323BD33C3006544D6 /* JSONManager.swift in Sources */,
 				C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */,
 				C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */,
 				C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */,
