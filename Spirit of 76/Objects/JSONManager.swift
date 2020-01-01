@@ -1,5 +1,5 @@
 //
-//  JsonManager.swift
+//  JSONManager.swift
 //  Spirit of 76
 //
 //  Created by Tim W. Newton on 12/30/19.
