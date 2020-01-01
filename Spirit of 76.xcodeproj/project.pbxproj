@@ -17,6 +17,7 @@
 		C761C3A723BA945400C062DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A623BA945400C062DC /* Assets.xcassets */; };
 		C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A823BA945400C062DC /* LaunchScreen.storyboard */; };
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
+		C7D870E323BD33C3006544D6 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D870E223BD33C3006544D6 /* JSONManager.swift */; };
 		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
 		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
 		C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1923BAD5A800E15CDD /* cities.json */; };
@@ -31,7 +32,6 @@
 		C7EA7F2E23BAD5C300E15CDD /* writings.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F2D23BAD5C300E15CDD /* writings.json */; };
 		C7EA7F3123BAD70500E15CDD /* SpiritOf76.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F2F23BAD70500E15CDD /* SpiritOf76.xcdatamodeld */; };
 		C7EA7F3423BADA3B00E15CDD /* JSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3323BADA3B00E15CDD /* JSigner.swift */; };
-		C7EA7F3723BADC0400E15CDD /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3623BADC0400E15CDD /* JSONManager.swift */; };
 		C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */; };
 		C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3C23BAEDD400E15CDD /* JCity.swift */; };
 		C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */; };
@@ -54,6 +54,7 @@
 		C761C3A923BA945400C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761C3AB23BA945400C062DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7D870E223BD33C3006544D6 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
 		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		C7EA7F1923BAD5A800E15CDD /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		C7EA7F2D23BAD5C300E15CDD /* writings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = writings.json; sourceTree = "<group>"; };
 		C7EA7F3023BAD70500E15CDD /* SpiritOf76.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpiritOf76.xcdatamodel; sourceTree = "<group>"; };
 		C7EA7F3323BADA3B00E15CDD /* JSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSigner.swift; sourceTree = "<group>"; };
-		C7EA7F3623BADC0400E15CDD /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String Enhanced.swift"; sourceTree = "<group>"; };
 		C7EA7F3C23BAEDD400E15CDD /* JCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCity.swift; sourceTree = "<group>"; };
 		C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCountry.swift; sourceTree = "<group>"; };
@@ -189,8 +189,8 @@
 		C7EA7F3523BADBF000E15CDD /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA7F3623BADC0400E15CDD /* JSONManager.swift */,
 				C761C3A823BA945400C062DC /* LaunchScreen.storyboard */,
+				C7D870E223BD33C3006544D6 /* JSONManager.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -300,9 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */,
+				C7D870E323BD33C3006544D6 /* JSONManager.swift in Sources */,
 				C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */,
 				C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */,
-				C7EA7F3723BADC0400E15CDD /* JSONManager.swift in Sources */,
 				C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */,
 				C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
