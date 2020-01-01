@@ -1,7 +1,7 @@
 {
     "records":[
         {
-            "id":1,
+            "jsonId":1,
             "name":"Declaration of Independence",
             "year":1776,
             "asOfDate":"1776-07-04",
@@ -11,7 +11,7 @@
             "release_status":true
         },
         {
-            "id":2,
+            "jsonId":2,
             "name":"Constitutional Convention",
             "year":1787,
             "synopsis":"Debating and drafting the U.S. Constitution",
@@ -20,7 +20,7 @@
             "release_status":true
         },
         {
-            "id":3,
+            "jsonId":3,
             "name":"Lexington & Concord",
             "year":1775,
             "synopsis":"The first battle of American Revolution",
@@ -28,7 +28,7 @@
             "release_status":false
         },
         {
-            "id":4,
+            "jsonId":4,
             "name":"Constitution Ratification",
             "year":1787,
             "synopsis":"The debates among states to adopt the Union",
@@ -37,7 +37,7 @@
              "release_status":false
         },
         {
-            "id":5,
+            "jsonId":5,
             "name":"Boston Tea Party",
             "year":1773,
             "asOfDate":"1773-12-16",
@@ -47,7 +47,7 @@
             "release_status":true
         },
         {
-            "id":6,
+            "jsonId":6,
             "name":"Stamp Act",
             "year":1765,
             "synopsis":"A tax disguised as a fee.",
@@ -57,7 +57,7 @@
             "release_status":true
         },
         {
-            "id":7,
+            "jsonId":7,
             "name":"Seizure of the Sloop Liberty",
             "year":1768,
             "asOfDate":"1768-06-10",
@@ -66,7 +66,7 @@
             "release_status":true
         },
         {
-            "id":8,
+            "jsonId":8,
             "name":"Colonial Convention, Albany",
             "year":1754,
             "notes":"This Convention was called for the purpose of concerting measures to oppose more effectually the encroachments of the French settlers, and to hold a conference with the Six Nations of Indians. Dr. Franklin was a member of that Convention and submitted a plan of union for the colonies which contained all the essential features of our present Constitution.",
@@ -74,7 +74,7 @@
             "release_status":true
         },
         {
-            "id":9,
+            "jsonId":9,
             "name":"Congress on the Move",
             "year":1776,
             "notes":"During the Revolution, Congress held its sessions in Philadelphia, but was obliged on several occasions to retreat to a more secure position. At the close of 1776, it adjourned to Baltimore, MD, when it was expected Cornwallis would attack Philadelphia, after his successful pursuit of Washington across New Jersey. Again, when Howe marched upon Philadelphia in September 1777, Congress adjourned to Lancaster, and three days afterward to York, where its sessions were held during the winter the American Army was encamped at Valley Forge.",
@@ -82,7 +82,7 @@
             "release_status":true
         },
         {
-            "id":10,
+            "jsonId":10,
             "name":"Colonial Congress (aka, General Congress)",
             "year":1765,
             "notes":"The passage of the <em>Stamp Act</em>, in March 1765, excited a spirit of resistance in the Colonies, that threatened open rebellion. The Massachusetts Assembly sent forth a circular letter to the other Colonies, proposing a General Congress of delegates from them, to be held in the city of New York in October following, for the purpose of consulting upon the public good. At the opening of the Convention, the following delegates appeared and took their seats. From <em>Massachusetts</em>, James Otis, Oliver Partridge, Timothy Ruggles; <em>Rhode Island</em>, Metcalf Bowler, Henry Ward; <em>Connecticut</em>, Eliphalet Dyer, David Rowland, William S. Johnson; <em>New York</em>, Robert R. Livingston, John Cruger, Philip Livingston, William Bayard, Leonard Lispenard; <em>Pennsylvania</em>, John Dickenson, John Morton, George Bryan; <em>Maryland</em>, William Murdock, Edward Tilghman, Thomas Ringgold; <em>New Jersey</em>, Robert Ogden, Hendrick Fisher, Joseph Borden; <em>Delaware</em>, Thomas McKean, Caesar Rodney; <em>South Carolina</em>, Thomas Lynch, Christopher Gadsden, John Rutledge. Timothy Ruggles, of Massachusetts, (who was a royalist during the Revolution), was, by ballot, elected President. They adopted a <em>Declaration of Rights</em>, a <em>Petition to the King</em>, and a <em>Memorial to Parliament</em>. The <em>Declaration of Rights</em> was penned by John Cruger, delegate from New York. He was at that time speaker of the Provincial Assembly, and Mayor of the city of New York. The <em>Petition to the King</em> was written by Robert R. Livingston, also a member from New York, who afterward had the high honor of administering the oath of office to Washington when he was inaugurated the first President of the United States.",
@@ -90,7 +90,7 @@
             "release_status":true
         },
         {
-            "id":11,
+            "jsonId":11,
             "name":"HMS Fowey, Ship-of-War",
             "year":1777,
             "synopsis":"Confiscating Gun Powder",
@@ -99,7 +99,7 @@
             "release_status":true
         },
         {
-            "id":12,
+            "jsonId":12,
             "name":"Whiskey Rebellion",
             "year":1792,
             "notes":"A portion of the people of the interior of Pennsylvania, violently opposed the excise law, it being a region where much whiskey was distilled, and hence the tax or duty amounted to a considerable resource. This excise law was adopted by Congress in 1790. In 1792, so insurrectionary had the people become in relation to the duty on distilled liquor, that Congress passed an act authorizing the President of the United States to call out the militia of the State, if necessary to enforce the laws. He withheld his power for nearly two years, but at length the <em>Whiskey Rebellion</em> assumed such a formidable aspect, that an army of fifteen thousand men were placed in the field. The rebellion ceased without a conflict.",
@@ -108,7 +108,7 @@
             "release_status":true
         },
         {
-            "id":13,
+            "jsonId":13,
             "name":"Boston Port Bill",
             "year":1774,
             "synopsis":"Punishment for the Tea Party",
@@ -117,7 +117,7 @@
             "release_status":true
         },
         {
-            "id":14,
+            "jsonId":14,
             "name":"Defeat at Brandywine",
             "year":1777,
             "asOfDate":"1777-08-25",
@@ -126,7 +126,7 @@
             "release_status":true
         },
         {
-            "id":15,
+            "jsonId":15,
             "name":"North Carolina's First Move",
             "year":1776,
             "asOfDate":"1776-04-22",
@@ -136,7 +136,7 @@
             "release_status":true
         },
         {
-            "id":16,
+            "jsonId":16,
             "name":"Recommending State Governments",
             "year":1776,
             "asOfDate":"1776-05-10",
@@ -146,7 +146,7 @@
             "release_status":true
         },
         {
-            "id":17,
+            "jsonId":17,
             "name":"Independence Resolved",
             "year":1776,
             "asOfDate":"1776-06-07",
@@ -156,7 +156,7 @@
             "release_status":true
         },
         {
-            "id":18,
+            "jsonId":18,
             "name":"Colonies to States",
             "year":1776,
             "asOfDate":"1776-09-09",

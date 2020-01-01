@@ -1,55 +1,55 @@
 {
     "records":[
         {
-            "id":1,
+            "jsonId":1,
             "name":"Boston",
             "img_portrait":"img_Boston.png",
             "stateID":5
         },
         {
-            "id":2,
+            "jsonId":2,
             "name":"Philadelphia",
             "img_portrait":"img_Philadelphia.png",
             "stateID":10
         },
         {
-            "id":3,
+            "jsonId":3,
             "name":"New York City",
             "img_portrait":"img_New_York_City.png",
             "stateID":4
         },
         {
-            "id":4,
+            "jsonId":4,
             "name":"Trenton",
             "img_portrait":"img_Trenton.png",
             "stateID":3
         },
         {
-            "id":5,
+            "jsonId":5,
             "name":"Yorktown",
             "img_portrait":"img_Yorktown.png",
             "stateID":1
         },
         {
-            "id":6,
+            "jsonId":6,
             "name":"Lexington",
             "img_portrait":"img_Lexington.png",
             "stateID":5
         },
         {
-            "id":7,
+            "jsonId":7,
             "name":"Concord",
             "img_portrait":"img_Concord.png",
             "stateID":5
         },
         {
-            "id":8,
+            "jsonId":8,
             "name":"Saratoga",
             "img_portrait":"img_Saratoga.png",
             "stateID":4
         },
         {
-            "id":9,
+            "jsonId":9,
             "name":"West Point",
             "img_portrait":"img_West_Point.png",
             "stateID":4

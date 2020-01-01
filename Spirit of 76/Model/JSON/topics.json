@@ -1,208 +1,208 @@
 {
     "records":[
         {
-            "id":1,
+            "jsonId":1,
             "title":"Taxation Without Representation",
             "synopsis":"Viewed as a hallmark of tyranny, this phrase became a rallying cry of the revolution."
         },
         {
-            "id":2,
+            "jsonId":2,
             "title":"Abolitionism",
             "synopsis":"Ending slavery in the colonies required a new nation",
             "notes":"There were many calls for abolition of slavery prior to America's Civil War. In Virginia, Richard Henry Lee's first debate was to take a passionate position to tax the importation of slaves to the point of ending it's practice. Thomas Jefferson, too, made strong but unsuccessful efforts in the Virginia Assembly for the emancipation of the slaves. In 1774, Governor Hopkins introduced a bill into the Assembly of Rhode Island to prevent the importation of slaves; and to show that his professions on this point were sincere, he manumitted all of those which belonged to himself. In connection with Rufus King of New York, William Ellery made strong efforts in 1785 to have slavery in the United States abolished."
         },
         {
-            "id":3,
+            "jsonId":3,
             "title":"Bureaucracies and the Abuse of Power",
             "synopsis":"Unelected officials of government have the ability to regulate with the power of legislation."
         },
         {
-            "id":4,
+            "jsonId":4,
             "title":"Judicial Abuse",
             "synopsis":"Judges who legislate or fail to uphold justice."
         },
         {
-            "id":5,
+            "jsonId":5,
             "title":"Civil Command of the Military",
             "synopsis":"Placing military power under the control of elected officials"
         },
         {
-            "id":6,
+            "jsonId":6,
             "title":"Freedom of Religion",
             "synopsis":"Allowing people to choose their religious affiliation"
         },
         {
-            "id":7,
+            "jsonId":7,
             "title":"Separation of Church and State",
             "synopsis":"Keeping government's nose out of the Church's business."
         },
         {
-            "id":8,
+            "jsonId":8,
             "title":"Mercantilism",
             "synopsis":"The exploitation of a colony for the benefit of the Mother Country"
         },
         {
-            "id":9,
+            "jsonId":9,
             "title":"Divine Providence",
             "synopsis":"Seeing God's handiwork in history"
         },
         {
-            "id":10,
+            "jsonId":10,
             "title":"Democracies",
             "synopsis":"Weakness and Appeal"
         },
         {
-            "id":11,
+            "jsonId":11,
             "title":"Separation of Power",
             "synopsis":"Building a Nation with Three Branches of Government"
         },
         {
-            "id":12,
+            "jsonId":12,
             "title":"Committees of Safety",
             "notes":"These committees were organized in several of the states before the Revolution. Their business was to act as an executive body to regulate the general concerns of the governor during the continuation of war. These committees were of vast importance, and acted efficiently in conjunction with the Committees of Correspondence. In some instances they consisted of the same men."
         },
         {
-            "id":13,
+            "jsonId":13,
             "title":"Enumerated Powers",
             "synopsis":"The opposite of Implied Powers; it requires that authorities must be explicitly defined.",
             "notes":"Enumerated Powers is a doctrine which limits the authority and capabilities of its object to those which are specifically defined; all other powers being forbidden. This is the opposite of <em>Implied Powers</em>, which permits actions by default, forbidding only those behaviors specifically outlined. That is, <em>enumerated powers</em> are restrictive in nature, whereas <em>implied powers</em> are liberating in nature. The US Constitution is a document which created a government bound by <em>enumerated powers</em>, so that the people will retain their <em>implied powers</em> of freedom."
         },
         {
-            "id":14,
+            "jsonId":14,
             "title":"British Military Abuses",
             "notes":"During the war, the British undertook expeditions of destruction and violence against the civilian population. For example, when a British force led by Governor Tryon of New York invaded the shores of Connecticut, it began to plunder and desolate the area. Fairfield and Norwalk were laid in ashes, and the most cruel atrocities were inflicted on the inhabitants, without regard to sex or condition. Houses were rifled, the persons of females abused, and many of them fled half naked to the woods and swamps in the vicinity of their desolated homes."
         },
         {
-            "id":15,
+            "jsonId":15,
             "title":"Six Nations of Indians",
             "notes":"The five Indian Tribes, the <em>Mohawks</em>, the <em>Oncidas</em>, the <em>Onondagas</em>, the <em>Cayugas</em>, and the <em>Senecas</em>, had formed a confederation long before they were discovered by the whites. It is not known when this confederation was first formed, but when New England settlers penetrated westward, they found this powerful confederacy strongly united, and at war with nearly all of the surrounding tribes.</div><br />\n<div>The <em>Onondagas</em> seemed to be the chief nation of the confederacy, for with them the great council fire was specially deposited, and it was kept always burning. Their undisputed domain included nearly the whole present area of the State of New York. They subdued the <em>Hurons</em> and <em>Algonquins</em> in 1657; and in 1665 they almost annihilated the <em>Eries</em>. In 1672 they destroyed the <em>Andastes</em>, and in 1701 they penetrated as far south as the Cape Fear River, spreading terror and desolation in their path. They warred with the <em>Cherokees</em>, and almost exterminated the <em>Catawbas</em>; and when, in 1744, they ceded some of their lands in Virginia, they reserved the privilege of a war-path through the ceded domain. In 1714 they were joined by the <em>Tuscaroras</em> of North Carolina, and since that time the confederacy has been known as the <em>Six Nations</em>.</div><br />\n<div>The <em>Six Nations</em> uniformly took sides with the British, and entered into a compact with them against the French in 1754. In the war of the Revolution, \"the whole confederacy,\" says De Witt Clinton, \"except a little more than half the <em>Oneidas</em>, took up arms against us. They hung like the scythe of Death upon the rear of our settlements, and their deeds are inscribed, with the scalping knife, and the tomahawk, in characters of blood, on the fields of Wyoming, and Cherry Valley, and on the banks of the Mohawk.\""
         },
         {
-            "id":16,
+            "jsonId":16,
             "title":"Continental Paper Money",
             "notes":"The amount of paper money issued by Congress before the close of 1779 amounted to about two hundred million dollars. The consequence of such an issue was a well grounded suspicion that the bills would not ultimately be redeemed; and this suspicion, at the close of 1779, became so much a certainty, that the notes depreciated to about one fourth of their value. An attempt was made by Congress to make these bills a legal tender at their nominal value, but the measure was soon perceived to be mischievous, and they were left to their fate."
         },
         {
-            "id":17,
+            "jsonId":17,
             "title":"Tories and Whigs",
             "notes":"That party names of <em>Tory</em> and <em>Whig</em> were first used in New York in 1774, and rapidly spread throughout the Colonies. Then name of <em>Tory</em> was applied to the American royalists, and the name of <em>Whig</em> was assumed by the patriots. The origin of these names, (which were copied from the English) is obscure.</div><br />\n<div>According to Bishop Burnett, the term <em>Whig</em> has the following derivation: The people of the southwestern parts of Scotland, not raising sufficient grain to last them through the winter, generally went to Leith to purchase the superabundance of the north. From the word <em>Whiggam</em>, which they used in driving their horses, they were called <em>Whiggamores</em>, and abbreviated, <em>Whigs</em>. On one of these occasions, news having reached Leith of the defeat of Duke Hamilton, the ministers invited the Whiggamores to march against Edinburgh, and they went at their head, preaching and praying all the way. The Marquis of Argyle, with a force, opposed and dispersed them. This was called the \"<em>Whiggamore inroad</em>,\" and ever after that, all that <em>opposed the Court</em>, came in contempt to be called <em>Whigs</em>. The English adopted the name.</div><br />\n<div>The origin of the word <em>Tory</em> is not clear. It was first used in Ireland in the time of Charles II. Sir Richard Phillips defines the two parties thus: \"Those are <em>Whigs</em> who would curb the power of the Crown; those are <em>Tories</em> who would curb the power of the people.\"</div><br />\n<div>The <em>Tories</em> of the Revolution were far more despised (and justly so) by the patriots, than the mercenary troops of Great Britain. They not only lifted their hands against their own brethren, but in many cases their treachery and cruelty exceeded the worst acts of the British soldiery. During the winter, when the American army was suffering every thing but death at Valley Forge, the interior of Pennsylvania swarmed with <em>Tories</em>; and when Washington, by order of Congress, proceeded to take, by force, the grain and other food which the <em>Tory</em> farmers refused to sell to the army, they, in some instances, burnt their produce, rather than have it feed the starving Americans!"
         },
         {
-            "id":18,
+            "jsonId":18,
             "title":"New York's Hesitancy",
             "synopsis":"Reluctantly Towards Independence",
             "notes":"New York was so peculiarly exposed to the attacks of the British fleet under Lord Howe, then hovering upon our coast, and so forewarned by the miseries of Boston, and the destruction of Falmouth, that Toryism, or loyalty to the crown, found ample nutriment among the people of the city. It was in the city of New York that the names of <em>Whig</em> and <em>Tory</em> were first applied to the distinctive political parties."
         },
         {
-            "id":19,
+            "jsonId":19,
             "title":"Marquis of Rockingham",
             "synopsis":"American Hopes of Reconciliation",
             "notes":"The Marquis of Rockingham was an honorable and liberal statesman. He was elevated to the premiership of England in 1766, as successor of Grenville, the author of the <em>Stamp Act</em>. Edmund Burke, and men of like character were called into his cabinet, and the Americans has some hopes of justice under his administration. But his cabinet was soon dissolved, and he was succeeded by Lord North, author of the <em>Tea Act</em> and kindred measures.</div><br />\n<div>See Also: Richard Stockton."
         },
         {
-            "id":20,
+            "jsonId":20,
             "title":"Provisional Governments",
             "notes":"After the abdication of the Colonial Governors in 1774 and 1775, provisional governments were formed by the various States, and popular Constitutions were framed, by which they were severally governed under the old confederacy (<em>Articles of Confederation</em>)."
         },
         {
-            "id":21,
+            "jsonId":21,
             "title":"Non-importation Agreements",
             "notes":"One of the measures adopted by the Colonists to force Great Britain to do them justice following the <em>Stamp Act</em> and the <em>Tea Act</em>, was that of American merchants everywhere agreeing not to import anything from the mother-country. This had a powerful effect upon Parliament (for in the lower House the mercantile interest was strongly represented) and led to the modification of several stringent measures. These agreements, of course, seriously affected merchants here, and therein their patriotism was made peculiarly manifest."
         },
         {
-            "id":22,
+            "jsonId":22,
             "title":"Secret Committee of the General Congress",
             "notes":"The duties of the secret committee consisted in managing the financial affairs of government. It was a position of great trust, for they frequently had funds placed in their hands to be disposed of according to their discretion being inimical to the general good to take public action upon such disbursements."
         },
         {
-            "id":23,
+            "jsonId":23,
             "title":"Committees of Correspondence",
             "notes":"The Committees of Correspondence constituted a powerful agent in the great of the Revolution. Their conception was simultaneous in Massachusetts and Virginia, and both States claim the honor of priority. At first these committees were confined to the larger cities, but very speedily every village hamlet had its auxiliary committees, and the high moral tone evinced by the Chiefs, ran through all the gradations, from the polished committees appointed by Colonial Assemblies, to the rustic, yet not the least patriotic ones of the interior towns; and through these made an impression upon the whole American people. Thus the patriot heart of America, at this crisis (1773), beat as with one pulsation, and the public mind was fully prepared to act with promptness and decision when circumstances should call for action.</div><br />\n<div>Mr. Lee is doubtless due the credit of first suggesting the system of \"Committees of Correspondence,\" although Virginia and Massachusetts both claim the honor of publicly proposing the measure first. So far as that claim is concerned, the proposition was almost simultaneous in the Assembly of both Provinces. It was proposed in the Virginia Assembly, on the twelfth of March, 1773, by Dabney Carr, a brother-in-law of Mr. Jefferson, and a young man of brilliant talents. The plan, however, was fixed on in a caucus at the \"Raleigh Tavern,\" and Richard Henry Lee was one of the number. But in a letter to John Dickenson, of Pennsylvania, dated July twenty-fifth, 1768, Mr. Lee proposed the system of \"Corresponding Committees,\" as a powerful instrument in uniting the sentiments of the colonists on the great political questions constantly arising to view."
         },
         {
-            "id":24,
+            "jsonId":24,
             "title":"Georgia's Early Reluctance",
             "notes":"At the early stage of the controversy with Great Britain, Georgia, sparsely populated, seemed quite inactive, except in the district known as the parish of St. John. There all the patriotism of the province seemed to have been concentrated. The General Assembly having refused to send delegates to the Congress of 1774, that parish separated from the province, and appointed a representative in the Continental Congress. The leaven, however, soon spread, and Georgia gave her vote, in 1776, for independence.</div><br />\n<div> In 1774, another convention of representatives of the people of the province met at Savannah, about six months after, but the extent of their proceedings was to petition Great Britain to redress the wrongs of the colonies, a petition which the patriots of the north knew to be as powerless to stay the oppressions of the Crown, as a barrier of down against a tornado.</div><br />\n<div> The people of the parish of St. John, convinced that the rest of the province was too apathetic to act, appealed to the Committee of Safety of South Carolina to allow them to join with them in their non-importation agreements, and other commercial regulations. Owing to some difference of opinion they were not successful in their application. They therefore united among themselves, established a non-importation association, and proceeded to elect a delegate to Congress."
         },
         {
-            "id":25,
+            "jsonId":25,
             "title":"After Yorktown",
             "notes":"After the capture of Cornwallis and his army at Yorktown, in 1781, the war virtually ceased. Armies were still on duty, and arrangements were made for regular campaigns the ensuing season; but unimportant skirmishes in the Southern States made up the bulk of actual hostilities from that time until the proclamation of peace. Georgia was the only rendezvous of the remnant of the British at the South, in the beginning of the year 1782. In June of that year, General Wayne arrived there with a portion of the Pennsylvania line, and the enemy retreated from all their outposts into Savannah. The State was thus evacuated, and republican authority was reestablished. Wayne was attacked within five miles of Savannah, on the twenty-fourth of June, by a party of British and Indians, and in that skirmish Colonel John Laurens was killed. This was the last battle of the Revolution. Cessation of hostilities was proclaimed, and in July the British force evacuated Savannah, and the last hostile foot left the soil of Georgia."
         },
         {
-            "id":26,
+            "jsonId":26,
             "title":"Seeking Foreign Friends",
             "notes":"Congress deemed it essential to have a good understanding with the rival powers of Great Britain, and in order to have <em>some</em> communication with them (which could not be done by open diplomacy) a committee was established for the purpose, expressed by the resolution constituting it \"to hold correspondence with the friends of America in Great Britain, Ireland, and <em>other parts of the world.</em>\""
         },
         {
-            "id":27,
+            "jsonId":27,
             "title":"The Regulators",
             "notes":"The North Carolina movement (1760-1771) known as the <em>Regulators</em> has been viewed in quite opposing lights; one party regarding them as only a knot of low-minded malcontents, who had everything to gain and nothing to lose, and who hoped by getting up an excitement, to secure something for themselves in the general scramble. This was the phase in which they appeared to Mr. Hooper, and thus regarding them, he felt it his duty to oppose them and maintain good order in the State.</div><br />\n<div>Others viewed them as patriots, impelled to action by a strong sense of wrong and injustice, the author of which was Governor Tryon, whose oppressive and cruel acts, even his partisans could not deny.</div><br />\n<div>From all the lights we have upon the subject, we cannot but view the movement as a truly patriotic one, and kindred to those which subsequently took place in Massachusetts and Virginia, when Boston harbor was made a teapot, and Patrick Henry drove the royal governor Dunmore from the Province of Virginia. Governor Tryon was a tyrant of the darkest hue, for he commingled, with his oppressions, acts of the grossest immorality and wanton cruelty.</div><br />\n<div>Although the <em>Regulators</em> were men moving in the common walks of life, (and doubtless many vagabonds enrolled themselves among them), yet the rules of government they adopted, the professions they made, and the practices they exhibited, all bear the impress of genuine patriotism; and we cannot but regard the blood shed on the occasion by the infamous Tryon, as the blood of the early martyrs of our Revolution."
         },
         {
-            "id":28,
+            "jsonId":28,
             "title":"Louisiana Purchase",
             "notes":"The United States agreed to pay fifteen millions of dollars to France for Louisiana (an area of more than a million of square miles), four millions of which France allowed to go toward the payment of indemnities for spoliations during peace."
         },
         {
-            "id":29,
+            "jsonId":29,
             "title":"Embargo Act",
             "notes":"<em>The Embargo Act</em> (Jefferson administration) prohibited all American vessels from sailing for foreign ports; all foreign vessels from taking out cargoes; and all coasting vessels were required to give bonds to land their cargoes in the United States. These restrictive measures were intended so to affect the commerce of Great Britain, as to bring that government to a fair treaty of amity and commerce."
         },
         {
-            "id":30,
+            "jsonId":30,
             "title":"Aaron Burr",
             "notes":"Aaron Burr organized a military expedition, ostensibly to act against the republic of Mexico; but the belief being generally entertained that it was really intended to dissever the Union, and form a separate government in the valley of the Mississippi, he was arrested, in 1807, on a charge of high treason. He was tried and acquitted."
         },
         {
-            "id":31,
+            "jsonId":31,
             "title":"Lewis and Clark Expedition",
             "notes":"Following the Louisiana Purchase, this expedition was under the direction of Captains Lewis and Clark, and they made a toilsome overland journey from the Mississippi to the mouth of the Columbia River."
         },
         {
-            "id":32,
+            "jsonId":32,
             "title":"Delaware and Pennsylvania",
             "notes":"Delaware was originally included in the grant made to William Penn, and was a part of Pennsylvania. But, in 1691, the \"three Lower Counties on the Delaware,\" dissatisfied with some of the proceedings of the Executive Council, withdrew from the Union, with the reluctant consent of the proprietor, who appointed a deputy governor over them. The next year, the Provincial government was taken from William Penn, by a royal commission to Governor Fletcher, of New York, who reunited Delaware to Pennsylvania, under the name of the \"Territory of the three Lower Counties on the Delaware.\" It remained subordinate to Pennsylvania until 1776, yet having a separate Legislature of its own."
         },
         {
-            "id":33,
+            "jsonId":33,
             "title":"William Penn's Dream",
             "notes":"In 1681, William Penn, a member of the Society of Friends, or Quakers, and son of the English Admiral of that name, obtained a grant from Charles II for all the lands embraced in the present State of Pennsylvania. That region had been colonized by Swedes, nearly forty years before, and Penn issued a proclamation, guaranteeing to permanent settlers undisputed right to the lands they occupied. The great aim of that good man was to establish an empire in the new world, upon the sacred principles of peace and brotherly love, where men of all nations, creeds, and hues, might live together as one harmonious family. Had the policy of William Penn, in conciliating the Indians by uniform kindness of treatment, been followed in the other colonies, much bloodshed might have been prevented, and the settlements would sooner have become permanent and prosperous. During the entire time that William Penn was proprietor of Pennsylvania, not a single dispute occurred with the natives."
         },
         {
-            "id":34,
+            "jsonId":34,
             "title":"Indian Relations",
             "synopsis":"Opportunities Lost",
             "notes":"It cannot be denied that the treatment of the Indian tribes at the hands of the whites, in a large majority of cases, has been such that it is not to be wondered at that the untutored mind of the savage should, in its excited workings, elaborate schemes of revenge, a sentiment growing out of injuries received, and a jealous foreboding of future expulsion from their hunting grounds and the graves of their fathers. Although unchristian and savage, yet the Indian possesses the sentiment of patriotism, and reveres the land of his fathers; and among no people upon earth is veneration for the resting place of the dead more strongly exhibited than by him. No wonder, then, that the vision of expatriation, perhaps annihilation, which the future revealed, should have made him arise in his might, and by the tomahawk and torch attempt to stay the flood of white settlement, whose surges beat so strongly against the feeble barriers of his already contracted domain. Had the law of kindness and the principle of justice always prevailed, as they did under the mild and prosperous rule of William Penn, the Indian would have been the white man's friend, and those dark pictures of fire and blood would never have appeared among the delineations of our eventful history."
         },
         {
-            "id":35,
+            "jsonId":35,
             "title":"Inns of Court",
             "synopsis":"London Law Schools",
             "notes":"A number of Inns of Court, or sort of colleges for teaching the law were established in London at various times. The Temple (of which there were three Societies. namely, the Inner, the Middle, and the Outer) was originally founded, and the Temple Church built, by the Knights Templar, in the reign of Henry II 1185. The Inner and Middle Temple were made Inns of Law in the reign of Edward III, about 1340; the Outer, not until the reign of Elizabeth, about 1560. <em>See Stow's Survey</em>."
         },
         {
-            "id":36,
+            "jsonId":36,
             "title":"Continental Congress",
             "notes":"The first Continental Congress convened on the fourth day of September 1774, and adjourned on the twenty-sixth day of October following -- a session of only fifty-two days. Yet within that time they organized, or made provisions for those efficient movements which afterward took place in favor of freedom; and they sent forth to the world those able addresses and petitions, which so much excited the admiration of the statesmen of Europe."
         },
         {
-            "id":37,
+            "jsonId":37,
             "title":"Three Howes of the Revolution",
             "notes":"There were three commanding officers by the name of Howe engaged in our Revolutionary war: General Robert Howe, of the American Army; General Sir William Howe, of the British army; and his brother, Lord Howe, Admiral in the British navy."
         },
         {
-            "id":38,
+            "jsonId":38,
             "title":"Opponent to Independence",
             "notes":"Mr. John Dickenson was, at the time of the Revolution, one of the most eminent lawyers in America. He was a powerful writer, and his <em>Letters of a Pennsylvania Farmer</em> were very instrumental in bringing on that crisis in public affairs in the Colonies which brought about the Revolution. He was always opposed to the proposition for independence, and would have voted against it if he had been in his seat on the fourth of July, 1776. His earnest desire was to obtain justice for America, without dismembering the British empire."
         },
         {
-            "id":39,
+            "jsonId":39,
             "title":"French Assistance",
             "notes":"As soon as France, by the treaty of February, 1778, openly declared in favor of the United States, she promptly commenced the fulfillment of her agreement, by fitting out a fleet of twelve sail of the line and sent them to America, under Count D'Estaing. She also appointed a minister (Mr. Gerard) to Congress, and he came with the French fleet, and was landed at Sandy Hook, in July of that year."
         },
         {
-            "id":40,
+            "jsonId":40,
             "title":"Removing Slavery's Condemnation",
             "notes":"It has been said that the paragraph commencing the with the words <em>\"He has waged a cruel war against human nature itself,\"</em> etc., was not palatable to those delegates who were slave-holders, and that it was stricken out lest it should be a cause for them to cast a negative vote on the question. But there is not the least shadow of evidence to prove that such selfish motives guided any one in that august assembly. On the contrary, it was high and holy regard for truth and justice, which caused that eloquent paragraph to be stricken out.</div><br />\n<div>The Congress in that Declaration was enumerating those aggressions against the rights and privileges of the colonies, justly chargeable upon George III as an individual, having been done by his personal sanction, or by his delegated representatives. Such being the case, it was manifestly unjust, indeed not strictly true, to charge him with the evils concomitant to slavery and the slave-trade. This trade was begun and carried on long before the reign of even the first George; and it is not known that George III ever gave his assent to anything relating to slavery, except to abolish it and declare the trade a piracy."
         }
