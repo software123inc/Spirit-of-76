@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import S123Common
 import SwiftyJSON
 
 class JSONManager {

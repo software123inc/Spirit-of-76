@@ -10,6 +10,7 @@
 		C7262E9C23BBC59300240183 /* JQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7262E9B23BBC59300240183 /* JQuote.swift */; };
 		C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C7262E9E23BBCC7700240183 /* SwiftyJSON */; };
 		C72C247A23BD35A20046B09F /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72C247923BD35A20046B09F /* JSONManager.swift */; };
+		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
 		C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39A23BA945200C062DC /* SceneDelegate.swift */; };
 		C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39C23BA945200C062DC /* FirstViewController.swift */; };
@@ -32,7 +33,6 @@
 		C7EA7F2E23BAD5C300E15CDD /* writings.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F2D23BAD5C300E15CDD /* writings.json */; };
 		C7EA7F3123BAD70500E15CDD /* SpiritOf76.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F2F23BAD70500E15CDD /* SpiritOf76.xcdatamodeld */; };
 		C7EA7F3423BADA3B00E15CDD /* JSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3323BADA3B00E15CDD /* JSigner.swift */; };
-		C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */; };
 		C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3C23BAEDD400E15CDD /* JCity.swift */; };
 		C7EA7F3F23BAEF5400E15CDD /* JCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */; };
 		C7EA7F4123BAF06800E15CDD /* JEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7F4023BAF06800E15CDD /* JEvent.swift */; };
@@ -69,7 +69,6 @@
 		C7EA7F2D23BAD5C300E15CDD /* writings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = writings.json; sourceTree = "<group>"; };
 		C7EA7F3023BAD70500E15CDD /* SpiritOf76.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpiritOf76.xcdatamodel; sourceTree = "<group>"; };
 		C7EA7F3323BADA3B00E15CDD /* JSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSigner.swift; sourceTree = "<group>"; };
-		C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String Enhanced.swift"; sourceTree = "<group>"; };
 		C7EA7F3C23BAEDD400E15CDD /* JCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCity.swift; sourceTree = "<group>"; };
 		C7EA7F3E23BAEF5400E15CDD /* JCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCountry.swift; sourceTree = "<group>"; };
 		C7EA7F4023BAF06800E15CDD /* JEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEvent.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C72C247D23BD39BE0046B09F /* S123Common in Frameworks */,
 				C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +205,6 @@
 		C7EA7F3923BADCCC00E15CDD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C7EA7F3A23BADCE200E15CDD /* String Enhanced.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +227,7 @@
 			name = "Spirit of 76";
 			packageProductDependencies = (
 				C7262E9E23BBCC7700240183 /* SwiftyJSON */,
+				C72C247C23BD39BE0046B09F /* S123Common */,
 			);
 			productName = "Spirit of 76";
 			productReference = C761C39523BA945200C062DC /* Spirit of 76.app */;
@@ -259,6 +259,7 @@
 			mainGroup = C761C38C23BA945200C062DC;
 			packageReferences = (
 				C7262E9D23BBCC7700240183 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				C72C247B23BD39BE0046B09F /* XCRemoteSwiftPackageReference "S123Common" */,
 			);
 			productRefGroup = C761C39623BA945200C062DC /* Products */;
 			projectDirPath = "";
@@ -302,7 +303,6 @@
 				C7EA7F4723BB085000E15CDD /* JTopic.swift in Sources */,
 				C72C247A23BD35A20046B09F /* JSONManager.swift in Sources */,
 				C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */,
-				C7EA7F3B23BADCE200E15CDD /* String Enhanced.swift in Sources */,
 				C7EA7F3D23BAEDD400E15CDD /* JCity.swift in Sources */,
 				C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
@@ -460,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -483,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -532,6 +532,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C72C247B23BD39BE0046B09F /* XCRemoteSwiftPackageReference "S123Common" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/software123inc/S123Common.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -539,6 +547,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7262E9D23BBCC7700240183 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		C72C247C23BD39BE0046B09F /* S123Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C72C247B23BD39BE0046B09F /* XCRemoteSwiftPackageReference "S123Common" */;
+			productName = S123Common;
 		};
 /* End XCSwiftPackageProductDependency section */
 
