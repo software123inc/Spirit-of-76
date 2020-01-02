@@ -34,7 +34,7 @@
         <attribute name="synopsis" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
-        <attribute name="biography" attributeType="String"/>
+        <attribute name="biography" optional="YES" attributeType="String"/>
         <attribute name="dateOfBirth" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="dateOfDeath" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="descriptiveText" attributeType="String"/>
