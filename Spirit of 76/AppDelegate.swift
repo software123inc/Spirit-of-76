@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         S123Common.activateLogging()
+//        S123Common.logDebugSimulatorPathToSqlite()
         
         JSONHelper.importSeedData()
         

@@ -11,12 +11,14 @@
 		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
 		C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39A23BA945200C062DC /* SceneDelegate.swift */; };
-		C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39C23BA945200C062DC /* FirstViewController.swift */; };
-		C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39E23BA945200C062DC /* SecondViewController.swift */; };
 		C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */; };
 		C761C3A723BA945400C062DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A623BA945400C062DC /* Assets.xcassets */; };
 		C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A823BA945400C062DC /* LaunchScreen.storyboard */; };
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
+		C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */; };
+		C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */; };
+		C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */; };
+		C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */; };
 		C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2D13223BE8E07006802C5 /* JSONHelper.swift */; };
 		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
 		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
@@ -37,13 +39,15 @@
 		C761C39523BA945200C062DC /* Spirit of 76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spirit of 76.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761C39823BA945200C062DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C761C39A23BA945200C062DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C761C39C23BA945200C062DC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C761C39E23BA945200C062DC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C761C3A423BA945200C062DC /* Spirit_of_76.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spirit_of_76.xcdatamodel; sourceTree = "<group>"; };
 		C761C3A623BA945400C062DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C761C3A923BA945400C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761C3AB23BA945400C062DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
+		C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Enhanced.swift"; sourceTree = "<group>"; };
+		C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarViewController.swift; sourceTree = "<group>"; };
 		C7C2D13223BE8E07006802C5 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
 		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
@@ -118,8 +122,8 @@
 		C761C3B223BAAD1A00C062DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C761C39C23BA945200C062DC /* FirstViewController.swift */,
-				C761C39E23BA945200C062DC /* SecondViewController.swift */,
+				C784E35C23C0179E001CF71D /* Persons */,
+				C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,8 +133,18 @@
 			children = (
 				C7EA7F1623BAD58F00E15CDD /* JSON */,
 				C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */,
+				C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C784E35C23C0179E001CF71D /* Persons */ = {
+			isa = PBXGroup;
+			children = (
+				C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */,
+				C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */,
+			);
+			path = Persons;
 			sourceTree = "<group>";
 		};
 		C7EA7F1623BAD58F00E15CDD /* JSON */ = {
@@ -265,11 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C761C39F23BA945200C062DC /* SecondViewController.swift in Sources */,
-				C761C39D23BA945200C062DC /* FirstViewController.swift in Sources */,
 				C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */,
+				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
+				C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */,
+				C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */,
 				C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */,
+				C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -439,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";

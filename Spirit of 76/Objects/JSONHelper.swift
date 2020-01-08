@@ -258,10 +258,10 @@ struct JSONHelper {
                     if importSuccessful {
                         for (index, jRec):(String, JSON) in json {
                             if let jsonId = jRec["jsonId"].int16, let quote = manObj(Quote.self, havingJsonId: jsonId) {
-                                DDLogDebug("\(index): \(quote.quotation?.prefix(10) ?? "?")")
+                                DDLogVerbose("\(index): \(quote.quotation?.prefix(10) ?? "?")")
                                 
                                 if let signerId = jRec["signerId"].int16, let person = manObj(Person.self, havingJsonId: signerId) {
-                                    DDLogDebug("\(index): \(person.lastName ?? "?")")
+                                    DDLogVerbose("\(index): \(person.lastName ?? "?")")
                                     quote.person = person
                                 }
                                 else {
