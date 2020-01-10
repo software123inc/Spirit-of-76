@@ -30,11 +30,9 @@ class PersonsTableViewController: UITableViewController, NSFetchedResultsControl
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
         
-        cell.textLabel?.text = "\(person.lastFirst)"
-        
-        if let image = UIImage(named: person.imageName) {
-            cell.imageView?.image = image
-        }
+        cell.textLabel?.text = person.lastFirst
+        cell.detailTextLabel?.text = person.summaryText
+        cell.imageView?.image = person.avatar
         
         return cell
     }

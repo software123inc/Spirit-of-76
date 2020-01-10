@@ -14,6 +14,7 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var personFullName: UILabel!
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var personDescriptionLabel: UILabel!
+    @IBOutlet weak var residentStateImageView: UIImageView!
     
     var person:Person? {
         didSet {
@@ -38,9 +39,17 @@ class PersonDetailViewController: UIViewController {
     func refreshUI() {
         loadViewIfNeeded()
         
-        self.personFullName.text = person?.fullName
-        self.personImageView.image = person?.portraitImage
-        self.personDescriptionLabel.text = person?.descriptiveText
+        if let person = person {
+            self.personFullName.text = person.fullName
+            self.personImageView.image = person.portraitImage
+            self.personDescriptionLabel.text = person.descriptiveText
+            self.residentStateImageView.image = person.residenceState?.blueImage
+        }
+        else {
+            self.personFullName.text = "Spirit of '76"
+            self.personImageView.image = UIImage(named: "Fife_and_Drum")
+            self.personDescriptionLabel.text = "Learn about the Signers of the Declaration of Independence."
+        }
     }
 }
 

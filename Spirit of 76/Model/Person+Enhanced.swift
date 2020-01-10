@@ -33,4 +33,10 @@ extension Person {
             return UIImage(named: self.imageName)
         }
     }
+    
+    var avatar:UIImage? {
+        get {
+            return UIImage(named: "Avatars/\(self.imageName)")
+        }
+    }
 }

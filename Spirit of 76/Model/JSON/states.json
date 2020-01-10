@@ -3,79 +3,79 @@
         {
             "jsonId":1,
             "name":"Virginia",
-            "img_map":"virginia.png",
+            "img_map":"virginia",
             "abbreviation":"VA"
         },
         {
             "jsonId":2,
             "name":"Delaware",
-            "img_map":"delaware.png",
+            "img_map":"delaware",
             "abbreviation":"DE"
         },
         {
             "jsonId":3,
             "name":"New Jersey",
-            "img_map":"new_jersey.png",
+            "img_map":"new_jersey",
             "abbreviation":"NJ"
         },
         {
             "jsonId":4,
             "name":"New York",
-            "img_map":"new_york_colony.png",
+            "img_map":"new_york_colony",
             "abbreviation":"NY"
         },
         {
             "jsonId":5,
             "name":"Massachusetts",
-            "img_map":"massachusetts_colony.png",
+            "img_map":"massachusetts_colony",
             "abbreviation":"MA"
         },
         {
             "jsonId":6,
             "name":"New Hampshire",
-            "img_map":"new_hampshire.png",
+            "img_map":"new_hampshire",
             "abbreviation":"NH"
         },
         {
             "jsonId":7,
             "name":"Rhode Island",
-            "img_map":"rhode_island.png",
+            "img_map":"rhode_island",
             "abbreviation":"RI"
         },
         {
             "jsonId":8,
             "name":"Connecticut",
-            "img_map":"connecticut.png",
+            "img_map":"connecticut",
             "abbreviation":"CT"
         },
         {
             "jsonId":9,
             "name":"Maryland",
-            "img_map":"maryland.png",
+            "img_map":"maryland",
             "abbreviation":"MD"
         },
         {
             "jsonId":10,
             "name":"Pennsylvania",
-            "img_map":"pennsylvania.png",
+            "img_map":"pennsylvania",
             "abbreviation":"PA"
         },
         {
             "jsonId":11,
             "name":"North Carolina",
-            "img_map":"north_carolina.png",
+            "img_map":"north_carolina",
             "abbreviation":"NC"
         },
         {
             "jsonId":12,
             "name":"South Carolina",
-            "img_map":"south_carolina.png",
+            "img_map":"south_carolina",
             "abbreviation":"SC"
         },
         {
             "jsonId":13,
             "name":"Georgia",
-            "img_map":"georgia.png",
+            "img_map":"georgia",
             "abbreviation":"GA"
         }
     ]
