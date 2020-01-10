@@ -39,7 +39,7 @@ class PersonsTableViewController: UITableViewController, NSFetchedResultsControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         tableView.dataSource = diffableDataSource
         self.loadModel()
         
