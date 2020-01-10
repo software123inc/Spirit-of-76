@@ -26,8 +26,9 @@ class PersonDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred")?.cgImage {
-            view.layer.contents = backgroundImage
+        
+        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+            self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
     }
     
