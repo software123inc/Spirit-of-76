@@ -31,11 +31,10 @@
                                             <constraint firstAttribute="height" constant="150" id="i3k-b6-but"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="massachusetts_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-Vs-b36">
-                                        <rect key="frame" x="52" y="194" width="271" height="275"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="massachusetts_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-Vs-b36">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="275"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="275" id="2NG-b6-Pya"/>
-                                            <constraint firstAttribute="width" constant="271" id="YNW-Zn-N5e"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -47,6 +46,7 @@
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="XVx-w5-4oB" secondAttribute="centerX" id="q8d-ZA-D0m"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="top" secondItem="FRT-fz-B4R" secondAttribute="bottom" constant="7.5" id="rZ1-D9-CsS"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="top" secondItem="2qh-3s-Abi" secondAttribute="top" constant="8" id="sZq-MM-l9F"/>
+                                    <constraint firstItem="Vb2-Vs-b36" firstAttribute="width" secondItem="2qh-3s-Abi" secondAttribute="width" id="tw1-O5-HO9"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="FRT-fz-B4R" secondAttribute="centerX" id="uD3-Ob-6RO"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="zct-4S-Blp"/>
                                 </constraints>
