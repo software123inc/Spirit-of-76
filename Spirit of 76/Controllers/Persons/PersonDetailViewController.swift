@@ -13,8 +13,8 @@ class PersonDetailViewController: UIViewController {
     
     @IBOutlet weak var personFullName: UILabel!
     @IBOutlet weak var personImageView: UIImageView!
-//    @IBOutlet weak var personDescriptionLabel: UILabel!
     @IBOutlet weak var residentStateImageView: UIImageView!
+    @IBOutlet weak var personDescriptionTextView: UITextView!
     
     var person:Person? {
         didSet {
@@ -26,7 +26,6 @@ class PersonDetailViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
@@ -43,13 +42,13 @@ class PersonDetailViewController: UIViewController {
         if let person = person {
             self.personFullName.text = person.fullName
             self.personImageView.image = person.portraitImage
-//            self.personDescriptionLabel.text = person.descriptiveText
+            self.personDescriptionTextView.text = person.descriptiveText
             self.residentStateImageView.image = person.residenceState?.blueImage
         }
         else {
             self.personFullName.text = "Spirit of '76"
             self.personImageView.image = UIImage(named: "Fife_and_Drum")
-//            self.personDescriptionLabel.text = "Learn about the Signers of the Declaration of Independence."
+            self.personDescriptionTextView.text = "Learn about the Signers of the Declaration of Independence."
         }
     }
 }
