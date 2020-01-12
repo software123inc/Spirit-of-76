@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fife_and_Drum" translatesAutoresizingMaskIntoConstraints="NO" id="nQI-fC-2cm">
-                                        <rect key="frame" x="27" y="36" width="321" height="150"/>
+                                        <rect key="frame" x="0.0" y="36" width="375" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="i3k-b6-but"/>
                                         </constraints>
@@ -43,10 +43,10 @@
                                     <constraint firstItem="Vb2-Vs-b36" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="ABx-Uo-VAK"/>
                                     <constraint firstAttribute="bottom" secondItem="nQI-fC-2cm" secondAttribute="bottom" constant="437" id="Uhs-ge-fCc"/>
                                     <constraint firstItem="Vb2-Vs-b36" firstAttribute="top" secondItem="nQI-fC-2cm" secondAttribute="bottom" constant="8" id="gnB-H6-lxd"/>
+                                    <constraint firstItem="nQI-fC-2cm" firstAttribute="width" secondItem="2qh-3s-Abi" secondAttribute="width" id="lBd-sq-fs9"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="XVx-w5-4oB" secondAttribute="centerX" id="q8d-ZA-D0m"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="top" secondItem="FRT-fz-B4R" secondAttribute="bottom" constant="7.5" id="rZ1-D9-CsS"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="top" secondItem="2qh-3s-Abi" secondAttribute="top" constant="8" id="sZq-MM-l9F"/>
-                                    <constraint firstItem="nQI-fC-2cm" firstAttribute="leading" secondItem="XS6-lJ-wRT" secondAttribute="leading" constant="27" id="t7j-UE-Y0L"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="FRT-fz-B4R" secondAttribute="centerX" id="uD3-Ob-6RO"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="zct-4S-Blp"/>
                                 </constraints>
