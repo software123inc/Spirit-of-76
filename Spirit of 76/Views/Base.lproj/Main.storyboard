@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="34z-8S-FCB" userLabel="Signers ViewController" customClass="PersonDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NAO-bj-ak9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-w5-4oB">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-w5-4oB">
+                                <rect key="frame" x="0.0" y="44" width="375" height="707"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRT-fz-B4R">
                                         <rect key="frame" x="141.5" y="8" width="92" height="20.5"/>
@@ -31,23 +31,34 @@
                                             <constraint firstAttribute="height" constant="150" id="i3k-b6-but"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5F-Ts-dUZ" userLabel="Dynamic Text View">
+                                        <rect key="frame" x="0.0" y="194" width="375" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="nVR-TJ-5Gb"/>
+                                        </constraints>
+                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="massachusetts_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-Vs-b36">
-                                        <rect key="frame" x="0.0" y="194" width="375" height="275"/>
+                                        <rect key="frame" x="0.0" y="348" width="375" height="275"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="275" id="2NG-b6-Pya"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="0LB-Ek-37I"/>
                                     <constraint firstItem="Vb2-Vs-b36" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="ABx-Uo-VAK"/>
                                     <constraint firstAttribute="bottom" secondItem="nQI-fC-2cm" secondAttribute="bottom" constant="437" id="Uhs-ge-fCc"/>
-                                    <constraint firstItem="Vb2-Vs-b36" firstAttribute="top" secondItem="nQI-fC-2cm" secondAttribute="bottom" constant="8" id="gnB-H6-lxd"/>
+                                    <constraint firstItem="h5F-Ts-dUZ" firstAttribute="top" secondItem="nQI-fC-2cm" secondAttribute="bottom" constant="8" symbolic="YES" id="diP-wA-Whp"/>
+                                    <constraint firstItem="Vb2-Vs-b36" firstAttribute="top" secondItem="h5F-Ts-dUZ" secondAttribute="bottom" constant="29" id="exj-f2-8e7"/>
+                                    <constraint firstItem="h5F-Ts-dUZ" firstAttribute="width" secondItem="2qh-3s-Abi" secondAttribute="width" id="gif-FA-CcL"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="width" secondItem="2qh-3s-Abi" secondAttribute="width" id="lBd-sq-fs9"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="XVx-w5-4oB" secondAttribute="centerX" id="q8d-ZA-D0m"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="top" secondItem="FRT-fz-B4R" secondAttribute="bottom" constant="7.5" id="rZ1-D9-CsS"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="top" secondItem="2qh-3s-Abi" secondAttribute="top" constant="8" id="sZq-MM-l9F"/>
                                     <constraint firstItem="Vb2-Vs-b36" firstAttribute="width" secondItem="2qh-3s-Abi" secondAttribute="width" id="tw1-O5-HO9"/>
                                     <constraint firstItem="nQI-fC-2cm" firstAttribute="centerX" secondItem="FRT-fz-B4R" secondAttribute="centerX" id="uD3-Ob-6RO"/>
+                                    <constraint firstItem="h5F-Ts-dUZ" firstAttribute="leading" secondItem="nQI-fC-2cm" secondAttribute="leading" id="yzR-5i-AAE"/>
                                     <constraint firstItem="FRT-fz-B4R" firstAttribute="centerX" secondItem="2qh-3s-Abi" secondAttribute="centerX" id="zct-4S-Blp"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="2qh-3s-Abi"/>
@@ -63,6 +74,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wje-3K-Nzr"/>
                     </view>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="personFullName" destination="FRT-fz-B4R" id="fNO-Ep-Z09"/>
                         <outlet property="personImageView" destination="nQI-fC-2cm" id="3JX-6W-Ypu"/>
@@ -71,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYF-9Y-uLM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-1533.2833583208396"/>
+            <point key="canvasLocation" x="140" y="-1533.7331334332835"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Bm-L9-YOr">
