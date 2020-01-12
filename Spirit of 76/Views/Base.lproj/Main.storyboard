@@ -91,7 +91,7 @@
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="personDescriptionTextView" destination="8dV-DT-3ny" id="XUB-u6-oIS"/>
-                        <outlet property="personFullName" destination="FRT-fz-B4R" id="fNO-Ep-Z09"/>
+                        <outlet property="personFullNameLabel" destination="FRT-fz-B4R" id="fNO-Ep-Z09"/>
                         <outlet property="personImageView" destination="nQI-fC-2cm" id="3JX-6W-Ypu"/>
                         <outlet property="residentStateImageView" destination="Vb2-Vs-b36" id="DiB-rd-CYX"/>
                     </connections>

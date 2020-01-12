@@ -11,7 +11,7 @@ import CocoaLumberjackSwift
 
 class PersonDetailViewController: UIViewController {
     
-    @IBOutlet weak var personFullName: UILabel!
+    @IBOutlet weak var personFullNameLabel: UILabel!
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var residentStateImageView: UIImageView!
     @IBOutlet weak var personDescriptionTextView: UITextView!
@@ -40,13 +40,13 @@ class PersonDetailViewController: UIViewController {
         loadViewIfNeeded()
         
         if let person = person {
-            self.personFullName.text = person.fullName
+            self.personFullNameLabel.text = person.fullName
             self.personImageView.image = person.portraitImage
             self.personDescriptionTextView.text = person.descriptiveText
             self.residentStateImageView.image = person.residenceState?.blueImage
         }
         else {
-            self.personFullName.text = "Spirit of '76"
+            self.personFullNameLabel.text = "Spirit of '76"
             self.personImageView.image = UIImage(named: "Fife_and_Drum")
             self.personDescriptionTextView.text = "Learn about the Signers of the Declaration of Independence."
         }
