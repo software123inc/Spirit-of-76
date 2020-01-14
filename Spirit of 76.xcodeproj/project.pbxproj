@@ -15,6 +15,7 @@
 		C761C3A723BA945400C062DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A623BA945400C062DC /* Assets.xcassets */; };
 		C761C3AA23BA945400C062DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3A823BA945400C062DC /* LaunchScreen.storyboard */; };
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
+		C7770A3823CD19AA00485BF2 /* Signers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7770A3623CD19AA00485BF2 /* Signers.storyboard */; };
 		C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */; };
 		C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */; };
 		C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */; };
@@ -45,6 +46,7 @@
 		C761C3A923BA945400C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761C3AB23BA945400C062DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7770A3723CD19AA00485BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Spirit of 76/Views/Base.lproj/Signers.storyboard"; sourceTree = "<group>"; };
 		C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
 		C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Enhanced.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				C761C3A823BA945400C062DC /* LaunchScreen.storyboard */,
 				C761C3B723BABDD500C062DC /* Main.storyboard */,
+				C7770A3923CD1A0100485BF2 /* Sub-Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +142,14 @@
 				C7F8D76123C7F1210095E965 /* State+Enhanced.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C7770A3923CD1A0100485BF2 /* Sub-Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7770A3623CD19AA00485BF2 /* Signers.storyboard */,
+			);
+			path = "Sub-Views";
 			sourceTree = "<group>";
 		};
 		C784E35C23C0179E001CF71D /* Persons */ = {
@@ -261,6 +272,7 @@
 				C7EA7F2B23BAD5AB00E15CDD /* signers.json in Resources */,
 				C7EA7F2A23BAD5AB00E15CDD /* topics.json in Resources */,
 				C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */,
+				C7770A3823CD19AA00485BF2 /* Signers.storyboard in Resources */,
 				C761C3B923BABDD500C062DC /* Main.storyboard in Resources */,
 				C7EA7F2523BAD5AB00E15CDD /* signerEducation.json in Resources */,
 				C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */,
@@ -311,6 +323,14 @@
 				C761C3B823BABDD500C062DC /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7770A3623CD19AA00485BF2 /* Signers.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7770A3723CD19AA00485BF2 /* Base */,
+			);
+			name = Signers.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
