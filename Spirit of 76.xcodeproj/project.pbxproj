@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7101BC623CE7E6300A91407 /* Education+Enhancement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */; };
+		C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC723CE7EE100A91407 /* CardSummary.swift */; };
+		C7101BCA23CE7FFA00A91407 /* CardSummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */; };
+		C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */; };
 		C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C7262E9E23BBCC7700240183 /* SwiftyJSON */; };
 		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Education+Enhancement.swift"; sourceTree = "<group>"; };
+		C7101BC723CE7EE100A91407 /* CardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSummary.swift; path = "Spirit of 76/CardSummary.swift"; sourceTree = SOURCE_ROOT; };
+		C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryStackViewController.swift; sourceTree = "<group>"; };
+		C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryContentViewController.swift; sourceTree = "<group>"; };
 		C73B199A23BAC65E0047EA7C /* Spirit of 76.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spirit of 76.entitlements"; sourceTree = "<group>"; };
 		C761C39523BA945200C062DC /* Spirit of 76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spirit of 76.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761C39823BA945200C062DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +137,8 @@
 			children = (
 				C784E35C23C0179E001CF71D /* Persons */,
 				C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */,
+				C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */,
+				C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +150,7 @@
 				C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */,
 				C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */,
 				C7F8D76123C7F1210095E965 /* State+Enhanced.swift */,
+				C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 		C7EA7F3823BADC3300E15CDD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C7101BC723CE7EE100A91407 /* CardSummary.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -295,6 +307,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */,
+				C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */,
+				C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */,
 				C7F8D76223C7F1210095E965 /* State+Enhanced.swift in Sources */,
 				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
@@ -302,7 +316,9 @@
 				C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */,
 				C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */,
 				C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */,
+				C7101BCA23CE7FFA00A91407 /* CardSummaryStackViewController.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
+				C7101BC623CE7E6300A91407 /* Education+Enhancement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

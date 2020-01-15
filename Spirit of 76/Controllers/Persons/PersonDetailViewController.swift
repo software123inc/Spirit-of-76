@@ -17,6 +17,8 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var personDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleViewLabel: UILabel?
+    @IBOutlet weak var educationContainerView: UIView!
+    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
     
     let titleViewImageFrame = CGRect.init(x: 0, y: 0, width: 23.5, height: 30)
     var personTitleImageView:UIImageView?
@@ -91,6 +93,10 @@ class PersonDetailViewController: UIViewController {
         
         personTitleImageView?.alpha = isScrolled ? 1 : 0
         libertyBell.alpha = isScrolled ? 0 : 1
+    }
+    
+    fileprivate func hideEducationContainerView() {
+        educationContainerHeightConstraint.constant = 0
     }
 }
 
