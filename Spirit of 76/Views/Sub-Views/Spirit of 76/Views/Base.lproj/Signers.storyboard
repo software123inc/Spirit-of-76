@@ -246,7 +246,7 @@
                                                     <constraint firstAttribute="height" constant="180" id="aHz-rC-Bno"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="5i7-uE-OZ7" kind="embed" identifier="addCardSummaryContent1" id="5TQ-FQ-wtI"/>
+                                                    <segue destination="5i7-uE-OZ7" kind="embed" identifier="addCardSummaryContent" id="5TQ-FQ-wtI"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>

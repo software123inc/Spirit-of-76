@@ -20,10 +20,13 @@ class CardSummaryStackViewController: UIViewController {
         super.viewDidLoad()
         
         appendCardSummaryViewController()
+        appendCardSummaryViewController()
+        appendCardSummaryViewController()
+        appendCardSummaryViewController()
         
         // Do any additional setup after loading the view.
         if stackView.arrangedSubviews.count > 0, let lastSubview = stackView.arrangedSubviews.last, let firstSubview = stackView.arrangedSubviews.first {
-            DDLogDebug("Multple subviews: \(stackView.arrangedSubviews.count), remove view \(lastSubview.className), first: \(firstSubview.className)")
+            DDLogDebug("Multple subviews: \(stackView.arrangedSubviews.count), last view \(lastSubview.className), first: \(firstSubview.className)")
         }
     }
     
@@ -33,8 +36,6 @@ class CardSummaryStackViewController: UIViewController {
     
     fileprivate func appendCardSummaryViewController() {
         if let cardSummaryVC = signersStoryboard.instantiateViewController(identifier: "CardSummaryContent") as? CardSummaryContentViewController {
-            DDLogDebug("CardSummaryContent: \(cardSummaryVC.className)")
-            
             self.addChild(cardSummaryVC)
             cardSummaryVC.view.translatesAutoresizingMaskIntoConstraints = false
             self.stackView.addArrangedSubview(cardSummaryVC.view)
