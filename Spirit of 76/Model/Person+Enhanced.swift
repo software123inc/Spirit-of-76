@@ -39,4 +39,13 @@ extension Person {
             return UIImage(named: "Avatars/\(self.imageName)")
         }
     }
+    
+    var educationCards:[CardSummary]? {
+        get {
+            if let educations = self.educations {
+                return Array<Any>(educations) as? [CardSummary]
+            }
+            return nil
+        }
+    }
 }

@@ -17,7 +17,7 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var personDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleViewLabel: UILabel?
-//    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
+    //    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var educationViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var educationView: UIView!
     
@@ -37,15 +37,40 @@ class PersonDetailViewController: UIViewController {
         }
     }
     
+    //MARK: - View Life Cycle
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.SegueID.showEducation, let dvc = segue.destination as? CardSummaryStackViewController {
+            self.educationViewController = dvc
+        }
+        else {
+            DDLogWarn("Unhandled segue id '\(String(describing: segue.identifier))'.")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.scrollView.delegate = self
-                
+        
         // Do any additional setup after loading the view.
         if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setNavBarTitleImageToLibertyBell()
+        
+        if let dvc = self.educationViewController, let educationCards = person?.educationCards, educationCards.count > 0 {
+            populateCardViewStack(dvc, summaries: educationCards)
+        }
+        else {
+            hideEducationView()
+        }
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,39 +78,9 @@ class PersonDetailViewController: UIViewController {
         refreshUI()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let dvc = self.educationViewController {
-            if let educations = person?.educations, let cardSummaries = Array(educations) as? [CardSummary] {
-                dvc.cardSummaries = cardSummaries
-            }
-            else {
-                DDLogWarn("No education.")
-                hideEducationView()
-            }
-        }
-        
-        setNavBarTitleImageToLibertyBell()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.SegueID.showEducation, let dvc = segue.destination as? CardSummaryStackViewController {
-            self.educationViewController = dvc
-            
-            DDLogVerbose("Matched segue ID and VC.")
-            if let educations = person?.educations {
-                let cardSummaries = Array(educations) as? [CardSummary]
-                DDLogVerbose("Assigning card summaries.")
-                dvc.cardSummaries = cardSummaries
-            }
-            else {
-                DDLogWarn("No education.")
-            }
-        }
-        else {
-            DDLogWarn("Unhandled segue id '\(String(describing: segue.identifier))'.")
-        }
+    private func populateCardViewStack(_ viewController:CardSummaryStackViewController, summaries:[CardSummary]) {
+        DDLogVerbose("Sending \(summaries.count) card summaries.")
+        viewController.cardSummaries = summaries
     }
     
     private func refreshUI() {

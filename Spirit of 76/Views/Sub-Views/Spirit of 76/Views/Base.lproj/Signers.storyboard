@@ -61,13 +61,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-S5-1Qo" userLabel="Education View">
                                         <rect key="frame" x="0.0" y="568.5" width="375" height="212"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAa-mW-r3k" userLabel="Education Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAa-mW-r3k" userLabel="Heading Label">
                                                 <rect key="frame" x="8" y="0.0" width="95" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-jA-j12" userLabel="Education Cards Container View">
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-jA-j12" userLabel="Cards Container View">
                                                 <rect key="frame" x="0.0" y="32" width="375" height="180"/>
                                                 <connections>
                                                     <segue destination="b2m-KP-O46" kind="embed" identifier="showEducation" id="aVd-nw-OXv"/>
@@ -243,11 +243,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-4x-oqj">
-                                <rect key="frame" x="20" y="0.0" width="380" height="180"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWn-4x-oqj">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="x6e-a6-jIo">
-                                        <rect key="frame" x="20" y="0.0" width="350" height="180"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x6e-a6-jIo">
+                                        <rect key="frame" x="10" y="0.0" width="350" height="180"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUg-d3-1tY" userLabel="Card Summary Content View 1">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
@@ -264,9 +264,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="x6e-a6-jIo" firstAttribute="top" secondItem="qWn-4x-oqj" secondAttribute="top" id="gVX-PV-BYp"/>
-                                    <constraint firstItem="x6e-a6-jIo" firstAttribute="leading" secondItem="qWn-4x-oqj" secondAttribute="leading" constant="20" id="obC-7N-vHS"/>
+                                    <constraint firstItem="x6e-a6-jIo" firstAttribute="leading" secondItem="qWn-4x-oqj" secondAttribute="leading" constant="10" id="obC-7N-vHS"/>
                                     <constraint firstAttribute="bottom" secondItem="x6e-a6-jIo" secondAttribute="bottom" id="tpe-ec-lZ6"/>
-                                    <constraint firstAttribute="trailing" secondItem="x6e-a6-jIo" secondAttribute="trailing" constant="20" id="wXh-8B-PXP"/>
+                                    <constraint firstAttribute="trailing" secondItem="x6e-a6-jIo" secondAttribute="trailing" constant="10" id="wXh-8B-PXP"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="1FX-dE-MZp"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jwM-7i-SYO"/>
@@ -274,7 +274,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qWn-4x-oqj" firstAttribute="leading" secondItem="3wH-9K-Fse" secondAttribute="leading" constant="20" symbolic="YES" id="W4m-3H-90M"/>
+                            <constraint firstItem="qWn-4x-oqj" firstAttribute="leading" secondItem="3wH-9K-Fse" secondAttribute="leading" id="W4m-3H-90M"/>
                             <constraint firstAttribute="trailing" secondItem="qWn-4x-oqj" secondAttribute="trailing" id="bhg-Hq-Tnl"/>
                             <constraint firstAttribute="bottom" secondItem="qWn-4x-oqj" secondAttribute="bottom" id="dog-Ng-4VI"/>
                             <constraint firstItem="qWn-4x-oqj" firstAttribute="top" secondItem="3wH-9K-Fse" secondAttribute="top" id="mMM-Zd-FQY"/>
