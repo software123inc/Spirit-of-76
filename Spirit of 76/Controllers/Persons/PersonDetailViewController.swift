@@ -131,12 +131,6 @@ class PersonDetailViewController: UIViewController {
     }
 }
 
-extension PersonDetailViewController: PersonSelectionDelegate {
-    func personSelected(_ newPerson: Person) {
-        self.person = newPerson
-    }
-}
-
 extension PersonDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if self.personTitleImageView != nil {

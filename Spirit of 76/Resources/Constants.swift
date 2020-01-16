@@ -16,6 +16,7 @@ struct K {
     }
     
     struct SegueID {
+        static let showPersonDetail = "showPersonDetail"
         static let showEducation = "showEducation"
         static let addCardSummaryContent = "addCardSummaryContent"
     }

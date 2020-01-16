@@ -9,18 +9,13 @@
 import UIKit
 import CoreData
 import CocoaLumberjackSwift
+import S123Common
 
 enum SectionType {
     case main
 }
 
-protocol PersonSelectionDelegate: class {
-  func personSelected(_ newPerson: Person)
-}
-
-class PersonsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate  {
-    weak var delegate: PersonSelectionDelegate?
-    
+class PersonsTableViewController: UITableViewController  {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -37,6 +32,8 @@ class PersonsTableViewController: UITableViewController, NSFetchedResultsControl
         return cell
     }
     
+    //MARK: - VIEW LIFE CYCLE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -51,7 +48,24 @@ class PersonsTableViewController: UITableViewController, NSFetchedResultsControl
         updateSnapshot(animated: false)
     }
     
-    func loadModel() {
+    //MARK: - NAVIGATION
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.SegueID.showPersonDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? PersonDetailViewController {
+            DDLogDebug("DVC = \(dvc.className)")
+            
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let personItem = diffableDataSource.itemIdentifier(for: indexPath) {
+                dvc.person = personItem
+            }
+        }
+        else {
+            DDLogWarn("unhandled segue id: \(String(describing: segue.identifier))")
+        }
+    }
+    
+    //MARK: - DATA MANAGEMENT
+    
+    private func loadModel() {
         let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
         let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
         let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
@@ -70,45 +84,18 @@ class PersonsTableViewController: UITableViewController, NSFetchedResultsControl
         }
     }
     
-    func updateSnapshot(animated: Bool = true) {
+    private func updateSnapshot(animated: Bool = true) {
             var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
             diffableDataSourceSnapshot.appendSections([.main])
             diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
             self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
     }
-    
-    //MARK: - NSFetchedResultsControllerDelegate
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot()
-    }
 }
 
-// MARK: - UITableViewDelegate methods
+//MARK: - NSFetchedResultsControllerDelegate
 
-extension PersonsTableViewController {
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let personItem = diffableDataSource.itemIdentifier(for: indexPath) {
-            if let delegate = delegate {
-                delegate.personSelected(personItem)
-
-                if let detailViewController = delegate as? PersonDetailViewController {
-                    if let splitViewController = splitViewController {
-                        splitViewController.showDetailViewController(detailViewController, sender: self)
-                    }
-                    else {
-                        DDLogDebug("Can't determine splitViewController.")
-                    }
-                }
-                else {
-                    DDLogDebug("Can't determine detailViewController.")
-                }
-            }
-            else {
-                DDLogDebug("Can't determine delegate.")
-            }
-        }
-        else {
-            DDLogDebug("Can't determine selected Person.")
-        }
+extension PersonsTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        updateSnapshot()
     }
 }

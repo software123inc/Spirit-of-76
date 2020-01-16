@@ -17,7 +17,6 @@ class PrimaryTabBarViewController: UITabBarController {
         
         self.delegate = self
         // Do any additional setup after loading the view.
-        configureInitialViewController()
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -34,29 +33,6 @@ class PrimaryTabBarViewController: UITabBarController {
             return .all
             
 //            return UIDevice.current.userInterfaceIdiom == .phone ? .portrait : .all //OBS -> You can also return an array
-        }
-    }
-    
-    /*
-     * When the app first loads, the initial view controller needs to
-     * be able to set it's delegate to properly pass a Person object
-     * selected in the table view to the Detail View Controller.
-     */
-    private func configureInitialViewController() {
-        if let svc = self.viewControllers?.first as? UISplitViewController {
-            DDLogVerbose("Found the split view!!")
-            if let masterNavVC = svc.viewControllers.first as? UINavigationController {
-                DDLogVerbose("Found the master Nav view!!")
-                
-                if let masterVc = masterNavVC.topViewController as? PersonsTableViewController {
-                    DDLogVerbose("Found the master view!!")
-
-                    if let detailVC = svc.viewControllers[1] as? PersonDetailViewController {
-                        DDLogVerbose("Found the detail view!!")
-                        masterVc.delegate = detailVC
-                    }
-                }
-            }
         }
     }
 }
