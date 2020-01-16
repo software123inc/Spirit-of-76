@@ -20,6 +20,8 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var educationContainerView: UIView!
     @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
     
+    weak var educationViewController:CardSummaryStackViewController?
+    
     let titleViewImageFrame = CGRect.init(x: 0, y: 0, width: 23.5, height: 30)
     var personTitleImageView:UIImageView?
     let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
@@ -52,11 +54,40 @@ class PersonDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        if let dvc = self.educationViewController {
+            DDLogDebug("I have an Ed VC")
+            
+            if let educations = person?.educations, let cardSummaries = Array(educations) as? [CardSummary] {
+                
+                DDLogDebug("Assigning card summaries.")
+                dvc.cardSummaries = cardSummaries
+            }
+            else {
+                DDLogWarn("No education.")
+            }
+        }
+        
         setNavBarTitleImageToLibertyBell()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        DDLogDebug("prepare segue '\(String(describing: segue.identifier))'.")
+        if segue.identifier == K.SegueID.showEducation, let dvc = segue.destination as? CardSummaryStackViewController {
+            self.educationViewController = dvc
+            
+            DDLogDebug("Matched segue ID and VC.")
+            if let educations = person?.educations {
+                let cardSummaries = Array(educations) as? [CardSummary]
+                DDLogDebug("Assigning card summaries.")
+                dvc.cardSummaries = cardSummaries
+            }
+            else {
+                DDLogWarn("No education.")
+            }
+        }
+        else {
+            DDLogDebug("unhandled segue id '\(String(describing: segue.identifier))'.")
+        }
     }
     
     private func refreshUI() {
