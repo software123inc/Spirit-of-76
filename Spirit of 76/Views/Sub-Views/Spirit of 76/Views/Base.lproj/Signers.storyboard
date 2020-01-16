@@ -131,7 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wje-3K-Nzr"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6aS-Ng-F6t"/>
+                    <navigationItem key="navigationItem" id="ylR-HS-oua"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
