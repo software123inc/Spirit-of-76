@@ -26,12 +26,17 @@ class CardSummaryStackViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         if stackView.arrangedSubviews.count > 0, let lastSubview = stackView.arrangedSubviews.last, let firstSubview = stackView.arrangedSubviews.first {
-            DDLogDebug("Multple subviews: \(stackView.arrangedSubviews.count), last view \(lastSubview.className), first: \(firstSubview.className)")
+            DDLogVerbose("Multple subviews: \(stackView.arrangedSubviews.count), last view \(lastSubview.className), first: \(firstSubview.className)")
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        DDLogInfo("Segue Identifier: \(segue.identifier ?? "Unidentified segue.")")
+        if segue.identifier == K.SegueID.addCardSummaryContent {
+            //no-op
+        }
+        else {
+            DDLogWarn("Unhandled Segue ID: \(segue.identifier ?? "Unidentified segue.")")
+        }
     }
     
     fileprivate func appendCardSummaryViewController() {

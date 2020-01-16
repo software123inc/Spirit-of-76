@@ -52,7 +52,7 @@ class PersonsTableViewController: UITableViewController  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == K.SegueID.showPersonDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? PersonDetailViewController {
-            DDLogDebug("DVC = \(dvc.className)")
+            DDLogVerbose("DVC = \(dvc.className)")
             
             if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let personItem = diffableDataSource.itemIdentifier(for: indexPath) {
                 dvc.person = personItem

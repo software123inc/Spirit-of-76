@@ -17,8 +17,9 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var personDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleViewLabel: UILabel?
-    @IBOutlet weak var educationContainerView: UIView!
-    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
+//    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var educationViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var educationView: UIView!
     
     weak var educationViewController:CardSummaryStackViewController?
     
@@ -56,15 +57,12 @@ class PersonDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let dvc = self.educationViewController {
-            DDLogDebug("I have an Ed VC")
-            
             if let educations = person?.educations, let cardSummaries = Array(educations) as? [CardSummary] {
-                
-                DDLogDebug("Assigning card summaries.")
                 dvc.cardSummaries = cardSummaries
             }
             else {
                 DDLogWarn("No education.")
+                hideEducationView()
             }
         }
         
@@ -75,10 +73,10 @@ class PersonDetailViewController: UIViewController {
         if segue.identifier == K.SegueID.showEducation, let dvc = segue.destination as? CardSummaryStackViewController {
             self.educationViewController = dvc
             
-            DDLogDebug("Matched segue ID and VC.")
+            DDLogVerbose("Matched segue ID and VC.")
             if let educations = person?.educations {
                 let cardSummaries = Array(educations) as? [CardSummary]
-                DDLogDebug("Assigning card summaries.")
+                DDLogVerbose("Assigning card summaries.")
                 dvc.cardSummaries = cardSummaries
             }
             else {
@@ -86,7 +84,7 @@ class PersonDetailViewController: UIViewController {
             }
         }
         else {
-            DDLogDebug("unhandled segue id '\(String(describing: segue.identifier))'.")
+            DDLogWarn("Unhandled segue id '\(String(describing: segue.identifier))'.")
         }
     }
     
@@ -126,8 +124,12 @@ class PersonDetailViewController: UIViewController {
         libertyBell.alpha = isScrolled ? 0 : 1
     }
     
-    fileprivate func hideEducationContainerView() {
-        educationContainerHeightConstraint.constant = 0
+    fileprivate func hideEducationView() {
+        educationViewHeightConstraint.constant = 0
+        
+        for view in educationView.subviews {
+            view.removeFromSuperview()
+        }
     }
 }
 
