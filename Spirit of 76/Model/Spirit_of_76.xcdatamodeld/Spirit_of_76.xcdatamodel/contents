@@ -25,6 +25,7 @@
         <attribute name="asOfDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="endYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="img_portrait" optional="YES" attributeType="String"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
@@ -112,7 +113,7 @@
         <element name="City" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="Country" positionX="-54" positionY="18" width="128" height="103"/>
         <element name="Education" positionX="-9" positionY="90" width="128" height="118"/>
-        <element name="Event" positionX="-36" positionY="36" width="128" height="193"/>
+        <element name="Event" positionX="-36" positionY="36" width="128" height="208"/>
         <element name="Fact" positionX="0" positionY="99" width="128" height="133"/>
         <element name="Person" positionX="18" positionY="117" width="128" height="418"/>
         <element name="Profession" positionX="9" positionY="108" width="128" height="133"/>

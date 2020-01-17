@@ -153,7 +153,7 @@ class PersonDetailViewController: UIViewController {
             let fullName = "Spirit of '76"
             self.personFullNameLabel.text = fullName
             self.personImageView.image = UIImage(named: "Fife_and_Drum")
-            self.personDescriptionTextView.text = "Learn about the Signers of the Declaration of Independence."
+            self.personDescriptionTextView.text = "Learn about the Signers of America's Founding Documents."
         }
         
         showStar()
