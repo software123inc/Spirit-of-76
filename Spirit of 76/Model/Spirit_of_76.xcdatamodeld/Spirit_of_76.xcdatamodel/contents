@@ -15,6 +15,7 @@
         <relationship name="birthPersons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="birthCountry" inverseEntity="Person"/>
     </entity>
     <entity name="Education" representedClassName="Education" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="notes" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
@@ -24,6 +25,7 @@
         <attribute name="asOfDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="endYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
@@ -32,6 +34,7 @@
         <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Fact" representedClassName="Fact" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="notes" attributeType="String"/>
         <attribute name="synopsis" optional="YES" attributeType="String"/>
@@ -43,6 +46,7 @@
         <attribute name="dateOfDeath" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="descriptiveText" optional="YES" attributeType="String"/>
         <attribute name="firstName" attributeType="String"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="lastName" attributeType="String"/>
         <attribute name="middleName" optional="YES" attributeType="String"/>
@@ -65,6 +69,7 @@
         <relationship name="writings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Writing" inverseName="persons" inverseEntity="Writing"/>
     </entity>
     <entity name="Profession" representedClassName="Profession" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="notes" attributeType="String"/>
         <attribute name="synopsis" optional="YES" attributeType="String"/>
@@ -72,6 +77,7 @@
         <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="professions" inverseEntity="Person"/>
     </entity>
     <entity name="Quote" representedClassName="Quote" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="quotation" optional="YES" attributeType="String"/>
         <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="quotes" inverseEntity="Person"/>
@@ -86,6 +92,7 @@
         <relationship name="residentPersons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Person" inverseName="residenceState" inverseEntity="Person"/>
     </entity>
     <entity name="Topic" representedClassName="Topic" syncable="YES" codeGenerationType="class">
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <attribute name="synopsis" optional="YES" attributeType="String"/>
@@ -93,6 +100,7 @@
     </entity>
     <entity name="Writing" representedClassName="Writing" syncable="YES" codeGenerationType="class">
         <attribute name="amazonLink" optional="YES" attributeType="String"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="notes" attributeType="String"/>
         <attribute name="release_status" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -103,14 +111,14 @@
     <elements>
         <element name="City" positionX="-63" positionY="-18" width="128" height="133"/>
         <element name="Country" positionX="-54" positionY="18" width="128" height="103"/>
-        <element name="Education" positionX="-9" positionY="90" width="128" height="103"/>
-        <element name="Event" positionX="-36" positionY="36" width="128" height="178"/>
-        <element name="Fact" positionX="0" positionY="99" width="128" height="118"/>
-        <element name="Person" positionX="18" positionY="117" width="128" height="403"/>
-        <element name="Profession" positionX="9" positionY="108" width="128" height="118"/>
-        <element name="Quote" positionX="-18" positionY="99" width="128" height="88"/>
+        <element name="Education" positionX="-9" positionY="90" width="128" height="118"/>
+        <element name="Event" positionX="-36" positionY="36" width="128" height="193"/>
+        <element name="Fact" positionX="0" positionY="99" width="128" height="133"/>
+        <element name="Person" positionX="18" positionY="117" width="128" height="418"/>
+        <element name="Profession" positionX="9" positionY="108" width="128" height="133"/>
+        <element name="Quote" positionX="-18" positionY="99" width="128" height="103"/>
         <element name="State" positionX="0" positionY="108" width="128" height="148"/>
-        <element name="Topic" positionX="18" positionY="117" width="128" height="103"/>
-        <element name="Writing" positionX="36" positionY="126" width="128" height="148"/>
+        <element name="Topic" positionX="18" positionY="117" width="128" height="118"/>
+        <element name="Writing" positionX="36" positionY="126" width="128" height="163"/>
     </elements>
 </model>

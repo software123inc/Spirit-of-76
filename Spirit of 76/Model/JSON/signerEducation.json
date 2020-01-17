@@ -58,7 +58,7 @@
             "jsonId":10,
             "signerId":103,
             "title":"Self Education",
-            "notes":"Mr. Sherman's early education was exceedingly limited, but with a naturally strong and active mind, he acquired a large stock of knowledge from books, during his apprenticeship. It is said that while at work on his bench, he had a book so placed that he could read when it was not necessary for his eyes to be upon his work. He thus acquired a good knowledge of mathematics, and he made astronomical calculations for an almanac that was published in New York when he was only twenty-seven years old.</div><br />\n<div>Not long after he settled in New Milford, he formed a partnership with his brother in a mercantile business, but all the while was very studious. He turned his attention to the study of law, during his leisure hours; and so proficient did he become in legal knowledge, that he was admitted to the bar in December 1754. Mr. Sherman had no instructor or guide in the study of law, neither had he any books but such as he borrowed, yet he became one of the most profound jurists of his day."
+            "notes":"Mr. Sherman's early education was exceedingly limited, but with a naturally strong and active mind, he acquired a large stock of knowledge from books, during his apprenticeship. It is said that while at work on his bench, he had a book so placed that he could read when it was not necessary for his eyes to be upon his work. He thus acquired a good knowledge of mathematics, and he made astronomical calculations for an almanac that was published in New York when he was only twenty-seven years old.\n\nNot long after he settled in New Milford, he formed a partnership with his brother in a mercantile business, but all the while was very studious. He turned his attention to the study of law, during his leisure hours; and so proficient did he become in legal knowledge, that he was admitted to the bar in December 1754. Mr. Sherman had no instructor or guide in the study of law, neither had he any books but such as he borrowed, yet he became one of the most profound jurists of his day."
         },
         {
             "jsonId":11,
@@ -70,7 +70,7 @@
             "jsonId":12,
             "signerId":81,
             "title":"Basic Education",
-            "notes":"His father was an industrious farmer, and the only education he was able to allow his son was that to be derived from the common schools in his neighborhood. Samuel was very studious, and the active energies of his mind surmounted many obstacles that stood in the way of intellectual advancement.</div><br />\n<div>He acquired a tolerable knowledge of the Latin language, and at the age of twenty-two years he commenced the study of law. Like Sherman, he was obliged to pursue it with borrowed books and without an instructor. He succeeded however, in mastering its difficulties, and in obtaining a good practice in his native town before he was thirty years of age."
+            "notes":"His father was an industrious farmer, and the only education he was able to allow his son was that to be derived from the common schools in his neighborhood. Samuel was very studious, and the active energies of his mind surmounted many obstacles that stood in the way of intellectual advancement.\n\nHe acquired a tolerable knowledge of the Latin language, and at the age of twenty-two years he commenced the study of law. Like Sherman, he was obliged to pursue it with borrowed books and without an instructor. He succeeded however, in mastering its difficulties, and in obtaining a good practice in his native town before he was thirty years of age."
         },
         {
             "jsonId":13,
@@ -136,7 +136,7 @@
             "jsonId":23,
             "signerId":92,
             "title":"Tutelage",
-            "notes":"Mr. Morris was placed in a school at Philadelphia, but the deficiencies of his teacher allowed him but slight advantage in the obtainment of knowledge. On being chided by his father for his tardiness in learning, he remarked, \"Why, sir, I have learned all that he could teach me.\""
+            "notes":"Mr. Morris was placed in a school at Philadelphia, but the deficiencies of his teacher allowed him but slight advantage in the obtainment of knowledge. On being chided by his father for his tardiness in learning, he remarked, 'Why, sir, I have learned all that he could teach me.'"
         },
         {
             "jsonId":24,
@@ -154,7 +154,7 @@
             "jsonId":26,
             "signerId":101,
             "title":"Medical Studies",
-            "notes":"The study of the law was the voluntary choice of young Rush, but by the advice of Dr. Findlay, he selected the practice of medicine as a profession, and placed himself under the direction of the celebrated Doctor Redman, of Philadelphia. In 1766 he went to England with the view of professional improvement, where he remained two years, attending the lectures at the best hospitals and medical schools in London. In the summer of 1768, he went to Paris, where he added much to his stock of knowledge; and in the autumn of that year he returned to America, bearing the title of \"Doctor of Medicine,\" for which a diploma was conferred at Edinburgh."
+            "notes":"The study of the law was the voluntary choice of young Rush, but by the advice of Dr. Findlay, he selected the practice of medicine as a profession, and placed himself under the direction of the celebrated Doctor Redman, of Philadelphia. In 1766 he went to England with the view of professional improvement, where he remained two years, attending the lectures at the best hospitals and medical schools in London. In the summer of 1768, he went to Paris, where he added much to his stock of knowledge; and in the autumn of that year he returned to America, bearing the title of 'Doctor of Medicine,' for which a diploma was conferred at Edinburgh."
         },
         {
             "jsonId":27,
@@ -202,7 +202,7 @@
             "jsonId":34,
             "signerId":78,
             "title":"Harvard",
-            "notes":"Young William was placed under the charge of Mr. Lovell, then one of the most eminent instructors in the colony of Massachusetts Bay. Having completed his preparatory studies, William was entered a pupil at Harvard University, where he remained a close and industrious student for three years, and in 1760 he graduated with distinguished honors.</div><br />\n<div>His father designed him for the clerical profession, but as he evinced a decided preference for the bar, he was placed as a student in the office of the celebrated James Otis. On the completion of his studies, perceiving that the profession was quite full of practicians [sic] in Massachusetts, he went to North Carolina, where many of his Scotch relations resided, and began business in that province in 1767."
+            "notes":"Young William was placed under the charge of Mr. Lovell, then one of the most eminent instructors in the colony of Massachusetts Bay. Having completed his preparatory studies, William was entered a pupil at Harvard University, where he remained a close and industrious student for three years, and in 1760 he graduated with distinguished honors.\n\nHis father designed him for the clerical profession, but as he evinced a decided preference for the bar, he was placed as a student in the office of the celebrated James Otis. On the completion of his studies, perceiving that the profession was quite full of practicians [sic] in Massachusetts, he went to North Carolina, where many of his Scotch relations resided, and began business in that province in 1767."
         },
         {
             "jsonId":35,
@@ -220,7 +220,7 @@
             "jsonId":37,
             "signerId":83,
             "title":"Studying Abroad",
-            "notes":"According to the fashion of the time in the \"Old Dominion,\" his father sent him to England, at an early age to be educated. He was placed in a school at Wakefield, in Yorkshire, where he soon became marked as a thoughtful and industrious student. Ancient history, especially that part which treats of the republics of the old world, engaged his close attention; and he read with avidity, every scrap of history of that character, which fell in his way. Thus he was early indoctrinated with the ideas of republicanism, and before the season of adolescence had passed, he was warmly attached to those principles of civil liberty, which he afterward so manfully contended for."
+            "notes":"According to the fashion of the time in the 'Old Dominion,' his father sent him to England, at an early age to be educated. He was placed in a school at Wakefield, in Yorkshire, where he soon became marked as a thoughtful and industrious student. Ancient history, especially that part which treats of the republics of the old world, engaged his close attention; and he read with avidity, every scrap of history of that character, which fell in his way. Thus he was early indoctrinated with the ideas of republicanism, and before the season of adolescence had passed, he was warmly attached to those principles of civil liberty, which he afterward so manfully contended for."
         },
         {
             "jsonId":38,
@@ -238,7 +238,7 @@
             "jsonId":40,
             "signerId":90,
             "title":"Cambridge University",
-            "notes":"Arthur Middleton was born at Middleton Place, the residence of his father, in South Carolina, in 1743. His father, Henry Middleton, was of English descent, and a wealthy planter, and he gave his son every opportunity for mental and moral culture which the Province afforded, until he arrived at a proper age to be sent to England for a thorough education. This was a prevailing custom among the men of wealth in the southern provinces, previous to the Revolution, and their sons consequently became political and social leaders, on account of their superior education.</div><br />\n<div> Arthur was sent to England, when he was about twelve years of age, and was placed in a school at Hackney (Several of the Southern members of Congress received their education at this school, preparatory to their entering the college at Cambridge.). At fourteen he was transferred to a school in Westminster, where he remained four years, and then entered the University at Cambridge. While there, he shunned the society of the frivolent [sic] and dissipated, and became a very close and thoughtful student. He remained at Cambridge four years, and at the age of twenty-two, he graduated with distinguished honors. He carried with him, from that institution, the sincere respect and esteem of professors and students."
+            "notes":"Arthur Middleton was born at Middleton Place, the residence of his father, in South Carolina, in 1743. His father, Henry Middleton, was of English descent, and a wealthy planter, and he gave his son every opportunity for mental and moral culture which the Province afforded, until he arrived at a proper age to be sent to England for a thorough education. This was a prevailing custom among the men of wealth in the southern provinces, previous to the Revolution, and their sons consequently became political and social leaders, on account of their superior education.\n\n Arthur was sent to England, when he was about twelve years of age, and was placed in a school at Hackney (Several of the Southern members of Congress received their education at this school, preparatory to their entering the college at Cambridge.). At fourteen he was transferred to a school in Westminster, where he remained four years, and then entered the University at Cambridge. While there, he shunned the society of the frivolent [sic] and dissipated, and became a very close and thoughtful student. He remained at Cambridge four years, and at the age of twenty-two, he graduated with distinguished honors. He carried with him, from that institution, the sincere respect and esteem of professors and students."
         },
         {
             "jsonId":41,

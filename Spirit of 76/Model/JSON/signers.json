@@ -16,7 +16,7 @@
             "placeOfDeath":"Mount Vernon, VA",
             "signerDOI":false,
             "signerUSC":true,
-            "release_status":false,
+            "release_status":true,
         },
         {
             "jsonId":2,

@@ -393,6 +393,7 @@
                             <constraint firstItem="qWn-4x-oqj" firstAttribute="top" secondItem="3wH-9K-Fse" secondAttribute="top" id="mMM-Zd-FQY"/>
                             <constraint firstItem="x6e-a6-jIo" firstAttribute="height" secondItem="3wH-9K-Fse" secondAttribute="height" id="y88-cP-fmD"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="001-h0-Pag"/>
                     </view>
                     <connections>
                         <outlet property="pageControl" destination="88l-ha-Gv4" id="X95-UH-vAO"/>
@@ -451,6 +452,7 @@
                             <constraint firstItem="lHb-xk-UkR" firstAttribute="baseline" secondItem="Ti8-Jd-ggP" secondAttribute="baseline" constant="4" id="nkx-os-TWc"/>
                             <constraint firstAttribute="trailing" secondItem="sCj-RL-ocM" secondAttribute="trailingMargin" constant="16" id="zeU-5t-uer"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="4ja-dO-SzS"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Y17-y7-ndb"/>

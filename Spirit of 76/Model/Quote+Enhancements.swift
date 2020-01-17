@@ -11,6 +11,9 @@ import CoreData
 
 extension Quote: CardSummary {
     var cardTitle: String {
+        if let prefix = self.quotation?.prefix(19) {
+            return "\(prefix)…"
+        }
         return " "
     }
     
