@@ -350,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-RL-ocM">
-                                <rect key="frame" x="0.0" y="29" width="350" height="111"/>
+                                <rect key="frame" x="0.0" y="29" width="350" height="99"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -366,10 +366,9 @@
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Ti8-Jd-ggP" secondAttribute="trailing" constant="250" id="QUG-Z9-Q4I"/>
                             <constraint firstItem="sCj-RL-ocM" firstAttribute="width" secondItem="6o9-Tr-rzf" secondAttribute="width" id="Y17-y7-ndb"/>
                             <constraint firstItem="sCj-RL-ocM" firstAttribute="leading" secondItem="6o9-Tr-rzf" secondAttribute="leading" id="YfD-Mm-atp"/>
-                            <constraint firstAttribute="bottom" secondItem="sCj-RL-ocM" secondAttribute="bottom" constant="40" id="b1m-SL-9Rt"/>
+                            <constraint firstAttribute="bottom" secondItem="sCj-RL-ocM" secondAttribute="bottom" constant="52" id="b1m-SL-9Rt"/>
                             <constraint firstAttribute="trailing" secondItem="sCj-RL-ocM" secondAttribute="trailing" id="zeU-5t-uer"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="aaM-x6-8lc"/>
                     </view>
                     <size key="freeformSize" width="350" height="180"/>
                     <connections>

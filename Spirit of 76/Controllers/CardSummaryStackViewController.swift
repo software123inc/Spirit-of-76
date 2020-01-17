@@ -14,6 +14,7 @@ class CardSummaryStackViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    let horizontalSizeClass = UIScreen.main.traitCollection.horizontalSizeClass
     let signersStoryboard = UIStoryboard.init(name: "Signers", bundle: nil)
     var cardSummaries: [CardSummary]?
     
@@ -37,37 +38,39 @@ class CardSummaryStackViewController: UIViewController {
         
         removeViewFromStack(firstSubview)
         
-        DDLogVerbose("I have \(cardSummaries.count) EDU records.")
-        
         for summary in cardSummaries {
             let cardSummaryVC = appendCardSummaryViewController()
             cardSummaryVC?.titleLabel.text = summary.cardTitle
             cardSummaryVC?.detailTextView.text = summary.cardDetailText
         }
         
-        if UIScreen.main.traitCollection.horizontalSizeClass == .regular {
+        if horizontalSizeClass == .regular {
             let fillerSize = 3 - (cardSummaries.count % 3)
             
             for _ in 1...fillerSize {
                 let cardSummaryVC = appendCardSummaryViewController()
-                cardSummaryVC?.view?.backgroundColor = .clear
-                cardSummaryVC?.titleLabel.text = ""
-                cardSummaryVC?.titleLabel.backgroundColor = .clear
-                cardSummaryVC?.detailTextView.text = ""
-                cardSummaryVC?.detailTextView.backgroundColor = .clear
+                makeCardSummaryInvisible(cardSummaryVC)
             }
         }
     }
     
+    private func makeCardSummaryInvisible(_ cardSummaryVC:CardSummaryContentViewController?) {
+        cardSummaryVC?.view?.backgroundColor = .clear
+        cardSummaryVC?.titleLabel.text = ""
+        cardSummaryVC?.titleLabel.backgroundColor = .clear
+        cardSummaryVC?.detailTextView.text = ""
+        cardSummaryVC?.detailTextView.backgroundColor = .clear
+    }
+    
     private func appendCardSummaryViewController() -> CardSummaryContentViewController?  {
-        guard let cardSummaryVC = signersStoryboard.instantiateViewController(identifier: "CardSummaryContent") as? CardSummaryContentViewController else { return nil }
+        guard let cardSummaryVC = signersStoryboard.instantiateViewController(identifier: K.ViewControllerID.cardSummaryContent) as? CardSummaryContentViewController else { return nil }
         
         self.addChild(cardSummaryVC)
         cardSummaryVC.view.translatesAutoresizingMaskIntoConstraints = false
         self.stackView.addArrangedSubview(cardSummaryVC.view)
         self.stackView.addSubview(cardSummaryVC.view)
         
-        switch(UIScreen.main.traitCollection.horizontalSizeClass) {
+        switch(horizontalSizeClass) {
             case .compact:
                 pageControl.numberOfPages = cardSummaries?.count ?? 0
                 NSLayoutConstraint.activate([

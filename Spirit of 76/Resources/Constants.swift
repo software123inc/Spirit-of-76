@@ -21,4 +21,8 @@ struct K {
         static let showFacts = "showFacts"
         static let addCardSummaryContent = "addCardSummaryContent"
     }
+    
+    struct ViewControllerID {
+        static let cardSummaryContent = "CardSummaryContent"
+    }
 }
