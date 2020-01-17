@@ -88,6 +88,6 @@ class TopicsTableViewController: UITableViewController {
 
 extension TopicsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: true)
+        updateSnapshot(animated: false)
     }
 }

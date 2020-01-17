@@ -30,7 +30,7 @@
         <attribute name="jsonId" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
-        <attribute name="release_status" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="release_status" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
         <attribute name="synopsis" optional="YES" attributeType="String"/>
         <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>

@@ -15,7 +15,7 @@ extension Topic: CardSummary {
     }
     
     var cardDetailText: String {
-        return self.notes ?? "<No Detail Text>"
+        return self.notes ?? self.synopsis ?? "<No Detail Text>"
     }
     
     var cardIsFavorite: Bool {

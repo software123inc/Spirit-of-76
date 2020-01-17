@@ -94,6 +94,6 @@ class EventsTableViewController: UITableViewController {
 
 extension EventsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: true)
+        updateSnapshot(animated: false)
     }
 }

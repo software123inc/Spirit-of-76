@@ -217,8 +217,8 @@
 		C784E35C23C0179E001CF71D /* Persons */ = {
 			isa = PBXGroup;
 			children = (
-				C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */,
 				C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */,
+				C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */,
 			);
 			path = Persons;
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 		C7B4FC9C23D23A1500D4206D /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				C7B4FC9D23D23A3000D4206D /* EventsTableViewController.swift */,
 				C7A250C523D24A6C00087163 /* EventDetailViewController.swift */,
+				C7B4FC9D23D23A3000D4206D /* EventsTableViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
