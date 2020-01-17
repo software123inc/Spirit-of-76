@@ -28,6 +28,9 @@
 		C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */; };
 		C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */; };
 		C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */; };
+		C7A250C623D24A6C00087163 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A250C523D24A6C00087163 /* EventDetailViewController.swift */; };
+		C7A250C923D2507700087163 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A250C823D2507700087163 /* TopicDetailViewController.swift */; };
+		C7A250CB23D250A500087163 /* TopicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A250CA23D250A500087163 /* TopicsTableViewController.swift */; };
 		C7B4FC8C23D2309E00D4206D /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B4FC8A23D2309E00D4206D /* Events.storyboard */; };
 		C7B4FC8F23D230FB00D4206D /* Topics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B4FC8D23D230FB00D4206D /* Topics.storyboard */; };
 		C7B4FC9223D2313B00D4206D /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B4FC9023D2313A00D4206D /* Favorites.storyboard */; };
@@ -35,6 +38,7 @@
 		C7B4FC9723D2372A00D4206D /* Event+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4FC9623D2372A00D4206D /* Event+Enhancements.swift */; };
 		C7B4FC9923D2389A00D4206D /* Topic+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4FC9823D2389A00D4206D /* Topic+Enhancements.swift */; };
 		C7B4FC9B23D238E300D4206D /* Writing+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4FC9A23D238E300D4206D /* Writing+Enhancements.swift */; };
+		C7B4FC9E23D23A3000D4206D /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B4FC9D23D23A3000D4206D /* EventsTableViewController.swift */; };
 		C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C2D13223BE8E07006802C5 /* JSONHelper.swift */; };
 		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
 		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
@@ -74,6 +78,9 @@
 		C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Enhanced.swift"; sourceTree = "<group>"; };
 		C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarViewController.swift; sourceTree = "<group>"; };
+		C7A250C523D24A6C00087163 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		C7A250C823D2507700087163 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
+		C7A250CA23D250A500087163 /* TopicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewController.swift; sourceTree = "<group>"; };
 		C7B4FC8B23D2309E00D4206D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Spirit of 76/Views/Base.lproj/Events.storyboard"; sourceTree = "<group>"; };
 		C7B4FC8E23D230FB00D4206D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Spirit of 76/Views/Sub-Views/Spirit of 76/Views/Base.lproj/Topics.storyboard"; sourceTree = "<group>"; };
 		C7B4FC9123D2313A00D4206D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Spirit of 76/Views/Base.lproj/Favorites.storyboard"; sourceTree = "<group>"; };
@@ -81,6 +88,7 @@
 		C7B4FC9623D2372A00D4206D /* Event+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Enhancements.swift"; sourceTree = "<group>"; };
 		C7B4FC9823D2389A00D4206D /* Topic+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Topic+Enhancements.swift"; sourceTree = "<group>"; };
 		C7B4FC9A23D238E300D4206D /* Writing+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Writing+Enhancements.swift"; sourceTree = "<group>"; };
+		C7B4FC9D23D23A3000D4206D /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		C7C2D13223BE8E07006802C5 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
 		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
@@ -158,10 +166,12 @@
 		C761C3B223BAAD1A00C062DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C784E35C23C0179E001CF71D /* Persons */,
-				C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */,
-				C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */,
 				C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */,
+				C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */,
+				C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */,
+				C7B4FC9C23D23A1500D4206D /* Events */,
+				C784E35C23C0179E001CF71D /* Persons */,
+				C7A250C723D2505300087163 /* Topics */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +221,24 @@
 				C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */,
 			);
 			path = Persons;
+			sourceTree = "<group>";
+		};
+		C7A250C723D2505300087163 /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				C7A250C823D2507700087163 /* TopicDetailViewController.swift */,
+				C7A250CA23D250A500087163 /* TopicsTableViewController.swift */,
+			);
+			path = Topics;
+			sourceTree = "<group>";
+		};
+		C7B4FC9C23D23A1500D4206D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				C7B4FC9D23D23A3000D4206D /* EventsTableViewController.swift */,
+				C7A250C523D24A6C00087163 /* EventDetailViewController.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		C7EA7F1623BAD58F00E15CDD /* JSON */ = {
@@ -355,12 +383,15 @@
 				C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */,
 				C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */,
 				C75F7CAB23D15D2000657B06 /* Quote+Enhancements.swift in Sources */,
+				C7A250CB23D250A500087163 /* TopicsTableViewController.swift in Sources */,
 				C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */,
 				C77C02C823D12B800082E2B7 /* Fact+Enhancements.swift in Sources */,
 				C75F7CA923D15CE700657B06 /* Profession+Enhancements.swift in Sources */,
 				C7F8D76223C7F1210095E965 /* State+Enhanced.swift in Sources */,
 				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
+				C7B4FC9E23D23A3000D4206D /* EventsTableViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
+				C7A250C923D2507700087163 /* TopicDetailViewController.swift in Sources */,
 				C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */,
 				C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */,
 				C7B4FC9723D2372A00D4206D /* Event+Enhancements.swift in Sources */,
@@ -371,6 +402,7 @@
 				C76AFF6523D0D97700952D21 /* Constants.swift in Sources */,
 				C7B4FC9B23D238E300D4206D /* Writing+Enhancements.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
+				C7A250C623D24A6C00087163 /* EventDetailViewController.swift in Sources */,
 				C7101BC623CE7E6300A91407 /* Education+Enhancement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

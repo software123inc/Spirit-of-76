@@ -17,6 +17,8 @@ struct K {
     
     struct SegueID {
         static let showPersonDetail = "showPersonDetail"
+        static let showEventDetail = "showEventDetail"
+        static let showTopicDetail = "showTopicDetail"
         static let showEducation = "showEducation"
         static let showFacts = "showFacts"
         static let showProfessions = "showProfessions"
@@ -25,7 +27,17 @@ struct K {
         static let moreDetailTextPopover = "moreDetailTextPopover"
     }
     
+    struct TVCIdentifier {
+        static let eventCell = "EventCell"
+        static let personCell = "PersonCell"
+        static let topicCell = "TopicCell"
+    }
+    
     struct ViewControllerID {
         static let cardSummaryContent = "CardSummaryContent"
     }
+}
+
+enum SectionType {
+    case main
 }

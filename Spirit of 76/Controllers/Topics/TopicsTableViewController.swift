@@ -1,8 +1,8 @@
 //
-//  PersonsTableViewController.swift
+//  TopicsTableViewController.swift
 //  Spirit of 76
 //
-//  Created by Tim W. Newton on 1/3/20.
+//  Created by Tim Newton on 1/17/20.
 //  Copyright © 2020 Tim W. Newton. All rights reserved.
 //
 
@@ -11,25 +11,22 @@ import CoreData
 import CocoaLumberjackSwift
 import S123Common
 
-class PersonsTableViewController: UITableViewController  {
+class TopicsTableViewController: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var fetchedResultsController:NSFetchedResultsController<Person>?
+    var fetchedResultsController:NSFetchedResultsController<Topic>?
     
-    lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Person>(tableView: tableView) { (tableView, indexPath, person) -> UITableViewCell? in
+    lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Topic>(tableView: tableView) { (tableView, indexPath, topic) -> UITableViewCell? in
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.personCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.topicCell, for: indexPath)
         
-        cell.textLabel?.text = person.lastFirst
-        cell.detailTextLabel?.text = person.summaryText
-        cell.imageView?.image = person.avatar
+        cell.textLabel?.text = topic.title
+        cell.detailTextLabel?.text = topic.synopsis
         
         return cell
     }
-    
-    //MARK: - VIEW LIFE CYCLE
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,15 +40,14 @@ class PersonsTableViewController: UITableViewController  {
          */
         updateSnapshot()
     }
-    
     //MARK: - NAVIGATION
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.SegueID.showPersonDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? PersonDetailViewController {
+        if segue.identifier == K.SegueID.showTopicDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? TopicDetailViewController {
             DDLogVerbose("DVC = \(dvc.className)")
             
-            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let personItem = diffableDataSource.itemIdentifier(for: indexPath) {
-                dvc.person = personItem
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let currentItem = diffableDataSource.itemIdentifier(for: indexPath) {
+                dvc.topic = currentItem
             }
         }
         else {
@@ -63,11 +59,10 @@ class PersonsTableViewController: UITableViewController  {
     
     private func loadModel() {
         let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
-        let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
-        let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
-        let request: NSFetchRequest<Person> = Person.fetchRequest()
+        let sort1 = NSSortDescriptor(key: "title", ascending: true)
+        let request: NSFetchRequest<Topic> = Topic.fetchRequest()
         
-        request.sortDescriptors = [sortLastName, sortFirstName]
+        request.sortDescriptors = [sort1]
         request.predicate = releasedContentPredicate
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -82,7 +77,7 @@ class PersonsTableViewController: UITableViewController  {
     
     private func updateSnapshot(animated: Bool = false) {
         // The animation default = false to prevent an error when the model updates and the tableView is not visible.
-        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
+        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Topic>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
         self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
@@ -91,7 +86,7 @@ class PersonsTableViewController: UITableViewController  {
 
 //MARK: - NSFetchedResultsControllerDelegate
 
-extension PersonsTableViewController: NSFetchedResultsControllerDelegate {
+extension TopicsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         updateSnapshot(animated: true)
     }
