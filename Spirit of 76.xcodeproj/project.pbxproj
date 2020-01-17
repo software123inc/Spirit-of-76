@@ -13,6 +13,8 @@
 		C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */; };
 		C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C7262E9E23BBCC7700240183 /* SwiftyJSON */; };
 		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
+		C75F7CA923D15CE700657B06 /* Profession+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */; };
+		C75F7CAB23D15D2000657B06 /* Quote+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
 		C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39A23BA945200C062DC /* SceneDelegate.swift */; };
 		C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */; };
@@ -48,6 +50,8 @@
 		C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryStackViewController.swift; sourceTree = "<group>"; };
 		C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryContentViewController.swift; sourceTree = "<group>"; };
 		C73B199A23BAC65E0047EA7C /* Spirit of 76.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spirit of 76.entitlements"; sourceTree = "<group>"; };
+		C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profession+Enhancements.swift"; sourceTree = "<group>"; };
+		C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Enhancements.swift"; sourceTree = "<group>"; };
 		C761C39523BA945200C062DC /* Spirit of 76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spirit of 76.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761C39823BA945200C062DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C761C39A23BA945200C062DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				C7F8D76123C7F1210095E965 /* State+Enhanced.swift */,
 				C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */,
 				C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */,
+				C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */,
+				C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,8 +329,10 @@
 			files = (
 				C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */,
 				C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */,
+				C75F7CAB23D15D2000657B06 /* Quote+Enhancements.swift in Sources */,
 				C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */,
 				C77C02C823D12B800082E2B7 /* Fact+Enhancements.swift in Sources */,
+				C75F7CA923D15CE700657B06 /* Profession+Enhancements.swift in Sources */,
 				C7F8D76223C7F1210095E965 /* State+Enhanced.swift in Sources */,
 				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,

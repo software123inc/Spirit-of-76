@@ -26,6 +26,13 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var factsViewHeightConstraint: NSLayoutConstraint!
     weak var factsViewController:CardSummaryStackViewController?
     
+    @IBOutlet weak var professionsView: UIView!
+    @IBOutlet weak var professionsViewHeightConstraint: NSLayoutConstraint!
+    weak var professionsViewController:CardSummaryStackViewController?
+    
+    @IBOutlet weak var quotesView: UIView!
+    @IBOutlet weak var quotesViewHeightConstraint: NSLayoutConstraint!
+    weak var quotesViewController:CardSummaryStackViewController?
     
     let titleViewImageFrame = CGRect.init(x: 0, y: 0, width: 23.5, height: 30)
     var personTitleImageView:UIImageView?
@@ -49,6 +56,12 @@ class PersonDetailViewController: UIViewController {
         }
         else if segue.identifier == K.SegueID.showFacts, let dvc = segue.destination as? CardSummaryStackViewController {
             self.factsViewController = dvc
+        }
+        else if segue.identifier == K.SegueID.showProfessions, let dvc = segue.destination as? CardSummaryStackViewController {
+            self.professionsViewController = dvc
+        }
+        else if segue.identifier == K.SegueID.showQuotes, let dvc = segue.destination as? CardSummaryStackViewController {
+            self.quotesViewController = dvc
         }
         else {
             DDLogWarn("Unhandled segue id '\(String(describing: segue.identifier))'.")
@@ -82,6 +95,20 @@ class PersonDetailViewController: UIViewController {
         }
         else {
             hideFactsView()
+        }
+        
+        if let dvc = self.professionsViewController, let cards = person?.professionCards, cards.count > 0 {
+            populateCardViewStack(dvc, summaries: cards)
+        }
+        else {
+            hideProfessionsView()
+        }
+        
+        if let dvc = self.quotesViewController, let cards = person?.quotesCards, cards.count > 0 {
+            populateCardViewStack(dvc, summaries: cards)
+        }
+        else {
+            hideQuotesView()
         }
     }
     
@@ -137,6 +164,14 @@ class PersonDetailViewController: UIViewController {
     
     private func hideFactsView() {
         hideViewAndSubviews(factsView, boundByConstraint: factsViewHeightConstraint)
+    }
+    
+    private func hideProfessionsView() {
+        hideViewAndSubviews(professionsView, boundByConstraint: professionsViewHeightConstraint)
+    }
+    
+    private func hideQuotesView() {
+        hideViewAndSubviews(quotesView, boundByConstraint: quotesViewHeightConstraint)
     }
     
     private func hideViewAndSubviews(_ view:UIView, boundByConstraint layoutConstraint:NSLayoutConstraint) {

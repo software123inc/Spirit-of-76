@@ -19,6 +19,8 @@ struct K {
         static let showPersonDetail = "showPersonDetail"
         static let showEducation = "showEducation"
         static let showFacts = "showFacts"
+        static let showProfessions = "showProfessions"
+        static let showQuotes = "showQuotes"
         static let addCardSummaryContent = "addCardSummaryContent"
     }
     

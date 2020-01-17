@@ -42,8 +42,8 @@ extension Person {
     
     var educationCards:[CardSummary]? {
         get {
-            if let educations = self.educations {
-                return Array<Any>(educations) as? [CardSummary]
+            if let cards = self.educations {
+                return Array<Any>(cards) as? [CardSummary]
             }
             return nil
         }
@@ -51,8 +51,26 @@ extension Person {
     
     var factCards:[CardSummary]? {
         get {
-            if let facts = self.facts {
-                return Array<Any>(facts) as? [CardSummary]
+            if let cards = self.facts {
+                return Array<Any>(cards) as? [CardSummary]
+            }
+            return nil
+        }
+    }
+    
+    var professionCards:[CardSummary]? {
+        get {
+            if let cards = self.professions {
+                return Array<Any>(cards) as? [CardSummary]
+            }
+            return nil
+        }
+    }
+    
+    var quotesCards:[CardSummary]? {
+        get {
+            if let cards = self.quotes {
+                return Array<Any>(cards) as? [CardSummary]
             }
             return nil
         }
