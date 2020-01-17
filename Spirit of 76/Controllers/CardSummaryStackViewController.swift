@@ -13,6 +13,7 @@ import CocoaLumberjackSwift
 class CardSummaryStackViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     let horizontalSizeClass = UIScreen.main.traitCollection.horizontalSizeClass
     let signersStoryboard = UIStoryboard.init(name: "Signers", bundle: nil)

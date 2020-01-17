@@ -22,6 +22,7 @@ struct K {
         static let showProfessions = "showProfessions"
         static let showQuotes = "showQuotes"
         static let addCardSummaryContent = "addCardSummaryContent"
+        static let moreDetailTextPopover = "moreDetailTextPopover"
     }
     
     struct ViewControllerID {
