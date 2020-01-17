@@ -12,6 +12,7 @@ import CocoaLumberjackSwift
 
 class CardSummaryStackViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     let signersStoryboard = UIStoryboard.init(name: "Signers", bundle: nil)
     var cardSummaries: [CardSummary]?
@@ -19,15 +20,6 @@ class CardSummaryStackViewController: UIViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.SegueID.addCardSummaryContent {
-            DDLogVerbose("Add dvc for \(segue.destination.className)")
-        }
-        else {
-            DDLogWarn("Unhandled Segue ID: \(segue.identifier ?? "Unidentified segue.")")
-        }
     }
     
     override func viewWillLayoutSubviews() {
@@ -52,6 +44,19 @@ class CardSummaryStackViewController: UIViewController {
             cardSummaryVC?.titleLabel.text = summary.cardTitle
             cardSummaryVC?.detailTextView.text = summary.cardDetailText
         }
+        
+        if UIScreen.main.traitCollection.horizontalSizeClass == .regular {
+            let fillerSize = 3 - (cardSummaries.count % 3)
+            
+            for _ in 1...fillerSize {
+                let cardSummaryVC = appendCardSummaryViewController()
+                cardSummaryVC?.view?.backgroundColor = .clear
+                cardSummaryVC?.titleLabel.text = ""
+                cardSummaryVC?.titleLabel.backgroundColor = .clear
+                cardSummaryVC?.detailTextView.text = ""
+                cardSummaryVC?.detailTextView.backgroundColor = .clear
+            }
+        }
     }
     
     private func appendCardSummaryViewController() -> CardSummaryContentViewController?  {
@@ -62,10 +67,21 @@ class CardSummaryStackViewController: UIViewController {
         self.stackView.addArrangedSubview(cardSummaryVC.view)
         self.stackView.addSubview(cardSummaryVC.view)
         
-        NSLayoutConstraint.activate([
-            cardSummaryVC.view.widthAnchor.constraint(equalToConstant: 350),
-            cardSummaryVC.view.heightAnchor.constraint(equalToConstant: 180)
-        ])
+        switch(UIScreen.main.traitCollection.horizontalSizeClass) {
+            case .compact:
+                pageControl.numberOfPages = cardSummaries?.count ?? 0
+                NSLayoutConstraint.activate([
+                    cardSummaryVC.view.widthAnchor.constraint(equalToConstant: view.frame.width),
+                    cardSummaryVC.view.heightAnchor.constraint(equalToConstant: 180)
+                ])
+            default:
+                DDLogVerbose("iPad page count = \(Int((cardSummaries?.count ?? 0) / 3) + 1)")
+                pageControl.numberOfPages = Int((cardSummaries?.count ?? 0) / 3) + 1
+                NSLayoutConstraint.activate([
+                    cardSummaryVC.view.widthAnchor.constraint(equalToConstant: view.frame.width / 3),
+                    cardSummaryVC.view.heightAnchor.constraint(equalToConstant: 180)
+                ])
+        }
         
         cardSummaryVC.didMove(toParent: self)
         
@@ -75,5 +91,12 @@ class CardSummaryStackViewController: UIViewController {
     private func removeViewFromStack(_ unwantedView:UIView) {
         stackView.removeArrangedSubview(unwantedView)
         unwantedView.removeFromSuperview()
+    }
+}
+
+extension CardSummaryStackViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.bounds.width
+        pageControl.currentPage = Int(scrollView.contentOffset.x / pageWidth)
     }
 }

@@ -21,6 +21,7 @@
 		C761C3B923BABDD500C062DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761C3B723BABDD500C062DC /* Main.storyboard */; };
 		C76AFF6523D0D97700952D21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76AFF6423D0D97700952D21 /* Constants.swift */; };
 		C7770A3823CD19AA00485BF2 /* Signers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7770A3623CD19AA00485BF2 /* Signers.storyboard */; };
+		C77C02C823D12B800082E2B7 /* Fact+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */; };
 		C784E35923BFEE61001CF71D /* PersonsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */; };
 		C784E35E23C017D3001CF71D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */; };
 		C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */; };
@@ -57,6 +58,7 @@
 		C761C3B823BABDD500C062DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C76AFF6423D0D97700952D21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C7770A3723CD19AA00485BF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Spirit of 76/Views/Base.lproj/Signers.storyboard"; sourceTree = "<group>"; };
+		C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fact+Enhancements.swift"; sourceTree = "<group>"; };
 		C784E35823BFEE61001CF71D /* PersonsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewController.swift; sourceTree = "<group>"; };
 		C784E35D23C017D3001CF71D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+Enhanced.swift"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */,
 				C7F8D76123C7F1210095E965 /* State+Enhanced.swift */,
 				C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */,
+				C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				C7C2D13323BE8E07006802C5 /* JSONHelper.swift in Sources */,
 				C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */,
 				C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */,
+				C77C02C823D12B800082E2B7 /* Fact+Enhancements.swift in Sources */,
 				C7F8D76223C7F1210095E965 /* State+Enhanced.swift in Sources */,
 				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,

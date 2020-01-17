@@ -48,4 +48,13 @@ extension Person {
             return nil
         }
     }
+    
+    var factCards:[CardSummary]? {
+        get {
+            if let facts = self.facts {
+                return Array<Any>(facts) as? [CardSummary]
+            }
+            return nil
+        }
+    }
 }

@@ -17,11 +17,15 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var personDescriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleViewLabel: UILabel?
-    //    @IBOutlet weak var educationContainerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var educationViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var educationView: UIView!
     
+    @IBOutlet weak var educationView: UIView!
+    @IBOutlet weak var educationViewHeightConstraint: NSLayoutConstraint!
     weak var educationViewController:CardSummaryStackViewController?
+    
+    @IBOutlet weak var factsView: UIView!
+    @IBOutlet weak var factsViewHeightConstraint: NSLayoutConstraint!
+    weak var factsViewController:CardSummaryStackViewController?
+    
     
     let titleViewImageFrame = CGRect.init(x: 0, y: 0, width: 23.5, height: 30)
     var personTitleImageView:UIImageView?
@@ -43,6 +47,9 @@ class PersonDetailViewController: UIViewController {
         if segue.identifier == K.SegueID.showEducation, let dvc = segue.destination as? CardSummaryStackViewController {
             self.educationViewController = dvc
         }
+        else if segue.identifier == K.SegueID.showFacts, let dvc = segue.destination as? CardSummaryStackViewController {
+            self.factsViewController = dvc
+        }
         else {
             DDLogWarn("Unhandled segue id '\(String(describing: segue.identifier))'.")
         }
@@ -63,14 +70,19 @@ class PersonDetailViewController: UIViewController {
         
         setNavBarTitleImageToLibertyBell()
         
-        if let dvc = self.educationViewController, let educationCards = person?.educationCards, educationCards.count > 0 {
-            populateCardViewStack(dvc, summaries: educationCards)
+        if let dvc = self.educationViewController, let cards = person?.educationCards, cards.count > 0 {
+            populateCardViewStack(dvc, summaries: cards)
         }
         else {
             hideEducationView()
         }
         
-        
+        if let dvc = self.factsViewController, let cards = person?.factCards, cards.count > 0 {
+            populateCardViewStack(dvc, summaries: cards)
+        }
+        else {
+            hideFactsView()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -101,7 +113,7 @@ class PersonDetailViewController: UIViewController {
         }
     }
     
-    fileprivate func setNavBarTitleImageToLibertyBell() {
+    private func setNavBarTitleImageToLibertyBell() {
         self.navigationItem.titleView = UIView.init(frame: titleViewImageFrame)
         self.navigationItem.titleView?.addSubview(libertyBell)
         
@@ -119,11 +131,19 @@ class PersonDetailViewController: UIViewController {
         libertyBell.alpha = isScrolled ? 0 : 1
     }
     
-    fileprivate func hideEducationView() {
-        educationViewHeightConstraint.constant = 0
+    private func hideEducationView() {
+        hideViewAndSubviews(educationView, boundByConstraint: educationViewHeightConstraint)
+    }
+    
+    private func hideFactsView() {
+        hideViewAndSubviews(factsView, boundByConstraint: factsViewHeightConstraint)
+    }
+    
+    private func hideViewAndSubviews(_ view:UIView, boundByConstraint layoutConstraint:NSLayoutConstraint) {
+        layoutConstraint.constant = 0
         
-        for view in educationView.subviews {
-            view.removeFromSuperview()
+        for subView in view.subviews {
+            subView.removeFromSuperview()
         }
     }
 }
