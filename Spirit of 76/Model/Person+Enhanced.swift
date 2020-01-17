@@ -42,37 +42,37 @@ extension Person {
     
     var educationCards:[CardSummary]? {
         get {
-            if let cards = self.educations {
-                return Array<Any>(cards) as? [CardSummary]
-            }
-            return nil
+            return cards(fromSet: self.educations)
         }
     }
     
     var factCards:[CardSummary]? {
         get {
-            if let cards = self.facts {
-                return Array<Any>(cards) as? [CardSummary]
-            }
-            return nil
+            return cards(fromSet: self.facts)
         }
     }
     
     var professionCards:[CardSummary]? {
         get {
-            if let cards = self.professions {
-                return Array<Any>(cards) as? [CardSummary]
-            }
-            return nil
+            return cards(fromSet: self.professions)
         }
     }
     
     var quotesCards:[CardSummary]? {
         get {
-            if let cards = self.quotes {
-                return Array<Any>(cards) as? [CardSummary]
-            }
-            return nil
+            return cards(fromSet: self.quotes)
         }
+    }
+    
+    private func cards(fromSet cardSet:NSSet?) -> [CardSummary]? {
+        guard let cardSet = cardSet else { return nil }
+        
+        return (Array<Any>(cardSet) as? [CardSummary])?.sorted(by: { (lhs, rhs) -> Bool in
+            if lhs.cardTitle == rhs.cardTitle {
+                return lhs.cardDetailText < rhs.cardDetailText
+            }
+            
+            return lhs.cardTitle < rhs.cardTitle
+        })
     }
 }
