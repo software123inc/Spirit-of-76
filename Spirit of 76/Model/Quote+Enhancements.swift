@@ -11,7 +11,7 @@ import CoreData
 
 extension Quote: CardSummary {
     var cardTitle: String {
-        return ""
+        return " "
     }
     
     var cardDetailText: String {

@@ -175,11 +175,11 @@ class PersonDetailViewController: UIViewController {
     }
     
     private func hideViewAndSubviews(_ view:UIView, boundByConstraint layoutConstraint:NSLayoutConstraint) {
-        layoutConstraint.constant = 0
-        
         for subView in view.subviews {
             subView.removeFromSuperview()
         }
+        
+        layoutConstraint.constant = 0
     }
 }
 
