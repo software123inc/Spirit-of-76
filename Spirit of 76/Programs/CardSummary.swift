@@ -6,9 +6,17 @@
 //  Copyright © 2020 Tim W. Newton. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CardSummary {
     var cardTitle:String { get }
     var cardDetailText:String { get }
+    var cardIsFavorite:Bool { get set }
+    var cardImage:UIImage? { get }
+}
+
+extension CardSummary {
+    var cardImage:UIImage? {
+        return nil
+    }
 }

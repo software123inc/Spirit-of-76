@@ -10,17 +10,22 @@ import UIKit
 import CocoaLumberjackSwift
 
 class CardSummaryContentViewController: UIViewController {
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
+    @IBOutlet weak var isFavoriteButton: UIButton?
     
     var cardSummary:CardSummary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showFavorite()
 
         // Do any additional setup after loading the view.
         titleLabel.text = cardSummary?.cardTitle
         detailTextView.text = cardSummary?.cardDetailText
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -29,6 +34,29 @@ class CardSummaryContentViewController: UIViewController {
         }
         else {
             DDLogDebug("Unhandled segue ID '\(segue.identifier ?? "unknown identifier")'")
+        }
+    }
+    
+    @IBAction func isFavoriteTapped(_ sender: UIButton) {
+        if var cardSummary = cardSummary {
+            cardSummary.cardIsFavorite = !cardSummary.cardIsFavorite
+            
+            appDelegate.saveContext()
+        }
+        
+        showFavorite()
+    }
+    
+    private func showFavorite() {
+        guard  let isFavoriteButton = self.isFavoriteButton else {
+            return
+        }
+        
+        if let cardSummary = cardSummary {
+            isFavoriteButton.isSelected = cardSummary.cardIsFavorite
+        }
+        else {
+            isFavoriteButton.isEnabled = false
         }
     }
 }

@@ -20,4 +20,14 @@ extension Quote: CardSummary {
     var cardDetailText: String {
         return self.quotation ?? "<No Detail Text>"
     }
+    
+    var cardIsFavorite: Bool {
+        get {
+            return self.isFavorite
+        }
+        
+        set {
+            self.isFavorite = newValue
+        }
+    }
 }
