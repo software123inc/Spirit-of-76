@@ -39,10 +39,12 @@ class CardSummaryStackViewController: UIViewController {
         
         removeViewFromStack(firstSubview)
         
-        for summary in cardSummaries {
+        for cardSummary in cardSummaries {
             let cardSummaryVC = appendCardSummaryViewController()
-            cardSummaryVC?.titleLabel.text = summary.cardTitle
-            cardSummaryVC?.detailTextView.text = summary.cardDetailText
+            
+            cardSummaryVC?.cardSummary = cardSummary
+            cardSummaryVC?.titleLabel.text = cardSummary.cardTitle
+            cardSummaryVC?.detailTextView.text = cardSummary.cardDetailText
         }
         
         if horizontalSizeClass == .regular {
