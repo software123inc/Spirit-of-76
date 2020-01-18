@@ -14,8 +14,8 @@ class TopicDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var isFavoriteButton: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     
     var topic:Topic?
 
@@ -41,6 +41,10 @@ class TopicDetailViewController: UIViewController {
         }
     }
     
+    private func setNavBarTitleImageToLibertyBell() {
+        self.navigationItem.titleView = libertyBell
+    }
+    
     private func showFavorite() {
         if let topic = topic {
             isFavoriteButton.image = (topic.cardIsFavorite) ? UIImage.init(systemName: "star.fill") : UIImage.init(systemName: "star")
@@ -50,10 +54,6 @@ class TopicDetailViewController: UIViewController {
             isFavoriteButton.image = UIImage.init(systemName: "star")
             isFavoriteButton.isEnabled = false
         }
-    }
-    
-    private func setNavBarTitleImageToLibertyBell() {
-        self.navigationItem.titleView = libertyBell
     }
     
     private func refreshUI() {

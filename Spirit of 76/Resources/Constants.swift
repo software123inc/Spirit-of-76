@@ -42,6 +42,73 @@ struct K {
     }
 }
 
+
+typealias Section = SectionType
 enum SectionType {
     case main
+}
+
+typealias FavoriteSection = FavoriteSectionType
+enum FavoriteSectionType: Int, CaseIterable {
+    case education = 0, event, fact, person, profession, quote, topic
+    
+    func description() -> String {
+        switch self {
+            case .education:
+                return "Education"
+            case .event:
+                return "Events"
+            case .fact:
+                return "Facts"
+            case .person:
+                return "Signers"
+            case .profession:
+                return "Professions"
+            case .quote:
+                return "Quotes"
+            case .topic:
+                return "Topics"
+        }
+    }
+    
+    static func typeFromSectionName(_ sectionName:FavoriteSectionNames) -> FavoriteSectionType {
+        switch sectionName {
+            case .education: return .education
+            case .event: return .event
+            case .fact: return .fact
+            case .person: return .person
+            case .profession: return .profession
+            case .quote: return .quote
+            case .topic: return .topic
+        }
+    }
+}
+
+enum FavoriteSectionNames: String, CaseIterable {
+    case education = "Education"
+    case event = "Event"
+    case fact = "Fact"
+    case person = "Person"
+    case profession = "Profession"
+    case quote = "Quote"
+    case topic = "Topic"
+    
+    func description() -> String {
+        switch self {
+            case .education:
+                return "Education"
+            case .event:
+                return "Events"
+            case .fact:
+                return "Facts"
+            case .person:
+                return "Signers"
+            case .profession:
+                return "Professions"
+            case .quote:
+                return "Quotes"
+            case .topic:
+                return "Topics"
+        }
+    }
 }

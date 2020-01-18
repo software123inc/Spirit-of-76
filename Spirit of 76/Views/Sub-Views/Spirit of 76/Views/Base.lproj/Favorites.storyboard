@@ -36,16 +36,15 @@
         <scene sceneID="hqu-2G-PiL">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="pxy-qo-EfT" customClass="FavoritesTableViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N4y-Py-4Vm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" id="N4y-Py-4Vm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteCell" textLabel="XYx-UN-1So" detailTextLabel="KcS-PX-d6n" style="IBUITableViewCellStyleSubtitle" id="kbg-Xm-d4B">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="20" y="55.5" width="374" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kbg-Xm-d4B" id="8eI-cc-sCC">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XYx-UN-1So">
