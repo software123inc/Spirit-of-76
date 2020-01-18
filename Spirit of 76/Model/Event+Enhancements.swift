@@ -29,7 +29,7 @@ extension Event: CardSummary {
     }
     
     var cardImage: UIImage?  {
-        if let imageName = self.img_portrait {
+        if let imageName = self.imageName {
             return UIImage.init(named: imageName)
         }
         

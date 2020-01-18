@@ -16,10 +16,12 @@ struct K {
     }
     
     struct SegueID {
+        static let showAboutDetails = "showAboutDetails"
         static let showPersonDetail = "showPersonDetail"
         static let showEventDetail = "showEventDetail"
         static let showTopicDetail = "showTopicDetail"
         static let showEducation = "showEducation"
+        static let showFavoriteDetails = "showFavoriteDetails"
         static let showFacts = "showFacts"
         static let showProfessions = "showProfessions"
         static let showQuotes = "showQuotes"
@@ -28,9 +30,11 @@ struct K {
     }
     
     struct TVCIdentifier {
+        static let aboutCell = "AboutCell"
         static let eventCell = "EventCell"
         static let personCell = "PersonCell"
         static let topicCell = "TopicCell"
+        static let favoriteCell = "FavoriteCell"
     }
     
     struct ViewControllerID {

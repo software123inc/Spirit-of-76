@@ -3,55 +3,55 @@
         {
             "jsonId":1,
             "name":"Boston",
-            "img_portrait":"img_Boston.png",
+            "imageName":"img_Boston.png",
             "stateId":5
         },
         {
             "jsonId":2,
             "name":"Philadelphia",
-            "img_portrait":"img_Philadelphia.png",
+            "imageName":"img_Philadelphia.png",
             "stateId":10
         },
         {
             "jsonId":3,
             "name":"New York City",
-            "img_portrait":"img_New_York_City.png",
+            "imageName":"img_New_York_City.png",
             "stateId":4
         },
         {
             "jsonId":4,
             "name":"Trenton",
-            "img_portrait":"img_Trenton.png",
+            "imageName":"img_Trenton.png",
             "stateId":3
         },
         {
             "jsonId":5,
             "name":"Yorktown",
-            "img_portrait":"img_Yorktown.png",
+            "imageName":"img_Yorktown.png",
             "stateId":1
         },
         {
             "jsonId":6,
             "name":"Lexington",
-            "img_portrait":"img_Lexington.png",
+            "imageName":"img_Lexington.png",
             "stateId":5
         },
         {
             "jsonId":7,
             "name":"Concord",
-            "img_portrait":"img_Concord.png",
+            "imageName":"img_Concord.png",
             "stateId":5
         },
         {
             "jsonId":8,
             "name":"Saratoga",
-            "img_portrait":"img_Saratoga.png",
+            "imageName":"img_Saratoga.png",
             "stateId":4
         },
         {
             "jsonId":9,
             "name":"West Point",
-            "img_portrait":"img_West_Point.png",
+            "imageName":"img_West_Point.png",
             "stateId":4
         }
     ]

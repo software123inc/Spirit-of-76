@@ -12,22 +12,23 @@ import S123Common
 import CocoaLumberjackSwift
 
 extension State {
-    var imageName:String {
-        get {
-            return "\(self.img_map?.allBefore(".png") ?? "?")"
-        }
-    }
-    
     var image:UIImage? {
         get {
-            return UIImage(named: self.imageName)
+            if let imageName = self.imageName {
+                return UIImage(named: imageName)
+            }
+            
+            return nil
         }
     }
     
     var blueImage:UIImage? {
         get {
-            let imgName = "\(self.imageName)_blue"
-            return UIImage(named: imgName)
+            if let imageName = self.imageName {
+                return UIImage(named: "\(imageName)_blue")
+            }
+            
+            return nil
         }
     }
 }

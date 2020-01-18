@@ -145,7 +145,7 @@ class PersonDetailViewController: UIViewController {
         if let person = person {
             let fullName = person.fullName
             self.personFullNameLabel.text = fullName
-            self.personImageView.image = person.portraitImage
+            self.personImageView.image = person.image
             self.personDescriptionTextView.text = person.descriptiveText
             self.residentStateImageView.image = person.residenceState?.blueImage
         }

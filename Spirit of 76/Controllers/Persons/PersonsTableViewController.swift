@@ -62,7 +62,7 @@ class PersonsTableViewController: UITableViewController  {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
+        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
         let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
         let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
         let request: NSFetchRequest<Person> = Person.fetchRequest()
@@ -85,7 +85,9 @@ class PersonsTableViewController: UITableViewController  {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 

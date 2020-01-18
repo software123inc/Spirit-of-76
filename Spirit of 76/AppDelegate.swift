@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        S123Common.logDebugSimulatorPathToSqlite()
         
         JSONHelper.importSeedData()
-                
+        
+        ThemeManager.applyTheme(theme: .Default)
+                        
         return true
     }
 

@@ -62,7 +62,7 @@ class EventsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
+        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
         let sort1 = NSSortDescriptor(key: "year", ascending: true)
         let sort2 = NSSortDescriptor(key: "asOfDate", ascending: true)
         let sort3 = NSSortDescriptor(key: "name", ascending: true)
@@ -86,7 +86,9 @@ class EventsTableViewController: UITableViewController {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Event>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 
@@ -94,6 +96,6 @@ class EventsTableViewController: UITableViewController {
 
 extension EventsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: false)
+        updateSnapshot(animated: true)
     }
 }

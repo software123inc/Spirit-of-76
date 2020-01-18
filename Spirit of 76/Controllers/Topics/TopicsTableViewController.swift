@@ -58,7 +58,7 @@ class TopicsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
+        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
         let sort1 = NSSortDescriptor(key: "title", ascending: true)
         let request: NSFetchRequest<Topic> = Topic.fetchRequest()
         
@@ -80,7 +80,9 @@ class TopicsTableViewController: UITableViewController {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Topic>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 
@@ -88,6 +90,6 @@ class TopicsTableViewController: UITableViewController {
 
 extension TopicsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: false)
+        updateSnapshot(animated: true)
     }
 }

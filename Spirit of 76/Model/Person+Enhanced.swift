@@ -22,21 +22,30 @@ extension Person {
         }
     }
     
-    var imageName:String {
+    var image:UIImage? {
         get {
-            return "\(self.lastName ?? "?")_\(self.firstName ?? "?")"
+            if let imageName = self.imageName {
+                return UIImage(named: imageName)
+            }
+            
+            return nil
         }
     }
     
-    var portraitImage:UIImage? {
-        get {
-            return UIImage(named: self.imageName)
-        }
-    }
+//    var portraitImage:UIImage? {
+//        get {
+//            let imageName = "\(self.lastName ?? "?")_\(self.firstName ?? "?")"
+//            return UIImage(named: imageName)
+//        }
+//    }
     
     var avatar:UIImage? {
         get {
-            return UIImage(named: "Avatars/\(self.imageName)")
+            if let imageName = self.imageName {
+                return UIImage(named: "Avatars/\(imageName)")
+            }
+            
+            return nil
         }
     }
     
