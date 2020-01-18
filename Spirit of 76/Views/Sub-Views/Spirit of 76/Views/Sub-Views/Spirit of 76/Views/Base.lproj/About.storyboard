@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Fk-tk-e1H">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fyR-Nz-I2d">
+            <objects>
+                <viewController id="EUI-ds-DEI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bi2-AJ-yv2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="AqY-9c-31I"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3J5-cR-7EE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2292" y="640"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="CgR-rD-d7A">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="RgK-PE-2du" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IhJ-1G-74j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" id="Yzp-Q4-eAw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yzp-Q4-eAw" id="URH-2B-Ihe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RgK-PE-2du" id="UY4-ox-IC0"/>
+                            <outlet property="delegate" destination="RgK-PE-2du" id="E9Q-gi-ndZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="About" id="wt7-I8-XR3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJd-aK-Bk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2989" y="-53"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Siq-fy-YEP">
+            <objects>
+                <navigationController id="w6s-AJ-ira" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rRl-kA-zdW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RgK-PE-2du" kind="relationship" relationship="rootViewController" id="fBt-R6-W4M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPZ-K9-TUI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2293" y="-53"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="rQF-5e-46X">
+            <objects>
+                <splitViewController id="2Fk-tk-e1H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="lightbulb" catalog="system" selectedImage="lightbulb.fill" id="XXv-uv-1jF"/>
+                    <connections>
+                        <segue destination="w6s-AJ-ira" kind="relationship" relationship="masterViewController" id="ZcM-Tq-05T"/>
+                        <segue destination="EUI-ds-DEI" kind="relationship" relationship="detailViewController" id="8md-jd-mK7"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwR-c9-X8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="537"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightbulb" catalog="system" width="56" height="64"/>
+        <image name="lightbulb.fill" catalog="system" width="56" height="64"/>
+    </resources>
+</document>

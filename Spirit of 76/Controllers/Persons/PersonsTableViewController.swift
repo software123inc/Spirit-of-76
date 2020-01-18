@@ -11,10 +11,6 @@ import CoreData
 import CocoaLumberjackSwift
 import S123Common
 
-enum SectionType {
-    case main
-}
-
 class PersonsTableViewController: UITableViewController  {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -23,7 +19,7 @@ class PersonsTableViewController: UITableViewController  {
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Person>(tableView: tableView) { (tableView, indexPath, person) -> UITableViewCell? in
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.personCell, for: indexPath)
         
         cell.textLabel?.text = person.lastFirst
         cell.detailTextLabel?.text = person.summaryText
@@ -36,7 +32,7 @@ class PersonsTableViewController: UITableViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         tableView.dataSource = diffableDataSource
         self.loadModel()
         
@@ -45,7 +41,7 @@ class PersonsTableViewController: UITableViewController  {
          not be animated. Passing TRUE at this stage would throw a warning about the table not
          existing yet, and getting a performance hit.
          */
-        updateSnapshot(animated: false)
+        updateSnapshot()
     }
     
     //MARK: - NAVIGATION
@@ -84,11 +80,12 @@ class PersonsTableViewController: UITableViewController  {
         }
     }
     
-    private func updateSnapshot(animated: Bool = true) {
-            var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
-            diffableDataSourceSnapshot.appendSections([.main])
-            diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-            self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+    private func updateSnapshot(animated: Bool = false) {
+        // The animation default = false to prevent an error when the model updates and the tableView is not visible.
+        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
+        diffableDataSourceSnapshot.appendSections([.main])
+        diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
     }
 }
 
@@ -96,6 +93,6 @@ class PersonsTableViewController: UITableViewController  {
 
 extension PersonsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot()
+        updateSnapshot(animated: true)
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import S123Common
 import CocoaLumberjackSwift
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        S123Common.logDebugSimulatorPathToSqlite()
         
         JSONHelper.importSeedData()
-        
+                
         return true
     }
 
