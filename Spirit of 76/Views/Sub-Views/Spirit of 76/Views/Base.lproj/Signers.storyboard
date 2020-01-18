@@ -11,7 +11,7 @@
         <!--Signers ViewController-->
         <scene sceneID="2iu-gC-Jcx">
             <objects>
-                <viewController title="Spirit of '76" extendedLayoutIncludesOpaqueBars="YES" id="34z-8S-FCB" userLabel="Signers ViewController" customClass="PersonDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signersDetailView" title="Spirit of '76" extendedLayoutIncludesOpaqueBars="YES" id="34z-8S-FCB" userLabel="Signers ViewController" customClass="PersonDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NAO-bj-ak9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,7 +541,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fp3-by-SDz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sZN-GW-Dcp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="signersDetailNavController" automaticallyAdjustsScrollViewInsets="NO" id="sZN-GW-Dcp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mHc-Z5-t47">

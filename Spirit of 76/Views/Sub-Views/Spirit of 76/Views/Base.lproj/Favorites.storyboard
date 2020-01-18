@@ -14,18 +14,54 @@
                     <view key="view" contentMode="scaleToFill" id="0m3-6h-oIm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6K-FZ-YvE">
+                                <rect key="frame" x="8" y="96" width="406" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fife_and_Drum" translatesAutoresizingMaskIntoConstraints="NO" id="xx6-ue-AWm">
+                                <rect key="frame" x="47" y="128" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="cja-cQ-QtY"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Yn-H0-ktY">
+                                <rect key="frame" x="0.0" y="286" width="414" height="584"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="i6K-FZ-YvE" firstAttribute="leading" secondItem="948-dX-XjG" secondAttribute="leading" constant="8" id="4AX-L1-4mr"/>
+                            <constraint firstItem="i6K-FZ-YvE" firstAttribute="top" secondItem="948-dX-XjG" secondAttribute="top" constant="8" id="50z-C4-Edk"/>
+                            <constraint firstItem="xx6-ue-AWm" firstAttribute="centerX" secondItem="948-dX-XjG" secondAttribute="centerX" id="9oB-dz-pla"/>
+                            <constraint firstItem="9Yn-H0-ktY" firstAttribute="bottom" secondItem="948-dX-XjG" secondAttribute="bottom" constant="8" id="APq-tJ-PT8"/>
+                            <constraint firstItem="948-dX-XjG" firstAttribute="trailing" secondItem="i6K-FZ-YvE" secondAttribute="trailing" id="PpQ-UE-slB"/>
+                            <constraint firstItem="xx6-ue-AWm" firstAttribute="top" secondItem="i6K-FZ-YvE" secondAttribute="bottom" constant="8" id="iwg-f9-Ql2"/>
+                            <constraint firstItem="9Yn-H0-ktY" firstAttribute="leading" secondItem="948-dX-XjG" secondAttribute="leading" id="jlU-sV-7gK"/>
+                            <constraint firstItem="948-dX-XjG" firstAttribute="trailing" secondItem="9Yn-H0-ktY" secondAttribute="trailing" id="wen-wo-H9p"/>
+                            <constraint firstItem="9Yn-H0-ktY" firstAttribute="top" secondItem="xx6-ue-AWm" secondAttribute="bottom" constant="8" id="zEI-ID-nAB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="948-dX-XjG"/>
                     </view>
                     <navigationItem key="navigationItem" id="GyK-FW-yGe">
-                        <barButtonItem key="rightBarButtonItem" title="isFavorite" image="star" catalog="system" id="qBh-Nd-PX6">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="isFavorite" image="star" catalog="system" id="qBh-Nd-PX6">
                             <connections>
                                 <action selector="isFavoriteTapped:" destination="Vas-dN-rjs" id="Bef-h9-b6g"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="detailTextView" destination="9Yn-H0-ktY" id="Pgu-Tu-PAp"/>
+                        <outlet property="imageView" destination="xx6-ue-AWm" id="Cce-vm-Bs7"/>
                         <outlet property="isFavoriteButton" destination="qBh-Nd-PX6" id="veS-kK-0TD"/>
+                        <outlet property="titleLabel" destination="i6K-FZ-YvE" id="dE6-Hr-bps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m44-VW-wXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -63,9 +99,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="ecw-ga-baY" kind="showDetail" identifier="showFavoriteDetail" id="zYD-Tf-zSr"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -74,10 +107,40 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="9sk-ds-Pnp"/>
+                    <connections>
+                        <segue destination="F6R-zQ-7G5" kind="showDetail" identifier="showFavoriteSigner" id="8Au-jr-z6j"/>
+                        <segue destination="h8C-Ig-QDe" kind="showDetail" identifier="showFavoriteEvent" id="mRQ-CS-7ua"/>
+                        <segue destination="GoK-XO-YcG" kind="showDetail" identifier="showFavoriteTopic" id="MMm-KU-lPN"/>
+                        <segue destination="ecw-ga-baY" kind="showDetail" identifier="showFavoriteDetail" id="bg2-Lk-B0P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmP-aL-0UM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3274" y="-1741"/>
+        </scene>
+        <!--signersDetailNavController-->
+        <scene sceneID="ujr-2M-1LU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signers" referencedIdentifier="signersDetailNavController" id="F6R-zQ-7G5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPY-7N-c8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3877" y="-1909"/>
+        </scene>
+        <!--eventsDetailNavController-->
+        <scene sceneID="2T9-Y3-iBJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="eventsDetailNavController" id="h8C-Ig-QDe" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPh-mt-uNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3986" y="-1741"/>
+        </scene>
+        <!--topicsDetailNavController-->
+        <scene sceneID="Bxs-fL-mbE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Topics" referencedIdentifier="topicsDetailNavController" id="GoK-XO-YcG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nB-uD-2VU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3860" y="-1615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rX8-Fg-clP">
@@ -129,10 +192,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fife_and_Drum" width="320" height="220"/>
         <image name="star" catalog="system" width="64" height="58"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zYD-Tf-zSr"/>
+        <segue reference="bg2-Lk-B0P"/>
     </inferredMetricsTieBreakers>
 </document>

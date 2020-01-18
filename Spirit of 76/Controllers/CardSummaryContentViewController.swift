@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import CocoaLumberjackSwift
 
 class CardSummaryContentViewController: UIViewController {

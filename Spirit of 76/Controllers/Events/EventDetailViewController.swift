@@ -62,11 +62,13 @@ class EventDetailViewController: UIViewController {
             titleLabel.text = event.cardTitle
             detailTextView.text = event.cardDetailText
             imageView.image = event.cardImage
+            detailTextView.textAlignment = .natural
         }
         else {
             titleLabel.text = "Spirit of '76"
             detailTextView.text = "Learn about many notable events of America's War for Independence."
             imageView.image = UIImage(named: "Fife_and_Drum")
+            detailTextView.textAlignment = .center
         }
         
         showFavorite()

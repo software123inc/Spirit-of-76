@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class PersonsTableViewController: UITableViewController  {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Person>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Person>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Person>(tableView: tableView) { (tableView, indexPath, person) -> UITableViewCell? in
         

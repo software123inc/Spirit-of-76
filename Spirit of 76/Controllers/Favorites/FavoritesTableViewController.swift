@@ -12,31 +12,51 @@ import CocoaLumberjackSwift
 import S123Common
 
 class FavoritesTableViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<JsonImport>?
-    var dataSource: FavoritesDiffableDataSource!
+    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<JsonImport>?
+    private var dataSource: FavoritesDiffableDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
-        
     }
+    
     //MARK: - NAVIGATION
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == K.SegueID.showFavoriteDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? FavoriteDetailViewController {
-    //            DDLogVerbose("DVC = \(dvc.className)")
-    //
-    //            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let _ = diffableDataSource.itemIdentifier(for: indexPath) {
-    //                //                dvc.favorite = currentItem
-    //            }
-    //        }
-    //        else {
-    //            DDLogWarn("unhandled segue id: \(String(describing: segue.identifier))")
-    //        }
-    //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.SegueID.showFavoriteEvent, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? EventDetailViewController {
+            dvc.event = sender as? Event
+        }
+        else if segue.identifier == K.SegueID.showFavoriteSigner, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? PersonDetailViewController {
+            dvc.person = sender as? Person
+        }
+        else if segue.identifier == K.SegueID.showFavoriteTopic, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? TopicDetailViewController {
+            dvc.topic = sender as? Topic
+        }
+        else if segue.identifier == K.SegueID.showFavoriteDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? FavoriteDetailViewController {
+            dvc.favorite = sender as? CardSummary
+        }
+        else {
+            DDLogWarn("unhandled segue id: \(String(describing: segue.identifier))")
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ii = dataSource.itemIdentifier(for: indexPath)
+        if let entityName = ii?.entity.name, let sectionTypeTrueName = FavoriteSectionEntityNames.init(rawValue: entityName) {
+            switch sectionTypeTrueName {
+                case .event:
+                    performSegue(withIdentifier: K.SegueID.showFavoriteEvent, sender: ii)
+                case .person:
+                    performSegue(withIdentifier: K.SegueID.showFavoriteSigner, sender: ii)
+                case .topic:
+                    performSegue(withIdentifier: K.SegueID.showFavoriteTopic, sender: ii)
+                case .education, .fact, .profession, .quote:
+                        performSegue(withIdentifier: K.SegueID.showFavoriteDetail, sender: ii)
+            }
+        }
+    }
     
     //MARK: - DATA MANAGEMENT
     private func configureDataSource() {
@@ -64,7 +84,7 @@ class FavoritesTableViewController: UITableViewController {
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
                                                               managedObjectContext: viewContext,
                                                               sectionNameKeyPath: sectionNameKeyPath,
-                                                              cacheName: nil)
+                                                              cacheName: "favoritesCache")
         fetchedResultsController?.delegate = self
         
         do {
@@ -83,14 +103,14 @@ class FavoritesTableViewController: UITableViewController {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
         
         if let frc = self.fetchedResultsController, let sections = frc.sections {
-            for (i , section) in (sections.enumerated()) {
+            for (i, section) in (sections.enumerated()) {
                 if let items = section.objects as? [JsonImport],
                     let sectionType = FavoriteSectionType.init(rawValue: i)
                 {
                     /* our sectionType really won't correspond to our Entity class, we just
-                       need to keep our sections indexes in order. We can figure out what the
-                       name of the section is not from sectionType, but by pulling the entity.name
-                       value from the first object in each section (as we do for the header names).*/
+                     need to keep our sections indexes in order. We can figure out what the
+                     name of the section is not from sectionType, but by pulling the entity.name
+                     value from the first object in each section (as we do for the header names).*/
                     diffableDataSourceSnapshot.appendSections([sectionType])
                     diffableDataSourceSnapshot.appendItems(items)
                     

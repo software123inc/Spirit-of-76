@@ -60,10 +60,12 @@ class TopicDetailViewController: UIViewController {
         if let topic = topic {
             titleLabel.text = topic.cardTitle
             detailTextView.text = topic.cardDetailText
+            detailTextView.textAlignment = .natural
         }
         else {
             titleLabel.text = "Spirit of '76"
             detailTextView.text = "Learn about many notable topics of America's War for Independence."
+            detailTextView.textAlignment = .center
         }
         
         showFavorite()

@@ -27,6 +27,9 @@ struct K {
         static let showQuotes = "showQuotes"
         static let addCardSummaryContent = "addCardSummaryContent"
         static let moreDetailTextPopover = "moreDetailTextPopover"
+        static let showFavoriteSigner = "showFavoriteSigner"
+        static let showFavoriteEvent = "showFavoriteEvent"
+        static let showFavoriteTopic = "showFavoriteTopic"
     }
     
     struct TVCIdentifier {
@@ -71,7 +74,7 @@ enum FavoriteSectionType: Int, CaseIterable {
         }
     }
     
-    static func typeFromSectionName(_ sectionName:FavoriteSectionNames) -> FavoriteSectionType {
+    static func typeFromSectionName(_ sectionName:FavoriteSectionEntityNames) -> FavoriteSectionType {
         switch sectionName {
             case .education: return .education
             case .event: return .event
@@ -84,7 +87,7 @@ enum FavoriteSectionType: Int, CaseIterable {
     }
 }
 
-enum FavoriteSectionNames: String, CaseIterable {
+enum FavoriteSectionEntityNames: String, CaseIterable {
     case education = "Education"
     case event = "Event"
     case fact = "Fact"

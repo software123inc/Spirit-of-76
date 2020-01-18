@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import CocoaLumberjackSwift
 
 class PersonDetailViewController: UIViewController {
@@ -124,7 +125,6 @@ class PersonDetailViewController: UIViewController {
     @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
         if let person = person {
             person.isFavorite = !person.isFavorite
-            
             appDelegate.saveContext()
             
             showStar()

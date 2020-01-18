@@ -10,13 +10,13 @@
         <!--Event Detail View Controller-->
         <scene sceneID="4Bm-L9-YOr">
             <objects>
-                <viewController id="Y3a-hw-dQG" customClass="EventDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsStoryboard" id="Y3a-hw-dQG" customClass="EventDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qdL-l7-HiS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d63-sI-vkY">
-                                <rect key="frame" x="153" y="96" width="108.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d63-sI-vkY">
+                                <rect key="frame" x="8" y="96" width="398" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,11 +43,12 @@
                             <constraint firstItem="enG-E2-92r" firstAttribute="top" secondItem="BIe-GH-8Zp" secondAttribute="bottom" constant="8" symbolic="YES" id="DKa-Jx-TY7"/>
                             <constraint firstItem="BIe-GH-8Zp" firstAttribute="width" secondItem="qdL-l7-HiS" secondAttribute="width" id="HDy-MQ-w3I"/>
                             <constraint firstItem="enG-E2-92r" firstAttribute="leading" secondItem="XnO-3H-fuo" secondAttribute="leading" id="HVQ-Oc-Dwi"/>
+                            <constraint firstItem="d63-sI-vkY" firstAttribute="leading" secondItem="XnO-3H-fuo" secondAttribute="leading" constant="8" id="Jb4-93-KpW"/>
                             <constraint firstItem="XnO-3H-fuo" firstAttribute="trailing" secondItem="enG-E2-92r" secondAttribute="trailing" id="KwT-ka-yk8"/>
                             <constraint firstItem="BIe-GH-8Zp" firstAttribute="leading" secondItem="XnO-3H-fuo" secondAttribute="leading" id="QSG-rj-Qdt"/>
                             <constraint firstItem="XnO-3H-fuo" firstAttribute="trailing" secondItem="BIe-GH-8Zp" secondAttribute="trailing" id="QV8-bm-lcM"/>
-                            <constraint firstItem="d63-sI-vkY" firstAttribute="centerX" secondItem="qdL-l7-HiS" secondAttribute="centerX" id="RUl-NE-3FA"/>
                             <constraint firstItem="BIe-GH-8Zp" firstAttribute="top" secondItem="d63-sI-vkY" secondAttribute="bottom" constant="8" symbolic="YES" id="jR1-NX-xwS"/>
+                            <constraint firstItem="XnO-3H-fuo" firstAttribute="trailing" secondItem="d63-sI-vkY" secondAttribute="trailing" constant="8" id="vPI-LP-xLO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XnO-3H-fuo"/>
                     </view>
@@ -150,7 +151,7 @@
         <!--Navigation Controller-->
         <scene sceneID="9dX-Ad-tg2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aTi-JJ-Aga" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="eventsDetailNavController" automaticallyAdjustsScrollViewInsets="NO" id="aTi-JJ-Aga" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kxa-Mk-w9G">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
