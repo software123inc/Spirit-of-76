@@ -1,8 +1,8 @@
 //
-//  PersonsTableViewController.swift
+//  FavoritesTableViewController.swift
 //  Spirit of 76
 //
-//  Created by Tim W. Newton on 1/3/20.
+//  Created by Tim W. Newton on 1/17/20.
 //  Copyright © 2020 Tim W. Newton. All rights reserved.
 //
 
@@ -11,24 +11,21 @@ import CoreData
 import CocoaLumberjackSwift
 import S123Common
 
-class PersonsTableViewController: UITableViewController  {
+class FavoritesTableViewController: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var fetchedResultsController:NSFetchedResultsController<Person>?
+    var fetchedResultsController:NSFetchedResultsController<JsonImport>?
     
-    lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Person>(tableView: tableView) { (tableView, indexPath, person) -> UITableViewCell? in
+    lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, JsonImport>(tableView: tableView) { (tableView, indexPath, JsonImport) -> UITableViewCell? in
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.personCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.favoriteCell, for: indexPath)
         
-        cell.textLabel?.text = person.lastFirst
-        cell.detailTextLabel?.text = person.summaryText
-        cell.imageView?.image = person.cardAvatar
+        cell.textLabel?.text = JsonImport.cardTitle
+        cell.detailTextLabel?.text = JsonImport.cardDetailText
         
         return cell
     }
-    
-    //MARK: - VIEW LIFE CYCLE
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +40,14 @@ class PersonsTableViewController: UITableViewController  {
          */
         updateSnapshot()
     }
-    
     //MARK: - NAVIGATION
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.SegueID.showPersonDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? PersonDetailViewController {
+        if segue.identifier == K.SegueID.showFavoriteDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? FavoriteDetailViewController {
             DDLogVerbose("DVC = \(dvc.className)")
             
-            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let personItem = diffableDataSource.itemIdentifier(for: indexPath) {
-                dvc.person = personItem
+            if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell), let _ = diffableDataSource.itemIdentifier(for: indexPath) {
+//                dvc.favorite = currentItem
             }
         }
         else {
@@ -62,12 +58,11 @@ class PersonsTableViewController: UITableViewController  {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
-        let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
-        let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
-        let request: NSFetchRequest<Person> = Person.fetchRequest()
+        let releasedContentPredicate = NSPredicate.init(format: "isFavorite == true")
+        let sort1 = NSSortDescriptor(key: "entity", ascending: true)
+        let request: NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
         
-        request.sortDescriptors = [sortLastName, sortFirstName]
+        request.sortDescriptors = [sort1]
         request.predicate = releasedContentPredicate
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -77,12 +72,13 @@ class PersonsTableViewController: UITableViewController  {
             try fetchedResultsController?.performFetch()
         } catch {
             // Failed to fetch results from the database. Handle errors appropriately in your app.
+            DDLogError(error.localizedDescription)
         }
     }
     
     private func updateSnapshot(animated: Bool = false) {
         // The animation default = false to prevent an error when the model updates and the tableView is not visible.
-        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
+        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, JsonImport>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
         
@@ -93,7 +89,7 @@ class PersonsTableViewController: UITableViewController  {
 
 //MARK: - NSFetchedResultsControllerDelegate
 
-extension PersonsTableViewController: NSFetchedResultsControllerDelegate {
+extension FavoritesTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         updateSnapshot(animated: true)
     }

@@ -11,8 +11,11 @@
 		C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC723CE7EE100A91407 /* CardSummary.swift */; };
 		C7101BCA23CE7FFA00A91407 /* CardSummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */; };
 		C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */; };
+		C717AB8023D2CE7400B14BB3 /* FavoriteSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717AB7F23D2CE7400B14BB3 /* FavoriteSummary.swift */; };
 		C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C7262E9E23BBCC7700240183 /* SwiftyJSON */; };
 		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
+		C758606223D2C7DB00603D29 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758606123D2C7DB00603D29 /* FavoritesTableViewController.swift */; };
+		C758606423D2C9FD00603D29 /* JsonImport+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758606323D2C9FD00603D29 /* JsonImport+Enhancements.swift */; };
 		C75F7CA923D15CE700657B06 /* Profession+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */; };
 		C75F7CAB23D15D2000657B06 /* Quote+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */; };
 		C761C39923BA945200C062DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761C39823BA945200C062DC /* AppDelegate.swift */; };
@@ -63,7 +66,10 @@
 		C7101BC723CE7EE100A91407 /* CardSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardSummary.swift; path = "Spirit of 76/Programs/CardSummary.swift"; sourceTree = SOURCE_ROOT; };
 		C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryStackViewController.swift; sourceTree = "<group>"; };
 		C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryContentViewController.swift; sourceTree = "<group>"; };
+		C717AB7F23D2CE7400B14BB3 /* FavoriteSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSummary.swift; sourceTree = "<group>"; };
 		C73B199A23BAC65E0047EA7C /* Spirit of 76.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spirit of 76.entitlements"; sourceTree = "<group>"; };
+		C758606123D2C7DB00603D29 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		C758606323D2C9FD00603D29 /* JsonImport+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonImport+Enhancements.swift"; sourceTree = "<group>"; };
 		C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profession+Enhancements.swift"; sourceTree = "<group>"; };
 		C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quote+Enhancements.swift"; sourceTree = "<group>"; };
 		C761C39523BA945200C062DC /* Spirit of 76.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spirit of 76.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,7 @@
 				C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */,
 				C7B4FC9623D2372A00D4206D /* Event+Enhancements.swift */,
 				C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */,
+				C758606323D2C9FD00603D29 /* JsonImport+Enhancements.swift */,
 				C78BE04723C0FFC60024FB0E /* Person+Enhanced.swift */,
 				C75F7CA823D15CE700657B06 /* Profession+Enhancements.swift */,
 				C75F7CAA23D15D2000657B06 /* Quote+Enhancements.swift */,
@@ -254,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DABCA423D2916300D210A5 /* FavoriteDetailViewController.swift */,
+				C758606123D2C7DB00603D29 /* FavoritesTableViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				C7101BC723CE7EE100A91407 /* CardSummary.swift */,
+				C717AB7F23D2CE7400B14BB3 /* FavoriteSummary.swift */,
 			);
 			name = Protocols;
 			path = Programs;
@@ -424,11 +433,14 @@
 				C761C39B23BA945200C062DC /* SceneDelegate.swift in Sources */,
 				C78BE04823C0FFC60024FB0E /* Person+Enhanced.swift in Sources */,
 				C7101BCA23CE7FFA00A91407 /* CardSummaryStackViewController.swift in Sources */,
+				C758606223D2C7DB00603D29 /* FavoritesTableViewController.swift in Sources */,
 				C7B4FC9923D2389A00D4206D /* Topic+Enhancements.swift in Sources */,
 				C7DABCA823D2938C00D210A5 /* AboutDetailsViewController.swift in Sources */,
 				C76AFF6523D0D97700952D21 /* Constants.swift in Sources */,
 				C7B4FC9B23D238E300D4206D /* Writing+Enhancements.swift in Sources */,
 				C7DABCA523D2916300D210A5 /* FavoriteDetailViewController.swift in Sources */,
+				C758606423D2C9FD00603D29 /* JsonImport+Enhancements.swift in Sources */,
+				C717AB8023D2CE7400B14BB3 /* FavoriteSummary.swift in Sources */,
 				C761C3A523BA945200C062DC /* Spirit_of_76.xcdatamodeld in Sources */,
 				C7A250C623D24A6C00087163 /* EventDetailViewController.swift in Sources */,
 				C7101BC623CE7E6300A91407 /* Education+Enhancement.swift in Sources */,

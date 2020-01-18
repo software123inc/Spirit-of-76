@@ -9,30 +9,12 @@
 import UIKit
 import CoreData
 
-extension Event: CardSummary {
-    var cardTitle: String {
+extension Event {
+    override var cardTitle: String {
         return self.name ?? "<No Title>"
     }
     
-    var cardDetailText: String {
+    override var cardDetailText: String {
         return self.notes ?? "<No Detail Text>"
-    }
-    
-    var cardIsFavorite: Bool {
-        get {
-            return self.isFavorite
-        }
-        
-        set {
-            self.isFavorite = newValue
-        }
-    }
-    
-    var cardImage: UIImage?  {
-        if let imageName = self.imageName {
-            return UIImage.init(named: imageName)
-        }
-        
-        return nil
     }
 }

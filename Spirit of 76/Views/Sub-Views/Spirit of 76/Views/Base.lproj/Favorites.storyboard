@@ -35,7 +35,7 @@
         <!--Favorites-->
         <scene sceneID="hqu-2G-PiL">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="pxy-qo-EfT" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="pxy-qo-EfT" customClass="FavoritesTableViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N4y-Py-4Vm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,6 +64,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ecw-ga-baY" kind="showDetail" identifier="showFavoriteDetail" id="zYD-Tf-zSr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -72,9 +75,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="9sk-ds-Pnp"/>
-                    <connections>
-                        <segue destination="ecw-ga-baY" kind="showDetail" identifier="showFavoriteDetails" id="WFp-Gi-LyF"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmP-aL-0UM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +134,6 @@
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WFp-Gi-LyF"/>
+        <segue reference="zYD-Tf-zSr"/>
     </inferredMetricsTieBreakers>
 </document>

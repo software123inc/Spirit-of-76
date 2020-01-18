@@ -145,7 +145,7 @@ class PersonDetailViewController: UIViewController {
         if let person = person {
             let fullName = person.fullName
             self.personFullNameLabel.text = fullName
-            self.personImageView.image = person.image
+            self.personImageView.image = person.cardImage
             self.personDescriptionTextView.text = person.descriptiveText
             self.residentStateImageView.image = person.residenceState?.blueImage
         }
@@ -175,7 +175,7 @@ class PersonDetailViewController: UIViewController {
         self.navigationItem.titleView?.addSubview(libertyBell)
         
         if let person = person  {
-            personTitleImageView = UIImageView.init(image: person.avatar)
+            personTitleImageView = UIImageView.init(image: person.cardAvatar)
             
             if let personImageView = personTitleImageView {
                 personImageView.frame = libertyBell.frame

@@ -12,16 +12,6 @@ import S123Common
 import CocoaLumberjackSwift
 
 extension State {
-    var image:UIImage? {
-        get {
-            if let imageName = self.imageName {
-                return UIImage(named: imageName)
-            }
-            
-            return nil
-        }
-    }
-    
     var blueImage:UIImage? {
         get {
             if let imageName = self.imageName {

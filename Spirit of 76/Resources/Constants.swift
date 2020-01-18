@@ -21,7 +21,7 @@ struct K {
         static let showEventDetail = "showEventDetail"
         static let showTopicDetail = "showTopicDetail"
         static let showEducation = "showEducation"
-        static let showFavoriteDetails = "showFavoriteDetails"
+        static let showFavoriteDetail = "showFavoriteDetail"
         static let showFacts = "showFacts"
         static let showProfessions = "showProfessions"
         static let showQuotes = "showQuotes"

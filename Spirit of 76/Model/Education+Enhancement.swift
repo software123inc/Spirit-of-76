@@ -9,22 +9,12 @@
 import Foundation
 import CoreData
 
-extension Education: CardSummary {
-    var cardTitle: String {
+extension Education {
+    override var cardTitle: String {
         return self.title ?? "<No Title>"
     }
     
-    var cardDetailText: String {
+    override var cardDetailText: String {
         return self.notes ?? "<No Detail Text>"
-    }
-    
-    var cardIsFavorite: Bool {
-        get {
-            return self.isFavorite
-        }
-        
-        set {
-            self.isFavorite = newValue
-        }
     }
 }

@@ -9,25 +9,15 @@
 import Foundation
 import CoreData
 
-extension Quote: CardSummary {
-    var cardTitle: String {
+extension Quote {
+    override var cardTitle: String {
         if let prefix = self.quotation?.prefix(19) {
             return "\(prefix)…"
         }
         return " "
     }
     
-    var cardDetailText: String {
-        return self.quotation ?? "<No Detail Text>"
-    }
-    
-    var cardIsFavorite: Bool {
-        get {
-            return self.isFavorite
-        }
-        
-        set {
-            self.isFavorite = newValue
-        }
+    override var cardDetailText: String {
+        return self.quotation ?? ""
     }
 }
