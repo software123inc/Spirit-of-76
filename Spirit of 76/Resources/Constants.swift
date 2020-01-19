@@ -13,7 +13,7 @@ struct K {
     
     struct Image {
         static let declarationBlurredBkgnd = UIImage(named: "declaration_pale_blurred")
-        static let fife_and_drum = UIImage(named: "Fife_and_Drum")
+        static let fife_and_drum = UIImage.init(named: "Fife_and_Drum")
         static let libertyBell = UIImage.init(named: "LibertyBell")
         static let star = UIImage.init(systemName: "star")
         static let star_filled = UIImage.init(systemName: "star.fill")

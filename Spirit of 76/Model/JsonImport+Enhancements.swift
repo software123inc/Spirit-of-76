@@ -37,7 +37,7 @@ extension JsonImport: CardSummary {
             return UIImage.init(named: imageName)
         }
         
-        return nil
+        return K.Image.fife_and_drum
     }
 }
 
@@ -69,7 +69,7 @@ extension JsonImport: FavoriteSummary {
             return UIImage.init(named: imageName)
         }
         
-        return nil
+        return K.Image.fife_and_drum
     }
     
     @objc

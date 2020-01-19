@@ -61,7 +61,7 @@ class EventDetailViewController: UIViewController {
         if let event = event {
             titleLabel.text = event.cardTitle
             detailTextView.text = event.cardDetailText
-            imageView.image = event.cardImage
+            imageView.image = event.cardImage ?? K.Image.fife_and_drum
             detailTextView.textAlignment = .natural
         }
         else {
