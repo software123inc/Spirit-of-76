@@ -84,7 +84,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 #if DEBUG
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-//                DDLogError(error.localizedDescription)
                 #else
                 DDLogError(error.localizedDescription)
                 #endif
