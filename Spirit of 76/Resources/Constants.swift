@@ -15,6 +15,12 @@ struct K {
         static let cayenne = "BrandCayenne"
     }
     
+    struct CacheName {
+        static let eventsCache = "eventsCache"
+        static let personCache = "personCache"
+        static let topicCache = "topicCache"
+    }
+    
     struct SegueID {
         static let showAboutDetails = "showAboutDetails"
         static let showPersonDetail = "showPersonDetail"

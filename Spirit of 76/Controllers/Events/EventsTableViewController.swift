@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class EventsTableViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Event>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Event>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Event>(tableView: tableView) { (tableView, indexPath, event) -> UITableViewCell? in
         
@@ -71,7 +69,10 @@ class EventsTableViewController: UITableViewController {
         request.sortDescriptors = [sort1, sort2, sort3]
         request.predicate = releasedContentPredicate
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.eventsCache)
         fetchedResultsController?.delegate = self
         
         do {

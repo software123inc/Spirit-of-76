@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class TopicsTableViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Topic>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Topic>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Topic>(tableView: tableView) { (tableView, indexPath, topic) -> UITableViewCell? in
         
@@ -65,7 +63,10 @@ class TopicsTableViewController: UITableViewController {
         request.sortDescriptors = [sort1]
         request.predicate = releasedContentPredicate
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.topicCache)
         fetchedResultsController?.delegate = self
         
         do {

@@ -11,24 +11,17 @@ import CoreData
 import CocoaLumberjackSwift
 import S123Common
 
-
-//open class NSFetchedResultsController<ResultType> : NSObject where ResultType : NSFetchRequestResult {
-
 class FavoritesTableViewController: UITableViewController {
-    private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    //    private var fetchedResultsController:NSFetchedResultsController<JsonImport>?
     private var dataSource: FavoritesDiffableDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        loadModel()
+        configureDataSource()
     }
     
     //MARK: - NAVIGATION
@@ -77,7 +70,7 @@ class FavoritesTableViewController: UITableViewController {
             return cell
         }
         
-//        self.loadModel()
+        self.loadModel()
     }
     
     private func loadModel() {
@@ -90,11 +83,7 @@ class FavoritesTableViewController: UITableViewController {
         request.sortDescriptors = [sort1]
         request.predicate = isFavoritePredicate
         
-        let frc = NSFetchedResultsController(fetchRequest: request,
-                                             managedObjectContext: viewContext,
-                                             sectionNameKeyPath: sectionNameKeyPath,
-                                             cacheName: "favoritesCache")
-        frc.delegate = self
+        let frc = requestController(fetchRequest: request, sectionNameKeyPath: sectionNameKeyPath)
         
         do {
             DDLogVerbose("Perform fetch<JsonImport>.")
@@ -105,6 +94,18 @@ class FavoritesTableViewController: UITableViewController {
         }
         
         updateSnapshot(frc:frc)
+    }
+    
+    private func requestController<T>(fetchRequest:NSFetchRequest<T>, sectionNameKeyPath:String) -> NSFetchedResultsController<T> {
+        // We don't want a cache as we need to re-fetch on appearance.
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                          managedObjectContext: viewContext,
+                                          sectionNameKeyPath: sectionNameKeyPath,
+                                          cacheName: nil)
+        
+        frc.delegate = self
+        
+        return frc
     }
     
     private func updateSnapshot(frc:NSFetchedResultsController<JsonImport>?, animated: Bool = false) {
@@ -140,10 +141,9 @@ class FavoritesTableViewController: UITableViewController {
 //MARK: - NSFetchedResultsControllerDelegate
 
 extension FavoritesTableViewController: NSFetchedResultsControllerDelegate {
+    // It's likely this is never called as our FRC is a local variable.
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        DDLogDebug("update fav snapshot A.")
         if let frc = controller as? NSFetchedResultsController<JsonImport> {
-            DDLogDebug("update fav snapshot B.")
             updateSnapshot(frc: frc, animated: true)
         }
     }

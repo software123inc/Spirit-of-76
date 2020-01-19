@@ -68,7 +68,10 @@ class PersonsTableViewController: UITableViewController  {
         request.sortDescriptors = [sortLastName, sortFirstName]
         request.predicate = releasedContentPredicate
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.personCache)
         fetchedResultsController?.delegate = self
         
         do {
