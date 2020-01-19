@@ -52,13 +52,29 @@ class CardSummaryStackViewController: UIViewController {
             cardSummaryVC?.detailTextView.text = cardSummary.cardDetailText
         }
         
-        if horizontalSizeClass == .regular, cardSummaries.count < stackView.subviews.count {
+        if horizontalSizeClass == .regular {
             let fillerSize = 3 - (cardSummaries.count % 3)
             
-            for _ in 1...fillerSize {
-                let cardSummaryVC = appendCardSummaryViewController()
-                makeCardSummaryInvisible(cardSummaryVC)
+            if fillerSize < 3 {
+                for _ in 1...fillerSize {
+                    let cardSummaryVC = appendCardSummaryViewController()
+                    makeCardSummaryInvisible(cardSummaryVC)
+                }
             }
+        }
+        
+        updatePageCount()
+    }
+    
+    private func updatePageCount() {
+        guard let cardSummaries = cardSummaries else { return }
+        
+        switch(horizontalSizeClass) {
+            case .compact:
+                pageControl.numberOfPages = cardSummaries.count
+            default:
+                DDLogVerbose("iPad page count = \(Int(cardSummaries.count / 3) + 1)")
+                pageControl.numberOfPages = Int(cardSummaries.count / 3) + min(1, cardSummaries.count % 3)
         }
     }
     
@@ -81,14 +97,11 @@ class CardSummaryStackViewController: UIViewController {
         
         switch(horizontalSizeClass) {
             case .compact:
-                pageControl.numberOfPages = cardSummaries?.count ?? 0
                 NSLayoutConstraint.activate([
                     cardSummaryVC.view.widthAnchor.constraint(equalToConstant: view.frame.width),
                     cardSummaryVC.view.heightAnchor.constraint(equalToConstant: 180)
                 ])
             default:
-                DDLogVerbose("iPad page count = \(Int((cardSummaries?.count ?? 0) / 3) + 1)")
-                pageControl.numberOfPages = Int((cardSummaries?.count ?? 0) / 3) + 1
                 NSLayoutConstraint.activate([
                     cardSummaryVC.view.widthAnchor.constraint(equalToConstant: view.frame.width / 3),
                     cardSummaryVC.view.heightAnchor.constraint(equalToConstant: 180)
