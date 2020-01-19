@@ -11,15 +11,24 @@ import CoreData
 import CocoaLumberjackSwift
 import S123Common
 
+
+//open class NSFetchedResultsController<ResultType> : NSObject where ResultType : NSFetchRequestResult {
+
 class FavoritesTableViewController: UITableViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    private var fetchedResultsController:NSFetchedResultsController<JsonImport>?
+    //    private var fetchedResultsController:NSFetchedResultsController<JsonImport>?
     private var dataSource: FavoritesDiffableDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadModel()
     }
     
     //MARK: - NAVIGATION
@@ -53,7 +62,7 @@ class FavoritesTableViewController: UITableViewController {
                 case .topic:
                     performSegue(withIdentifier: K.SegueID.showFavoriteTopic, sender: ii)
                 case .education, .fact, .profession, .quote:
-                        performSegue(withIdentifier: K.SegueID.showFavoriteDetail, sender: ii)
+                    performSegue(withIdentifier: K.SegueID.showFavoriteDetail, sender: ii)
             }
         }
     }
@@ -68,41 +77,41 @@ class FavoritesTableViewController: UITableViewController {
             return cell
         }
         
-        self.loadModelFromFetchResult()
+//        self.loadModel()
     }
     
-    private func loadModelFromFetchResult() {
-        let releasedContentPredicate = NSPredicate.init(format: "isFavorite == true")
+    private func loadModel() {
+        let isFavoritePredicate = NSPredicate.init(format: "isFavorite == true")
         
         let sectionNameKeyPath = "entity"
         let sort1 = NSSortDescriptor(key: sectionNameKeyPath, ascending: true)
         let request: NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
         
         request.sortDescriptors = [sort1]
-        request.predicate = releasedContentPredicate
+        request.predicate = isFavoritePredicate
         
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
-                                                              managedObjectContext: viewContext,
-                                                              sectionNameKeyPath: sectionNameKeyPath,
-                                                              cacheName: "favoritesCache")
-        fetchedResultsController?.delegate = self
+        let frc = NSFetchedResultsController(fetchRequest: request,
+                                             managedObjectContext: viewContext,
+                                             sectionNameKeyPath: sectionNameKeyPath,
+                                             cacheName: "favoritesCache")
+        frc.delegate = self
         
         do {
             DDLogVerbose("Perform fetch<JsonImport>.")
-            try fetchedResultsController?.performFetch()
+            try frc.performFetch()
         } catch {
             // Failed to fetch results from the database. Handle errors appropriately in your app.
             DDLogError(error.localizedDescription)
         }
         
-        updateSnapshot()
+        updateSnapshot(frc:frc)
     }
     
-    private func updateSnapshot(animated: Bool = false) {
+    private func updateSnapshot(frc:NSFetchedResultsController<JsonImport>?, animated: Bool = false) {
         // The animation default = false to prevent an error when the model updates and the tableView is not visible.
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
         
-        if let frc = self.fetchedResultsController, let sections = frc.sections {
+        if let frc = frc, let sections = frc.sections {
             for (i, section) in (sections.enumerated()) {
                 if let items = section.objects as? [JsonImport],
                     let sectionType = FavoriteSectionType.init(rawValue: i)
@@ -132,6 +141,10 @@ class FavoritesTableViewController: UITableViewController {
 
 extension FavoritesTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: true)
+        DDLogDebug("update fav snapshot A.")
+        if let frc = controller as? NSFetchedResultsController<JsonImport> {
+            DDLogDebug("update fav snapshot B.")
+            updateSnapshot(frc: frc, animated: true)
+        }
     }
 }
