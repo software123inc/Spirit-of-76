@@ -161,7 +161,7 @@
         <!--Favorites-->
         <scene sceneID="Ok9-j2-mC3">
             <objects>
-                <splitViewController id="ZqB-xv-dRF" sceneMemberID="viewController">
+                <splitViewController id="ZqB-xv-dRF" customClass="PrimarySplitViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" selectedImage="star.fill" id="Ua2-Yo-yHO"/>
                     <connections>
                         <segue destination="de0-qd-7ai" kind="relationship" relationship="masterViewController" id="rTF-O2-XYO"/>
@@ -197,6 +197,6 @@
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bg2-Lk-B0P"/>
+        <segue reference="SOF-XM-udl"/>
     </inferredMetricsTieBreakers>
 </document>

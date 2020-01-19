@@ -110,6 +110,7 @@ class PersonDetailViewController: UIViewController {
             appDelegate.saveContext()
             
             showStar()
+            NotificationCenter.default.post(name: Notification.Name.didToggleFavorite, object: person)
         }
     }
     

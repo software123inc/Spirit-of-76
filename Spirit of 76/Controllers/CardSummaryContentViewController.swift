@@ -13,6 +13,7 @@ import CocoaLumberjackSwift
 class CardSummaryContentViewController: UIViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBOutlet var tapGesture: UITapGestureRecognizer!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var isFavoriteButton: UIButton?
@@ -39,14 +40,20 @@ class CardSummaryContentViewController: UIViewController {
         }
     }
     
+    //MARK:- IBActions
     @IBAction func isFavoriteTapped(_ sender: UIButton) {
         if var cardSummary = cardSummary {
             cardSummary.cardIsFavorite = !cardSummary.cardIsFavorite
             
             appDelegate.saveContext()
+            NotificationCenter.default.post(name: Notification.Name.didToggleFavorite, object: cardSummary)
         }
         
         showFavorite()
+    }
+    
+    @IBAction func gestureHandler(_ sender: UIGestureRecognizer) {
+        performSegue(withIdentifier: K.SegueID.moreDetailTextPopover, sender: cardSummary)
     }
     
     private func showFavorite() {

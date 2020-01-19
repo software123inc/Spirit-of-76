@@ -74,7 +74,7 @@
         <!--About-->
         <scene sceneID="rQF-5e-46X">
             <objects>
-                <splitViewController id="2Fk-tk-e1H" sceneMemberID="viewController">
+                <splitViewController id="2Fk-tk-e1H" customClass="PrimarySplitViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="lightbulb" catalog="system" selectedImage="lightbulb.fill" id="XXv-uv-1jF"/>
                     <connections>
                         <segue destination="w6s-AJ-ira" kind="relationship" relationship="masterViewController" id="ZcM-Tq-05T"/>
@@ -109,6 +109,6 @@
         <image name="lightbulb.fill" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qdE-ZH-dL6"/>
+        <segue reference="8md-jd-mK7"/>
     </inferredMetricsTieBreakers>
 </document>

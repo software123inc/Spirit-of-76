@@ -131,7 +131,7 @@
         <!--Topics-->
         <scene sceneID="qpg-Hn-2tL">
             <objects>
-                <splitViewController id="gF2-x0-hju" sceneMemberID="viewController">
+                <splitViewController id="gF2-x0-hju" customClass="PrimarySplitViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Topics" image="text.bubble" catalog="system" selectedImage="text.bubble.fill" id="86L-og-uGN"/>
                     <connections>
                         <segue destination="84f-bj-UPS" kind="relationship" relationship="masterViewController" id="fap-Ng-Zri"/>
@@ -168,6 +168,6 @@
         <image name="text.bubble.fill" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OGJ-ep-ebu"/>
+        <segue reference="KWa-fz-ArJ"/>
     </inferredMetricsTieBreakers>
 </document>

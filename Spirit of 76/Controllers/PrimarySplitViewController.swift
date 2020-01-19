@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrimarySplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+class PrimarySplitViewController: UISplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +17,11 @@ class PrimarySplitViewController: UISplitViewController, UISplitViewControllerDe
         self.delegate = self
         self.preferredDisplayMode = .primaryOverlay
     }
-    
+}
+
+extension PrimarySplitViewController: UISplitViewControllerDelegate {
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         // Return true to prevent UIKit from applying its default behavior
         return true
     }
 }
-

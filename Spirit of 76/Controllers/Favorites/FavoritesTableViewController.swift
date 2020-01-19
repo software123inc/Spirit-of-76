@@ -17,11 +17,22 @@ class FavoritesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name.didToggleFavorite,
+                                               object: nil,
+                                               queue: .main) { (note) in
+                                                DDLogVerbose("Favorite toggled...")
+                                                self.loadModel(animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureDataSource()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: - NAVIGATION
@@ -74,7 +85,7 @@ class FavoritesTableViewController: UITableViewController {
         self.loadModel()
     }
     
-    private func loadModel() {
+    private func loadModel(animated: Bool = false) {
         let sectionNameKeyPath = K.ManObjKey.entity
         let sort1 = NSSortDescriptor(key: sectionNameKeyPath, ascending: true)
         let request: NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
@@ -92,7 +103,7 @@ class FavoritesTableViewController: UITableViewController {
             DDLogError(error.localizedDescription)
         }
         
-        updateSnapshot(frc:frc)
+        updateSnapshot(frc:frc, animated: animated)
     }
     
     private func requestController<T>(fetchRequest:NSFetchRequest<T>, sectionNameKeyPath:String) -> NSFetchedResultsController<T> {

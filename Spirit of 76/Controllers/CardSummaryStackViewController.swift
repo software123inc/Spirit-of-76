@@ -30,6 +30,21 @@ class CardSummaryStackViewController: UIViewController {
         populateStackView()
     }
     
+    //MARK: - IBAction Management
+    
+    @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
+        DDLogVerbose("Need scrolling update to page \(sender.currentPage - 1)!")
+        
+        let scrollToX = Int(self.scrollView.frame.size.width) * sender.currentPage
+        let scrollToY = 0
+        let width = Int(self.scrollView.frame.size.width)
+        let height = Int(self.scrollView.frame.size.height)
+        
+        let visibleRect = CGRect(x: scrollToX, y: scrollToY, width: width, height: height)
+        
+        self.scrollView.scrollRectToVisible(visibleRect, animated: true)
+    }
+    
     //MARK: - Data Management
     
     private func populateStackView() {
