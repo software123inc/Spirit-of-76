@@ -9,9 +9,9 @@
 import UIKit
 
 protocol FavoriteSummary {
+    var itemIsFavorite:Bool { get set }
     var favoriteTitle:String { get }
     var favoriteDetailText:String { get }
     var favoriteImage:UIImage? { get }
     var favoriteAvatar:UIImage? { get }
-    var favoriteSortKey:UIImage? { get }
 }

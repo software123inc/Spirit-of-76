@@ -37,7 +37,7 @@ class FavoritesTableViewController: UITableViewController {
             dvc.topic = sender as? Topic
         }
         else if segue.identifier == K.SegueID.showFavoriteDetail, let navVC = segue.destination as? UINavigationController, let dvc = navVC.topViewController as? FavoriteDetailViewController {
-            dvc.favorite = sender as? CardSummary
+            dvc.favorite = sender as? FavoriteSummary
         }
         else {
             DDLogWarn("unhandled segue id: \(String(describing: segue.identifier))")
@@ -64,8 +64,9 @@ class FavoritesTableViewController: UITableViewController {
     private func configureDataSource() {
         dataSource = FavoritesDiffableDataSource(tableView: tableView) {(tableView, indexPath, jsonImport) -> UITableViewCell? in
             let cell = tableView.dequeueReusableCell(withIdentifier: K.TVCIdentifier.favoriteCell, for: indexPath)
-            cell.textLabel?.text = jsonImport.cardTitle
-            cell.detailTextLabel?.text = jsonImport.cardDetailText
+            cell.textLabel?.text = jsonImport.favoriteTitle
+            cell.detailTextLabel?.text = jsonImport.favoriteDetailText
+            cell.imageView?.image = jsonImport.favoriteAvatar ?? K.Image.libertyBell
             
             return cell
         }

@@ -10,11 +10,24 @@ import Foundation
 import CoreData
 
 extension Writing {
+    
+    //MARK:-- Card Summary
+    
     override var cardTitle: String {
         return self.title ?? ""
     }
     
     override var cardDetailText: String {
+        return self.notes ?? ""
+    }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return self.title ?? ""
+    }
+    
+    override var favoriteDetailText: String {
         return self.notes ?? ""
     }
 }

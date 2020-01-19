@@ -10,11 +10,24 @@ import UIKit
 import CoreData
 
 extension Event {
+    
+    //MARK:-- Card Summary
+    
     override var cardTitle: String {
-        return self.name ?? "<No Title>"
+        return self.name ?? ""
     }
     
     override var cardDetailText: String {
-        return self.notes ?? "<No Detail Text>"
+        return self.notes ?? ""
+    }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return self.name ?? ""
+    }
+    
+    override var favoriteDetailText: String {
+        return self.notes ?? ""
     }
 }

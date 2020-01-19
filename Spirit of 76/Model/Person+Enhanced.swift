@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 extension Person {
+    //MARK:-- Card Summary
+    
     override var cardTitle: String {
         return self.fullName
     }
@@ -17,6 +19,22 @@ extension Person {
     override var cardDetailText: String {
         return self.summaryText ?? ""
     }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return self.lastFirst
+    }
+    
+    override var favoriteDetailText: String {
+        return self.summaryText ?? ""
+    }
+    
+    override var favoriteAvatar: UIImage? {
+        return self.cardAvatar
+    }
+    
+    //MARK:-- General
     
     var cardAvatar:UIImage? {
         get {

@@ -6,10 +6,22 @@
 //  Copyright © 2020 Tim W. Newton. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct K {
     static let appName = "Spirit of '76"
+    
+    struct Image {
+        static let declarationBlurredBkgnd = UIImage(named: "declaration_pale_blurred")
+        static let fife_and_drum = UIImage(named: "Fife_and_Drum")
+        static let libertyBell = UIImage.init(named: "LibertyBell")
+        static let star = UIImage.init(systemName: "star")
+        static let star_filled = UIImage.init(systemName: "star.fill")
+    }
+    
+    struct ImageView {
+        static let libertyBell = UIImageView.init(image: K.Image.libertyBell)
+    }
     
     struct BrandColors {
         static let cayenne = "BrandCayenne"

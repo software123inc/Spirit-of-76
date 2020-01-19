@@ -10,11 +10,28 @@ import Foundation
 import CoreData
 
 extension Topic {
+    
+    //MARK:-- Card Summary
+    
     override var cardTitle: String {
         return self.title ?? ""
     }
     
     override var cardDetailText: String {
-        return self.notes ?? self.synopsis ?? ""
+        return self.detailText
+    }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return self.title ?? ""
+    }
+    
+    override var favoriteDetailText: String {
+        return self.detailText
+    }
+    
+    var detailText: String {
+        self.notes ?? self.synopsis ?? ""
     }
 }

@@ -12,14 +12,14 @@ import CocoaLumberjackSwift
 
 class FavoriteDetailViewController: UIViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
+    private let libertyBell = K.ImageView.libertyBell
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var isFavoriteButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
-    var favorite:CardSummary?
+    var favorite:FavoriteSummary?
     
     //MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class FavoriteDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
         
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+        if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
         
@@ -39,7 +39,7 @@ class FavoriteDetailViewController: UIViewController {
     
     @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
         if var favorite = favorite {
-            favorite.cardIsFavorite = !favorite.cardIsFavorite
+            favorite.itemIsFavorite = !favorite.itemIsFavorite
             appDelegate.saveContext()
             showFavorite()
         }
@@ -48,11 +48,11 @@ class FavoriteDetailViewController: UIViewController {
     //MARK:- Instance methods
     private func showFavorite() {
         if let favorite = favorite {
-            isFavoriteButton.image = (favorite.cardIsFavorite) ? UIImage.init(systemName: "star.fill") : UIImage.init(systemName: "star")
+            isFavoriteButton.image = (favorite.itemIsFavorite) ? K.Image.star_filled : K.Image.star
             isFavoriteButton.isEnabled = true
         }
         else {
-            isFavoriteButton.image = UIImage.init(systemName: "star")
+            isFavoriteButton.image = K.Image.star
             isFavoriteButton.isEnabled = false
         }
     }
@@ -63,14 +63,16 @@ class FavoriteDetailViewController: UIViewController {
     
     private func refreshUI() {
         if let favorite = favorite {
-            titleLabel.text = favorite.cardTitle
-            detailTextView.text = favorite.cardDetailText
+            titleLabel.text = favorite.favoriteTitle
+            detailTextView.text = favorite.favoriteDetailText
             detailTextView.textAlignment = .natural
+            imageView.image = favorite.favoriteImage
         }
         else {
-            titleLabel.text = "Spirit of '76"
+            titleLabel.text = K.appName
             detailTextView.text = "Find all your saved favorites here."
             detailTextView.textAlignment = .center
+            imageView.image = K.Image.fife_and_drum
         }
         
         showFavorite()

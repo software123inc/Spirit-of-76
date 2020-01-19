@@ -10,7 +10,7 @@ import UIKit
 
 class TopicDetailViewController: UIViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
+    private let libertyBell = K.ImageView.libertyBell
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
@@ -25,7 +25,7 @@ class TopicDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
         
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+        if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
         
@@ -47,11 +47,11 @@ class TopicDetailViewController: UIViewController {
     
     private func showFavorite() {
         if let topic = topic {
-            isFavoriteButton.image = (topic.cardIsFavorite) ? UIImage.init(systemName: "star.fill") : UIImage.init(systemName: "star")
+            isFavoriteButton.image = (topic.cardIsFavorite) ? K.Image.star_filled : K.Image.star
             isFavoriteButton.isEnabled = true
         }
         else {
-            isFavoriteButton.image = UIImage.init(systemName: "star")
+            isFavoriteButton.image = K.Image.star
             isFavoriteButton.isEnabled = false
         }
     }
@@ -63,7 +63,7 @@ class TopicDetailViewController: UIViewController {
             detailTextView.textAlignment = .natural
         }
         else {
-            titleLabel.text = "Spirit of '76"
+            titleLabel.text = K.appName
             detailTextView.text = "Learn about many notable topics of America's War for Independence."
             detailTextView.textAlignment = .center
         }

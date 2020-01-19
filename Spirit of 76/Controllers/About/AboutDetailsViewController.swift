@@ -9,7 +9,7 @@
 import UIKit
 
 class AboutDetailsViewController: UIViewController {
-    private let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
+    private let libertyBell = K.ImageView.libertyBell
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class AboutDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
         
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+        if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
     }

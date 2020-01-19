@@ -11,7 +11,7 @@ import CocoaLumberjackSwift
 
 class EventDetailViewController: UIViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
+    private let libertyBell = K.ImageView.libertyBell
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
@@ -26,7 +26,7 @@ class EventDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
         
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+        if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
         
@@ -48,11 +48,11 @@ class EventDetailViewController: UIViewController {
     
     private func showFavorite() {
         if let event = event {
-            isFavoriteButton.image = (event.cardIsFavorite) ? UIImage.init(systemName: "star.fill") : UIImage.init(systemName: "star")
+            isFavoriteButton.image = (event.cardIsFavorite) ? K.Image.star_filled : K.Image.star
             isFavoriteButton.isEnabled = true
         }
         else {
-            isFavoriteButton.image = UIImage.init(systemName: "star")
+            isFavoriteButton.image = K.Image.star
             isFavoriteButton.isEnabled = false
         }
     }
@@ -65,9 +65,9 @@ class EventDetailViewController: UIViewController {
             detailTextView.textAlignment = .natural
         }
         else {
-            titleLabel.text = "Spirit of '76"
+            titleLabel.text = K.appName
             detailTextView.text = "Learn about many notable events of America's War for Independence."
-            imageView.image = UIImage(named: "Fife_and_Drum")
+            imageView.image = K.Image.fife_and_drum
             detailTextView.textAlignment = .center
         }
         
