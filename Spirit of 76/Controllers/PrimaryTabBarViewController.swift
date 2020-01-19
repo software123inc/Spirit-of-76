@@ -26,13 +26,7 @@ class PrimaryTabBarViewController: UITabBarController {
                 return .portrait
             }
             
-//            if self.traitCollection.horizontalSizeClass == .compact || self.traitCollection.verticalSizeClass == .compact {
-//                return .portrait
-//            }
-            
             return .all
-            
-//            return UIDevice.current.userInterfaceIdiom == .phone ? .portrait : .all //OBS -> You can also return an array
         }
     }
 }

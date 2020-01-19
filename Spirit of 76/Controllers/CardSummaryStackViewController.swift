@@ -18,6 +18,7 @@ class CardSummaryStackViewController: UIViewController {
     let horizontalSizeClass = UIScreen.main.traitCollection.horizontalSizeClass
     let signersStoryboard = UIStoryboard.init(name: "Signers", bundle: nil)
     var cardSummaries: [CardSummary]?
+    var isTransition = false
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -32,12 +33,16 @@ class CardSummaryStackViewController: UIViewController {
     //MARK: - Data Management
     
     private func populateStackView() {
-        guard let cardSummaries = cardSummaries, cardSummaries.count > 0, let firstSubview = stackView.arrangedSubviews.first else {
+        DDLogVerbose("Populating stack view.")
+        
+        guard let cardSummaries = cardSummaries, cardSummaries.count > 0 else {
             DDLogWarn("Can't populate stack view yet with \(self.cardSummaries?.count ?? -1) cards.")
             return
         }
         
-        removeViewFromStack(firstSubview)
+        for subview in stackView.subviews {
+            removeViewFromStack(subview)
+        }
         
         for cardSummary in cardSummaries {
             let cardSummaryVC = appendCardSummaryViewController()
@@ -47,7 +52,7 @@ class CardSummaryStackViewController: UIViewController {
             cardSummaryVC?.detailTextView.text = cardSummary.cardDetailText
         }
         
-        if horizontalSizeClass == .regular {
+        if horizontalSizeClass == .regular, cardSummaries.count < stackView.subviews.count {
             let fillerSize = 3 - (cardSummaries.count % 3)
             
             for _ in 1...fillerSize {
@@ -66,6 +71,7 @@ class CardSummaryStackViewController: UIViewController {
     }
     
     private func appendCardSummaryViewController() -> CardSummaryContentViewController?  {
+        DDLogVerbose("In stack view: \(stackView.subviews.count), Summaries: \(cardSummaries?.count ?? -99)")
         guard let cardSummaryVC = signersStoryboard.instantiateViewController(identifier: K.ViewControllerID.cardSummaryContent) as? CardSummaryContentViewController else { return nil }
         
         self.addChild(cardSummaryVC)
