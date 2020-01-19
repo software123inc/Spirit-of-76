@@ -16,6 +16,7 @@ class CardSummaryContentViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var isFavoriteButton: UIButton?
+    @IBOutlet weak var isFavoriteButtonTrailingConstraint: NSLayoutConstraint!
     
     var cardSummary:CardSummary?
     
