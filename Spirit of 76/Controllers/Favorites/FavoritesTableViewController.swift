@@ -74,14 +74,12 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     private func loadModel() {
-        let isFavoritePredicate = NSPredicate.init(format: "isFavorite == true")
-        
-        let sectionNameKeyPath = "entity"
+        let sectionNameKeyPath = K.ManObjKey.entity
         let sort1 = NSSortDescriptor(key: sectionNameKeyPath, ascending: true)
         let request: NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
         
-        request.sortDescriptors = [sort1]
-        request.predicate = isFavoritePredicate
+        request.sortDescriptors = [sort1, K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isFavorite
         
         let frc = requestController(fetchRequest: request, sectionNameKeyPath: sectionNameKeyPath)
         

@@ -56,12 +56,9 @@ class TopicsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
-        let sort1 = NSSortDescriptor(key: "title", ascending: true)
         let request: NSFetchRequest<Topic> = Topic.fetchRequest()
-        
-        request.sortDescriptors = [sort1]
-        request.predicate = releasedContentPredicate
+        request.sortDescriptors = [K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
                                                               managedObjectContext: viewContext,

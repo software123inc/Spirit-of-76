@@ -3,6 +3,7 @@
         {
             "jsonId":1,
             "name":"Declaration of Independence",
+            "sortValue":"Declaration of Independence",
             "year":1776,
             "asOfDate":"1776-07-04",
             "synopsis":"Signing the Declaration",
@@ -13,6 +14,7 @@
         {
             "jsonId":2,
             "name":"Constitutional Convention",
+            "sortValue":"Constitutional Convention",
             "year":1787,
             "synopsis":"Debating and drafting the U.S. Constitution",
             "notes":"When the war of the Revolution was terminated, and the army disbanded, Congress, which had been powerful through its military arm, was rendered quite impotent, for the authority before concentrated in the National Legislature, returned to the individual States whence it emanated. Congress was burdened with a foreign debt of eight millions of dollars, and a domestic debt of thirty millions, and yet, according to the Articles of Confederation, it possessed no power to liquidate debts incurred during the war; it only possessed the privilege of recommending to the several States the payment thereof. The people lost nearly all regard for Congress, general indifference prevailed, and a disposition to refuse to pay any taxes whatsoever began to be cherished. General anarchy and confusion seemed to be the tendency of all things, and the leading men of the Revolution felt gloomy forebodings for the future. It was clearly seen that the serious defects of the Articles of Confederation were the root of the growing evil, and these convictions led to those measures which finally wrought out the Federal Constitution.",
@@ -22,6 +24,7 @@
         {
             "jsonId":3,
             "name":"Lexington & Concord",
+            "sortValue":"Lexington & Concord",
             "year":1775,
             "synopsis":"The first battle of American Revolution",
             "imageName":"Lexington",
@@ -30,15 +33,17 @@
         {
             "jsonId":4,
             "name":"Constitution Ratification",
+            "sortValue":"Constitution Ratification",
             "year":1787,
             "synopsis":"The debates among states to adopt the Union",
             "imageName":"Constitution_Ratification",
             "endYear":1788,
-             "releaseStatus":false
+            "releaseStatus":false
         },
         {
             "jsonId":5,
             "name":"Boston Tea Party",
+            "sortValue":"Boston Tea Party",
             "year":1773,
             "asOfDate":"1773-12-16",
             "synopsis":"Iconic act of civil protest over tyranny through taxation.",
@@ -49,6 +54,7 @@
         {
             "jsonId":6,
             "name":"Stamp Act",
+            "sortValue":"Stamp Act",
             "year":1765,
             "synopsis":"A tax disguised as a fee.",
             "notes":"The Stamp Act required all legal documents, such as wills, deeds, mortgages, marriage certificates, etc., to be written on paper stamped with the royal arms of Britain. An officer called a Stamp Master was appointed to sell them, and thus Great Britain indirectly taxed her American colonies without their consent. The eloquence of Patrick Henry's resolutions respecting the Stamp Act, fell like successive thunderbolts on the ears of the timid House of Burgesses. 'It was in the midst of the magnificent debate on those resolutions,' says Mr. Wirt, 'while he was descanting on the tyranny of the obnoxious Act, that he exclaimed, in a voice of thunder, and with the look of a God; 'Caesar had his Brutus, Charles the First his Cromwell - and George the Third' -- 'Treason!' cried the Speaker -- 'treason, treason,' echoed from every part of the House. It was one of those trying moments which are decisive of character. Henry faltered not for an instant; but rising to a loftier altitude and fixing on the Speaker an eye of the most determined fire, he finished the sentence with the firmest emphasis -- 'and George the Third -- may profit by their example. If that be treason, make the most of it.''",
@@ -59,6 +65,7 @@
         {
             "jsonId":7,
             "name":"Seizure of the Sloop Liberty",
+            "sortValue":"Seizure of the Sloop Liberty",
             "year":1768,
             "asOfDate":"1768-06-10",
             "notes":"One of the earliest acts of open resistance was on the occasion of the seizure of John Hancock's sloop, Liberty in 1768 by the Custom House officers, under the plea that she was loaded with goods contrary to the revenue laws. The people were greatly exasperated; they beat the officers with clubs and obliged them to fly to Castle William, at the entrance of Boston harbor for safety. They also burned the Collector's boat and committed other acts of violence. These transactions gave the royal governor an excuse he wished for to introduce British troops into the city. This measure excited the indignation of the people to the highest pitch, and almost daily quarrels took place in the streets between the citizens and the soldiers, which finally resulted in the death of three Americans in March 1770 by shots from the soldiers' muskets (editor's note: three were killed instantly and two others subsequently died from wounds sustained in the event) -- an event known as The Boston Massacre.",
@@ -68,6 +75,7 @@
         {
             "jsonId":8,
             "name":"Colonial Convention, Albany",
+            "sortValue":"Colonial Convention, Albany",
             "year":1754,
             "notes":"This Convention was called for the purpose of concerting measures to oppose more effectually the encroachments of the French settlers, and to hold a conference with the Six Nations of Indians. Dr. Franklin was a member of that Convention and submitted a plan of union for the colonies which contained all the essential features of our present Constitution.",
             "imageName":"Convention_Albany",
@@ -76,6 +84,7 @@
         {
             "jsonId":9,
             "name":"Congress on the Move",
+            "sortValue":"Congress on the Move",
             "year":1776,
             "notes":"During the Revolution, Congress held its sessions in Philadelphia, but was obliged on several occasions to retreat to a more secure position. At the close of 1776, it adjourned to Baltimore, MD, when it was expected Cornwallis would attack Philadelphia, after his successful pursuit of Washington across New Jersey. Again, when Howe marched upon Philadelphia in September 1777, Congress adjourned to Lancaster, and three days afterward to York, where its sessions were held during the winter the American Army was encamped at Valley Forge.",
             "imageName":"Philadelphia_Congress",
@@ -84,6 +93,7 @@
         {
             "jsonId":10,
             "name":"Colonial Congress (aka, General Congress)",
+            "sortValue":"Colonial Congress (aka, General Congress)",
             "year":1765,
             "notes":"The passage of the Stamp Act, in March 1765, excited a spirit of resistance in the Colonies, that threatened open rebellion. The Massachusetts Assembly sent forth a circular letter to the other Colonies, proposing a General Congress of delegates from them, to be held in the city of New York in October following, for the purpose of consulting upon the public good. At the opening of the Convention, the following delegates appeared and took their seats. From Massachusetts, James Otis, Oliver Partridge, Timothy Ruggles; Rhode Island, Metcalf Bowler, Henry Ward; Connecticut, Eliphalet Dyer, David Rowland, William S. Johnson; New York, Robert R. Livingston, John Cruger, Philip Livingston, William Bayard, Leonard Lispenard; Pennsylvania, John Dickenson, John Morton, George Bryan; Maryland, William Murdock, Edward Tilghman, Thomas Ringgold; New Jersey, Robert Ogden, Hendrick Fisher, Joseph Borden; Delaware, Thomas McKean, Caesar Rodney; South Carolina, Thomas Lynch, Christopher Gadsden, John Rutledge. Timothy Ruggles, of Massachusetts, (who was a royalist during the Revolution), was, by ballot, elected President. They adopted a Declaration of Rights, a Petition to the King, and a Memorial to Parliament. The Declaration of Rights was penned by John Cruger, delegate from New York. He was at that time speaker of the Provincial Assembly, and Mayor of the city of New York. The Petition to the King was written by Robert R. Livingston, also a member from New York, who afterward had the high honor of administering the oath of office to Washington when he was inaugurated the first President of the United States.",
             "imageName":"Colonial_Congress",
@@ -92,6 +102,7 @@
         {
             "jsonId":11,
             "name":"HMS Fowey, Ship-of-War",
+            "sortValue":"HMS Fowey, Ship-of-War",
             "year":1777,
             "synopsis":"Confiscating Gun Powder",
             "notes":"In 1777, the attempt of Lord Dunmore to take the ammunition, citing under a secret order from the British ministry, from the public magazines on board the Fowey ship-of-war, then lying off Williamsburg, excited the people to the highest pitch, and threatened open rebellion and armed resistance. This movement clearly divulged the premeditated design of disarming the people, and reducing them to slavery. The governor, finding resistance vain, finally agreed to pay for the powder, and was then allowed quietly to retire with his family on board the ship-of-war in the river.",
@@ -101,6 +112,7 @@
         {
             "jsonId":12,
             "name":"Whiskey Rebellion",
+            "sortValue":"Whiskey Rebellion",
             "year":1792,
             "notes":"A portion of the people of the interior of Pennsylvania, violently opposed the excise law, it being a region where much whiskey was distilled, and hence the tax or duty amounted to a considerable resource. This excise law was adopted by Congress in 1790. In 1792, so insurrectionary had the people become in relation to the duty on distilled liquor, that Congress passed an act authorizing the President of the United States to call out the militia of the State, if necessary to enforce the laws. He withheld his power for nearly two years, but at length the Whiskey Rebellion assumed such a formidable aspect, that an army of fifteen thousand men were placed in the field. The rebellion ceased without a conflict.",
             "imageName":"Whiskey_Rebellion",
@@ -110,6 +122,7 @@
         {
             "jsonId":13,
             "name":"Boston Port Bill",
+            "sortValue":"Boston Port Bill",
             "year":1774,
             "synopsis":"Punishment for the Tea Party",
             "notes":"On the thirty-first of March, 1774, the British Parliament passed an act for the punishment of the people of Boston for the destruction of tea in the harbor, on the sixteenth of December previous. It provided for the virtual and actual closing of the port. All importations and exportations were forbidden, and vessels were prohibited from entering or leaving that port. The Customs, Courts of Justice, and all government offices, were removed to Salem; and on the arrival of Governor Gage, a few days before the first of June (the time the act was to take effect), he called a meeting of the General Assembly of Massachusetts at Salem. Thus all business was suddenly crushed in Boston, and the inhabitants were reduced to great misery, overawed as they were by large bodies of armed troops. The people of the Colonies deeply sympathized with them, and lent them generous aid. And, strange as it may appear, the city of London subscribed one hundred and fifty thousand dollars for the poor of Boston!",
@@ -119,6 +132,7 @@
         {
             "jsonId":14,
             "name":"Defeat at Brandywine",
+            "sortValue":"Defeat at Brandywine",
             "year":1777,
             "asOfDate":"1777-08-25",
             "notes":"General Howe, finding it impracticable to reach Philadelphia by land, embarked his troops on board the British fleet, then lying of Sandy Hook, and proceeded to the Chesapeake Bay. His troops were landed at the mouth of Elk River, on the twenty-fifth of August, 1777, and that was the first intimation Washington had of his real destination. The British immediately commenced their march toward Philadelphia, and the Americans at the same time marched from that city to meet them. They met upon the river Brandywine, where the battle of that name, so disastrous to the Americans, occurred. It was there that La Fayette greatly distinguished himself, and was severely wounded.",
@@ -128,6 +142,7 @@
         {
             "jsonId":15,
             "name":"North Carolina's First Move",
+            "sortValue":"North Carolina's First Move",
             "year":1776,
             "asOfDate":"1776-04-22",
             "synopsis":"First to authorize delegates to vote for independence.",
@@ -138,6 +153,7 @@
         {
             "jsonId":16,
             "name":"Recommending State Governments",
+            "sortValue":"Recommending State Governments",
             "year":1776,
             "asOfDate":"1776-05-10",
             "synopsis":"Congress recommends that colonies form state governments independent of the Crown",
@@ -148,6 +164,7 @@
         {
             "jsonId":17,
             "name":"Independence Resolved",
+            "sortValue":"Independence Resolved",
             "year":1776,
             "asOfDate":"1776-06-07",
             "synopsis":"Mr. Lee's Motion Before Congress",
@@ -158,6 +175,7 @@
         {
             "jsonId":18,
             "name":"Colonies to States",
+            "sortValue":"Colonies to States",
             "year":1776,
             "asOfDate":"1776-09-09",
             "notes":"On the ninth of September, 1776, Congress adopted the following resolution: 'That in all continental commissions where heretofore the words 'United Colonies' have been used, the style be altered in future to the 'United States.' In 1777, the red ground of the American flag was altered to thirteen red and white stripes, as an emblem of the thirteen states united in a war for liberty.",

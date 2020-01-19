@@ -203,7 +203,6 @@
 		C761C3B323BAAD2B00C062DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C70C087723D3909900CA67AA /* Diffable */,
 				C7101BC523CE7E6300A91407 /* Education+Enhancement.swift */,
 				C7B4FC9623D2372A00D4206D /* Event+Enhancements.swift */,
 				C77C02C723D12B800082E2B7 /* Fact+Enhancements.swift */,
@@ -214,6 +213,7 @@
 				C7F8D76123C7F1210095E965 /* State+Enhanced.swift */,
 				C7B4FC9823D2389A00D4206D /* Topic+Enhancements.swift */,
 				C7B4FC9A23D238E300D4206D /* Writing+Enhancements.swift */,
+				C70C087723D3909900CA67AA /* Diffable */,
 				C7EA7F1623BAD58F00E15CDD /* JSON */,
 				C761C3A323BA945200C062DC /* Spirit_of_76.xcdatamodeld */,
 			);

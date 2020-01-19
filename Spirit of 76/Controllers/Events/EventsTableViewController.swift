@@ -60,14 +60,9 @@ class EventsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
-        let sort1 = NSSortDescriptor(key: "year", ascending: true)
-        let sort2 = NSSortDescriptor(key: "asOfDate", ascending: true)
-        let sort3 = NSSortDescriptor(key: "name", ascending: true)
         let request: NSFetchRequest<Event> = Event.fetchRequest()
-        
-        request.sortDescriptors = [sort1, sort2, sort3]
-        request.predicate = releasedContentPredicate
+        request.sortDescriptors = [K.SortBy.yearASC, K.SortBy.asOfDateASC, K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
                                                               managedObjectContext: viewContext,

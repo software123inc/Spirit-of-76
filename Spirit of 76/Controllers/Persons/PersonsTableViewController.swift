@@ -60,13 +60,9 @@ class PersonsTableViewController: UITableViewController  {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "releaseStatus == true")
-        let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
-        let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
         let request: NSFetchRequest<Person> = Person.fetchRequest()
-        
-        request.sortDescriptors = [sortLastName, sortFirstName]
-        request.predicate = releasedContentPredicate
+        request.sortDescriptors = [K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
         fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
                                                               managedObjectContext: viewContext,

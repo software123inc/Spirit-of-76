@@ -13,4 +13,5 @@ protocol FavoriteSummary {
     var favoriteDetailText:String { get }
     var favoriteImage:UIImage? { get }
     var favoriteAvatar:UIImage? { get }
+    var favoriteSortKey:UIImage? { get }
 }
