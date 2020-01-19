@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        S123Common.logDebugSimulatorPathToSqlite()
         
         JSONHelper.importSeedData()
-                
+        
+        ThemeManager.applyTheme(theme: .Default)
+                        
         return true
     }
 
@@ -62,7 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  * The store could not be migrated to the current model version.
                  Check the error message to determine what the actual problem was.
                  */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+                DDLogError(error.localizedDescription)
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
@@ -81,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 #if DEBUG
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+//                DDLogError(error.localizedDescription)
                 #else
                 DDLogError(error.localizedDescription)
                 #endif

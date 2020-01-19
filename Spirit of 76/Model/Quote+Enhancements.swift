@@ -6,28 +6,39 @@
 //  Copyright © 2020 Tim W. Newton. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
-extension Quote: CardSummary {
-    var cardTitle: String {
+extension Quote {
+    
+    //MARK:-- Card Summary
+    
+    override var cardTitle: String {
+        return shortQuote
+    }
+    
+    override var cardDetailText: String {
+        return self.quotation ?? ""
+    }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return shortQuote
+    }
+    
+    override var favoriteDetailText: String {
+        return self.person?.fullName ?? ""
+    }
+    
+    var shortQuote: String {
         if let prefix = self.quotation?.prefix(19) {
             return "\(prefix)…"
         }
-        return " "
+        return ""
     }
     
-    var cardDetailText: String {
-        return self.quotation ?? "<No Detail Text>"
-    }
-    
-    var cardIsFavorite: Bool {
-        get {
-            return self.isFavorite
-        }
-        
-        set {
-            self.isFavorite = newValue
-        }
+    override var favoriteAvatar: UIImage? {
+        return self.person?.favoriteAvatar
     }
 }

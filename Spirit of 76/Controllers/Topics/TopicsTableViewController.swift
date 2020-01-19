@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class TopicsTableViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Topic>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Topic>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Topic>(tableView: tableView) { (tableView, indexPath, topic) -> UITableViewCell? in
         
@@ -58,14 +56,14 @@ class TopicsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
-        let sort1 = NSSortDescriptor(key: "title", ascending: true)
         let request: NSFetchRequest<Topic> = Topic.fetchRequest()
+        request.sortDescriptors = [K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
-        request.sortDescriptors = [sort1]
-        request.predicate = releasedContentPredicate
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.topicCache)
         fetchedResultsController?.delegate = self
         
         do {
@@ -80,7 +78,9 @@ class TopicsTableViewController: UITableViewController {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Topic>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 
@@ -88,6 +88,6 @@ class TopicsTableViewController: UITableViewController {
 
 extension TopicsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: false)
+        updateSnapshot(animated: true)
     }
 }

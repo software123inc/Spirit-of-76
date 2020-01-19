@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class PersonsTableViewController: UITableViewController  {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Person>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Person>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Person>(tableView: tableView) { (tableView, indexPath, person) -> UITableViewCell? in
         
@@ -23,7 +21,7 @@ class PersonsTableViewController: UITableViewController  {
         
         cell.textLabel?.text = person.lastFirst
         cell.detailTextLabel?.text = person.summaryText
-        cell.imageView?.image = person.avatar
+        cell.imageView?.image = person.cardAvatar
         
         return cell
     }
@@ -62,15 +60,14 @@ class PersonsTableViewController: UITableViewController  {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
-        let sortLastName = NSSortDescriptor(key: "lastName", ascending: true)
-        let sortFirstName = NSSortDescriptor(key: "firstName", ascending: true)
         let request: NSFetchRequest<Person> = Person.fetchRequest()
+        request.sortDescriptors = [K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
-        request.sortDescriptors = [sortLastName, sortFirstName]
-        request.predicate = releasedContentPredicate
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.personCache)
         fetchedResultsController?.delegate = self
         
         do {
@@ -85,7 +82,9 @@ class PersonsTableViewController: UITableViewController  {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Person>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 

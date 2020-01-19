@@ -13,9 +13,14 @@ protocol CardSummary {
     var cardDetailText:String { get }
     var cardIsFavorite:Bool { get set }
     var cardImage:UIImage? { get }
+    var cardAvatar:UIImage? { get }
 }
 
 extension CardSummary {
+    var cardAvatar:UIImage? {
+        return nil
+    }
+    
     var cardImage:UIImage? {
         return nil
     }

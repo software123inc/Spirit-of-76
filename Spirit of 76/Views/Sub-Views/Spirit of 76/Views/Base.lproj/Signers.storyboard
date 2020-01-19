@@ -11,7 +11,7 @@
         <!--Signers ViewController-->
         <scene sceneID="2iu-gC-Jcx">
             <objects>
-                <viewController title="Spirit of '76" extendedLayoutIncludesOpaqueBars="YES" id="34z-8S-FCB" userLabel="Signers ViewController" customClass="PersonDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signersDetailView" title="Spirit of '76" extendedLayoutIncludesOpaqueBars="YES" id="34z-8S-FCB" userLabel="Signers ViewController" customClass="PersonDetailViewController" customModule="Spirit_of_76" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NAO-bj-ak9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,13 +313,12 @@
         <!--Signers Nav Controller-->
         <scene sceneID="8PK-HO-wVy">
             <objects>
-                <navigationController extendedLayoutIncludesOpaqueBars="YES" toolbarHidden="NO" id="AcK-9y-Eq6" userLabel="Signers Nav Controller" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="AcK-9y-Eq6" userLabel="Signers Nav Controller" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aLl-sb-xof">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sfi-lK-b2q">
-                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -333,7 +332,7 @@
         <!--Signers SplitViewController-->
         <scene sceneID="naF-2C-riE">
             <objects>
-                <splitViewController title="Signers" extendedLayoutIncludesOpaqueBars="YES" id="0gA-Z2-Vgz" userLabel="Signers SplitViewController" sceneMemberID="viewController">
+                <splitViewController id="0gA-Z2-Vgz" userLabel="Signers SplitViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Signers" image="person.2" catalog="system" selectedImage="person.2.fill" id="PcN-Gx-TGK"/>
                     <connections>
                         <segue destination="AcK-9y-Eq6" kind="relationship" relationship="masterViewController" id="prs-zU-L4L"/>
@@ -541,7 +540,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fp3-by-SDz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sZN-GW-Dcp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="signersDetailNavController" automaticallyAdjustsScrollViewInsets="NO" id="sZN-GW-Dcp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mHc-Z5-t47">
@@ -571,7 +570,7 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4oj-y0-x8I"/>
+        <segue reference="v1x-38-axs"/>
         <segue reference="GEI-Ct-gmi"/>
     </inferredMetricsTieBreakers>
 </document>

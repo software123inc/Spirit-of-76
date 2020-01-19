@@ -1,5 +1,5 @@
 //
-//  EventDetailViewController.swift
+//  FavoriteDetailViewController.swift
 //  Spirit of 76
 //
 //  Created by Tim Newton on 1/17/20.
@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreData
 import CocoaLumberjackSwift
 
-class EventDetailViewController: UIViewController {
+class FavoriteDetailViewController: UIViewController {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let libertyBell = K.ImageView.libertyBell
     
@@ -18,11 +19,12 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var isFavoriteButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
-    var event:Event?
+    var favorite:FavoriteSummary?
     
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
         
@@ -33,22 +35,20 @@ class EventDetailViewController: UIViewController {
         refreshUI()
     }
     
+    //MARK: - IBActions
+    
     @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
-        if let event = event {
-            event.isFavorite = !event.isFavorite
-            
+        if var favorite = favorite {
+            favorite.itemIsFavorite = !favorite.itemIsFavorite
             appDelegate.saveContext()
             showFavorite()
         }
     }
     
-    private func setNavBarTitleImageToLibertyBell() {
-        self.navigationItem.titleView = libertyBell
-    }
-    
+    //MARK:- Instance methods
     private func showFavorite() {
-        if let event = event {
-            isFavoriteButton.image = (event.cardIsFavorite) ? K.Image.star_filled : K.Image.star
+        if let favorite = favorite {
+            isFavoriteButton.image = (favorite.itemIsFavorite) ? K.Image.star_filled : K.Image.star
             isFavoriteButton.isEnabled = true
         }
         else {
@@ -57,18 +57,22 @@ class EventDetailViewController: UIViewController {
         }
     }
     
+    private func setNavBarTitleImageToLibertyBell() {
+        self.navigationItem.titleView = libertyBell
+    }
+    
     private func refreshUI() {
-        if let event = event {
-            titleLabel.text = event.cardTitle
-            detailTextView.text = event.cardDetailText
-            imageView.image = event.cardImage ?? K.Image.fife_and_drum
+        if let favorite = favorite {
+            titleLabel.text = favorite.favoriteTitle
+            detailTextView.text = favorite.favoriteDetailText
             detailTextView.textAlignment = .natural
+            imageView.image = favorite.favoriteImage
         }
         else {
             titleLabel.text = K.appName
-            detailTextView.text = "Learn about many notable events of America's War for Independence."
-            imageView.image = K.Image.fife_and_drum
+            detailTextView.text = "Find all your saved favorites here."
             detailTextView.textAlignment = .center
+            imageView.image = K.Image.fife_and_drum
         }
         
         showFavorite()

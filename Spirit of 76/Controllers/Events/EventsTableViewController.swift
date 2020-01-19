@@ -12,10 +12,8 @@ import CocoaLumberjackSwift
 import S123Common
 
 class EventsTableViewController: UITableViewController {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    var fetchedResultsController:NSFetchedResultsController<Event>?
+    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private var fetchedResultsController:NSFetchedResultsController<Event>?
     
     lazy var diffableDataSource = UITableViewDiffableDataSource<SectionType, Event>(tableView: tableView) { (tableView, indexPath, event) -> UITableViewCell? in
         
@@ -62,16 +60,14 @@ class EventsTableViewController: UITableViewController {
     //MARK: - DATA MANAGEMENT
     
     private func loadModel() {
-        let releasedContentPredicate = NSPredicate.init(format: "release_status == true")
-        let sort1 = NSSortDescriptor(key: "year", ascending: true)
-        let sort2 = NSSortDescriptor(key: "asOfDate", ascending: true)
-        let sort3 = NSSortDescriptor(key: "name", ascending: true)
         let request: NSFetchRequest<Event> = Event.fetchRequest()
+        request.sortDescriptors = [K.SortBy.yearASC, K.SortBy.asOfDateASC, K.SortBy.sortValueASC]
+        request.predicate = K.Predicate.isReleased
         
-        request.sortDescriptors = [sort1, sort2, sort3]
-        request.predicate = releasedContentPredicate
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request,
+                                                              managedObjectContext: viewContext,
+                                                              sectionNameKeyPath: nil,
+                                                              cacheName: K.CacheName.eventsCache)
         fetchedResultsController?.delegate = self
         
         do {
@@ -86,7 +82,9 @@ class EventsTableViewController: UITableViewController {
         var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<SectionType, Event>()
         diffableDataSourceSnapshot.appendSections([.main])
         diffableDataSourceSnapshot.appendItems(fetchedResultsController?.fetchedObjects ?? [])
-        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: animated)
+        
+        let shouldAnimate = animated && (tableView.window != nil)
+        self.diffableDataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate)
     }
 }
 
@@ -94,6 +92,6 @@ class EventsTableViewController: UITableViewController {
 
 extension EventsTableViewController: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        updateSnapshot(animated: false)
+        updateSnapshot(animated: true)
     }
 }

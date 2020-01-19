@@ -3,52 +3,62 @@
         {
             "jsonId":1,
             "name":"United States",
-            "img_flag":"flag_usa"
+            "sortValue":"United States",
+            "imageName":"flag_usa"
         },
         {
             "jsonId":2,
             "name":"British American Colonies",
-            "img_flag":"flag_england"
+            "sortValue":"British American Colonies",
+            "imageName":"flag_england"
         },
         {
             "jsonId":3,
             "name":"Great Britain",
-            "img_flag":"flag_england"
+            "sortValue":"Great Britain",
+            "imageName":"flag_england"
         },
         {
             "jsonId":4,
             "name":"French American Colonies",
-            "img_flag":"flag_france"
+            "sortValue":"French American Colonies",
+            "imageName":"flag_france"
         },
         {
             "jsonId":5,
             "name":"France",
-            "img_flag":"flag_france"
+            "sortValue":"France",
+            "imageName":"flag_france"
         },
         {
             "jsonId":6,
             "name":"Spain",
-            "img_flag":"flag_spain"
+            "sortValue":"Spain",
+            "imageName":"flag_spain"
         },
         {
             "jsonId":7,
             "name":"Spanish American Colonies",
-            "img_flag":"flag_spain"
+            "sortValue":"Spanish American Colonies",
+            "imageName":"flag_spain"
         },
         {
             "jsonId":8,
             "name":"Ireland",
-            "img_flag":"flag_ireland"
+            "sortValue":"Ireland",
+            "imageName":"flag_ireland"
         },
         {
             "jsonId":9,
             "name":"Scotland",
-            "img_flag":"flag_scotland"
+            "sortValue":"Scotland",
+            "imageName":"flag_scotland"
         },
         {
             "jsonId":10,
             "name":"Wales",
-            "img_flag":"flag_wales"
+            "sortValue":"Wales",
+            "imageName":"flag_wales"
         }
     ]
 }

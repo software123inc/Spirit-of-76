@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 import CocoaLumberjackSwift
 
 class PersonDetailViewController: UIViewController {
@@ -38,7 +39,7 @@ class PersonDetailViewController: UIViewController {
     
     let titleViewImageFrame = CGRect.init(x: 0, y: 0, width: 23.5, height: 30)
     var personTitleImageView:UIImageView?
-    let libertyBell = UIImageView.init(image: UIImage.init(named: "LibertyBell"))
+    let libertyBell = K.ImageView.libertyBell
     
     var isScrolled:Bool {
         return self.scrollView.convert(self.personImageView.frame.origin, to: self.view).y < 60
@@ -75,7 +76,7 @@ class PersonDetailViewController: UIViewController {
         self.scrollView.delegate = self
         
         // Do any additional setup after loading the view.
-        if let backgroundImage = UIImage(named: "declaration_pale_blurred") {
+        if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
     }
@@ -124,7 +125,6 @@ class PersonDetailViewController: UIViewController {
     @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
         if let person = person {
             person.isFavorite = !person.isFavorite
-            
             appDelegate.saveContext()
             
             showStar()
@@ -145,14 +145,14 @@ class PersonDetailViewController: UIViewController {
         if let person = person {
             let fullName = person.fullName
             self.personFullNameLabel.text = fullName
-            self.personImageView.image = person.portraitImage
+            self.personImageView.image = person.cardImage
             self.personDescriptionTextView.text = person.descriptiveText
             self.residentStateImageView.image = person.residenceState?.blueImage
         }
         else {
-            let fullName = "Spirit of '76"
+            let fullName = K.appName
             self.personFullNameLabel.text = fullName
-            self.personImageView.image = UIImage(named: "Fife_and_Drum")
+            self.personImageView.image = K.Image.fife_and_drum
             self.personDescriptionTextView.text = "Learn about the Signers of America's Founding Documents."
         }
         
@@ -161,11 +161,11 @@ class PersonDetailViewController: UIViewController {
     
     private func showStar () {
         if let person = person {
-            self.isFavoriteBarButtonItem.image = (person.isFavorite) ? UIImage.init(systemName: "star.fill") : UIImage.init(systemName: "star")
+            self.isFavoriteBarButtonItem.image = (person.isFavorite) ? K.Image.star_filled : K.Image.star
             self.isFavoriteBarButtonItem.isEnabled = true
         }
         else {
-            self.isFavoriteBarButtonItem.image = UIImage.init(systemName: "star")
+            self.isFavoriteBarButtonItem.image = K.Image.star
             self.isFavoriteBarButtonItem.isEnabled = false
         }
     }
@@ -175,7 +175,7 @@ class PersonDetailViewController: UIViewController {
         self.navigationItem.titleView?.addSubview(libertyBell)
         
         if let person = person  {
-            personTitleImageView = UIImageView.init(image: person.avatar)
+            personTitleImageView = UIImageView.init(image: person.cardAvatar)
             
             if let personImageView = personTitleImageView {
                 personImageView.frame = libertyBell.frame

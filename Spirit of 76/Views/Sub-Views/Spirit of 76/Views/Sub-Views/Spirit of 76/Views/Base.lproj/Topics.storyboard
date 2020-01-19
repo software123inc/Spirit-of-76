@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGa-wp-Qz0">
-                                <rect key="frame" x="153" y="96" width="108.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spirit of '76" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGa-wp-Qz0">
+                                <rect key="frame" x="8" y="96" width="398" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,9 +44,10 @@
                             <constraint firstItem="V06-pV-sqd" firstAttribute="top" secondItem="dGa-wp-Qz0" secondAttribute="bottom" constant="8" id="XuZ-FG-qbW"/>
                             <constraint firstItem="V06-pV-sqd" firstAttribute="trailing" secondItem="1zC-JD-7EC" secondAttribute="trailing" id="Y6s-Ao-7qJ"/>
                             <constraint firstItem="1zC-JD-7EC" firstAttribute="trailing" secondItem="lh1-qW-tgv" secondAttribute="trailing" id="abZ-VX-Oap"/>
+                            <constraint firstItem="dGa-wp-Qz0" firstAttribute="leading" secondItem="1zC-JD-7EC" secondAttribute="leading" constant="8" id="eaN-uj-iQw"/>
                             <constraint firstItem="V06-pV-sqd" firstAttribute="leading" secondItem="1zC-JD-7EC" secondAttribute="leading" id="fQI-JB-l7a"/>
+                            <constraint firstItem="1zC-JD-7EC" firstAttribute="trailing" secondItem="dGa-wp-Qz0" secondAttribute="trailing" constant="8" id="izC-sq-yiG"/>
                             <constraint firstItem="1zC-JD-7EC" firstAttribute="bottom" secondItem="lh1-qW-tgv" secondAttribute="bottom" id="pXy-oF-jUi"/>
-                            <constraint firstItem="dGa-wp-Qz0" firstAttribute="centerX" secondItem="1zC-JD-7EC" secondAttribute="centerX" id="qy5-cN-6V3"/>
                             <constraint firstItem="lh1-qW-tgv" firstAttribute="top" secondItem="V06-pV-sqd" secondAttribute="bottom" constant="8" id="v6v-QL-3rm"/>
                             <constraint firstItem="V06-pV-sqd" firstAttribute="width" secondItem="1zC-JD-7EC" secondAttribute="width" id="zLP-AT-UA0"/>
                         </constraints>
@@ -144,7 +145,7 @@
         <!--Navigation Controller-->
         <scene sceneID="kMr-si-bhQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nsd-eY-ZUf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="topicsDetailNavController" automaticallyAdjustsScrollViewInsets="NO" id="Nsd-eY-ZUf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SqB-yK-CqZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

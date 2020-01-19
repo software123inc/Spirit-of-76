@@ -10,6 +10,42 @@ import UIKit
 import CoreData
 
 extension Person {
+    //MARK:-- Card Summary
+    
+    override var cardTitle: String {
+        return self.fullName
+    }
+    
+    override var cardDetailText: String {
+        return self.summaryText ?? ""
+    }
+    
+    //MARK:-- Favorite Summary
+    
+    override var favoriteTitle: String {
+        return self.lastFirst
+    }
+    
+    override var favoriteDetailText: String {
+        return self.summaryText ?? ""
+    }
+    
+    override var favoriteAvatar: UIImage? {
+        return self.cardAvatar
+    }
+    
+    //MARK:-- General
+    
+    var cardAvatar:UIImage? {
+        get {
+            if let imageName = self.imageName {
+                return UIImage(named: "Avatars/\(imageName)")
+            }
+            
+            return nil
+        }
+    }
+    
     var fullName:String {
         get {
             return "\(self.firstName ?? "?")\(self.middleName != nil ? " \(self.middleName!)" : "") \(self.lastName ?? "?")"
@@ -19,24 +55,6 @@ extension Person {
     var lastFirst:String {
         get {
             return "\(self.lastName ?? "?") \(self.firstName ?? "?")"
-        }
-    }
-    
-    var imageName:String {
-        get {
-            return "\(self.lastName ?? "?")_\(self.firstName ?? "?")"
-        }
-    }
-    
-    var portraitImage:UIImage? {
-        get {
-            return UIImage(named: self.imageName)
-        }
-    }
-    
-    var avatar:UIImage? {
-        get {
-            return UIImage(named: "Avatars/\(self.imageName)")
         }
     }
     
