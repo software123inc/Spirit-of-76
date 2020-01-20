@@ -120,7 +120,7 @@ class FavoritesTableViewController: UITableViewController {
     
     private func updateSnapshot(frc:NSFetchedResultsController<JsonImport>?, animated: Bool = false) {
         // The animation default = false to prevent an error when the model updates and the tableView is not visible.
-        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
+        var snapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
         
         if let frc = frc, let sections = frc.sections {
             for (i, section) in (sections.enumerated()) {
@@ -131,19 +131,16 @@ class FavoritesTableViewController: UITableViewController {
                      need to keep our sections indexes in order. We can figure out what the
                      name of the section is not from sectionType, but by pulling the entity.name
                      value from the first object in each section (as we do for the header names).*/
-                    diffableDataSourceSnapshot.appendSections([sectionType])
-                    diffableDataSourceSnapshot.appendItems(items)
+                    snapshot.appendSections([sectionType])
+                    snapshot.appendItems(items)
                     
                     let shouldAnimate = animated && (tableView.window != nil)
-                    dataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate, completion: nil)
+                    dataSource.apply(snapshot, animatingDifferences: shouldAnimate)
                 }
                 else {
                     DDLogWarn("Unexpected objects in FetchResultsController<JsonImport>.")
                 }
             }
-        }
-        else {
-            DDLogWarn("Unexpected FetchResultsController<JsonImport>.")
         }
     }
 }
