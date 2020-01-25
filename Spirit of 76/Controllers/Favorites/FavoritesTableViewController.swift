@@ -13,7 +13,7 @@ import S123Common
 
 class FavoritesTableViewController: UITableViewController {
     private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    private var dataSource: FavoritesDiffableDataSource!
+    private var dataSource: FavoritesDiffableDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,17 @@ class FavoritesTableViewController: UITableViewController {
         NotificationCenter.default.addObserver(forName: Notification.Name.didToggleFavorite,
                                                object: nil,
                                                queue: .main) { (note) in
-                                                DDLogVerbose("Favorite toggled...")
+                                                if self.dataSource == nil {
+                                                    self.configureDataSource()
+                                                }
                                                 self.loadModel(animated: true)
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        guard JsonImport.hasFavorites else { return }
         configureDataSource()
     }
     
@@ -56,8 +60,7 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ii = dataSource.itemIdentifier(for: indexPath)
-        if let entityName = ii?.entity.name, let sectionTypeTrueName = FavoriteSectionEntityNames.init(rawValue: entityName) {
+        if let ii = dataSource?.itemIdentifier(for: indexPath), let entityName = ii.entity.name, let sectionTypeTrueName = FavoriteSectionEntityNames.init(rawValue: entityName) {
             switch sectionTypeTrueName {
                 case .event:
                     performSegue(withIdentifier: K.SegueID.showFavoriteEvent, sender: ii)
@@ -124,8 +127,7 @@ class FavoritesTableViewController: UITableViewController {
         
         if let frc = frc, let sections = frc.sections {
             for (i, section) in (sections.enumerated()) {
-                if let items = section.objects as? [JsonImport],
-                    let sectionType = FavoriteSectionType.init(rawValue: i)
+                if let items = section.objects as? [JsonImport], let sectionType = FavoriteSectionType.init(rawValue: i)
                 {
                     /* our sectionType really won't correspond to our Entity class, we just
                      need to keep our sections indexes in order. We can figure out what the
@@ -135,7 +137,7 @@ class FavoritesTableViewController: UITableViewController {
                     snapshot.appendItems(items)
                     
                     let shouldAnimate = animated && (tableView.window != nil)
-                    dataSource.apply(snapshot, animatingDifferences: shouldAnimate)
+                    dataSource?.apply(snapshot, animatingDifferences: shouldAnimate)
                 }
                 else {
                     DDLogWarn("Unexpected objects in FetchResultsController<JsonImport>.")

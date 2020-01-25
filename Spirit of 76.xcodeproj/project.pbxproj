@@ -196,9 +196,9 @@
 		C761C3B223BAAD1A00C062DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C756ED1423D51B8400F3AA86 /* PrimarySplitViewController.swift */,
 				C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */,
 				C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */,
+				C756ED1423D51B8400F3AA86 /* PrimarySplitViewController.swift */,
 				C78BE04923C1120C0024FB0E /* PrimaryTabBarViewController.swift */,
 				C7DABCA623D2937100D210A5 /* About */,
 				C7B4FC9C23D23A1500D4206D /* Events */,
@@ -657,7 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -680,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";

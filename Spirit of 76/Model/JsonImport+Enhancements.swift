@@ -8,6 +8,29 @@
 
 import CoreData
 import UIKit
+import CocoaLumberjackSwift
+
+extension JsonImport {
+    static var favoritesCount:Int {
+        let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var count = 0
+        do {
+            let fr:NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
+            fr.predicate = K.Predicate.isFavorite
+            
+            count =  try viewContext.count(for: fr)
+        }
+        catch {
+            DDLogWarn(error.localizedDescription)
+        }
+        
+        return count
+    }
+    
+    static var hasFavorites:Bool {
+        return JsonImport.favoritesCount > 0
+    }
+}
 
 extension JsonImport: CardSummary {
     @objc
