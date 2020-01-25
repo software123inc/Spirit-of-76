@@ -17,11 +17,22 @@ class FavoritesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: Notification.Name.didToggleFavorite,
+                                               object: nil,
+                                               queue: .main) { (note) in
+                                                DDLogVerbose("Favorite toggled...")
+                                                self.loadModel(animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureDataSource()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     //MARK: - NAVIGATION
@@ -74,7 +85,7 @@ class FavoritesTableViewController: UITableViewController {
         self.loadModel()
     }
     
-    private func loadModel() {
+    private func loadModel(animated: Bool = false) {
         let sectionNameKeyPath = K.ManObjKey.entity
         let sort1 = NSSortDescriptor(key: sectionNameKeyPath, ascending: true)
         let request: NSFetchRequest<JsonImport> = JsonImport.fetchRequest()
@@ -92,7 +103,7 @@ class FavoritesTableViewController: UITableViewController {
             DDLogError(error.localizedDescription)
         }
         
-        updateSnapshot(frc:frc)
+        updateSnapshot(frc:frc, animated: animated)
     }
     
     private func requestController<T>(fetchRequest:NSFetchRequest<T>, sectionNameKeyPath:String) -> NSFetchedResultsController<T> {
@@ -109,7 +120,7 @@ class FavoritesTableViewController: UITableViewController {
     
     private func updateSnapshot(frc:NSFetchedResultsController<JsonImport>?, animated: Bool = false) {
         // The animation default = false to prevent an error when the model updates and the tableView is not visible.
-        var diffableDataSourceSnapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
+        var snapshot = NSDiffableDataSourceSnapshot<FavoriteSection, JsonImport>()
         
         if let frc = frc, let sections = frc.sections {
             for (i, section) in (sections.enumerated()) {
@@ -120,19 +131,16 @@ class FavoritesTableViewController: UITableViewController {
                      need to keep our sections indexes in order. We can figure out what the
                      name of the section is not from sectionType, but by pulling the entity.name
                      value from the first object in each section (as we do for the header names).*/
-                    diffableDataSourceSnapshot.appendSections([sectionType])
-                    diffableDataSourceSnapshot.appendItems(items)
+                    snapshot.appendSections([sectionType])
+                    snapshot.appendItems(items)
                     
                     let shouldAnimate = animated && (tableView.window != nil)
-                    dataSource.apply(diffableDataSourceSnapshot, animatingDifferences: shouldAnimate, completion: nil)
+                    dataSource.apply(snapshot, animatingDifferences: shouldAnimate)
                 }
                 else {
                     DDLogWarn("Unexpected objects in FetchResultsController<JsonImport>.")
                 }
             }
-        }
-        else {
-            DDLogWarn("Unexpected FetchResultsController<JsonImport>.")
         }
     }
 }

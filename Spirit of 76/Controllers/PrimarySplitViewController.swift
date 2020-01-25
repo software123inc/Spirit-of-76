@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CocoaLumberjackSwift
 
-class PrimarySplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+class PrimarySplitViewController: UISplitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +18,16 @@ class PrimarySplitViewController: UISplitViewController, UISplitViewControllerDe
         self.delegate = self
         self.preferredDisplayMode = .primaryOverlay
     }
-    
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        // Return true to prevent UIKit from applying its default behavior
-        return true
-    }
 }
 
+extension PrimarySplitViewController: UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        // Return true to initally show Master (primary) view controller.
+        // Return false to initally show Detail (secondary) view controller.
+        
+        let shouldCollapse = UserDefaults.standard.bool(forKey: K.PrefKey.showTablesInitially)
+        DDLogVerbose("shouldCollapse: \(shouldCollapse)")
+        
+        return shouldCollapse
+    }
+}

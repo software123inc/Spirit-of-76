@@ -4,64 +4,64 @@
             "jsonId":1,
             "title":"Taxation Without Representation",
             "sortValue":"Taxation Without Representation",
-            "synopsis":"Viewed as a hallmark of tyranny, this phrase became a rallying cry of the revolution.",
+            "synopsis":"Definition: Viewed as a hallmark of tyranny, this phrase became a rallying cry of the revolution.",
             "releaseStatus":true
         },
         {
             "jsonId":2,
             "title":"Abolitionism",
             "sortValue":"Abolitionism",
-            "synopsis":"Ending slavery in the colonies required a new nation",
+            "synopsis":"Ending slavery in the colonies required a new nation.",
             "notes":"There were many calls for abolition of slavery prior to America's Civil War. In Virginia, Richard Henry Lee's first debate was to take a passionate position to tax the importation of slaves to the point of ending it's practice. Thomas Jefferson, too, made strong but unsuccessful efforts in the Virginia Assembly for the emancipation of the slaves. In 1774, Governor Hopkins introduced a bill into the Assembly of Rhode Island to prevent the importation of slaves; and to show that his professions on this point were sincere, he manumitted all of those which belonged to himself. In connection with Rufus King of New York, William Ellery made strong efforts in 1785 to have slavery in the United States abolished.",
             "releaseStatus":true
         },
         {
             "jsonId":3,
             "title":"Bureaucracies and the Abuse of Power",
-            "sortValue":"Bureaucracies and the Abuse of Power",
-            "synopsis":"Unelected officials of government have the ability to regulate with the power of legislation.",
+            "sortValue":"Bureaucracies and the Abuse of Power.",
+            "synopsis":"Definition: Unelected officials of government have the ability to regulate with the power of legislation.",
             "releaseStatus":true
         },
         {
             "jsonId":4,
             "title":"Judicial Abuse",
             "sortValue":"Judicial Abuse",
-            "synopsis":"Judges who legislate or fail to uphold justice.",
+            "synopsis":"Definition: Judges who legislate or fail to uphold justice.",
             "releaseStatus":true
         },
         {
             "jsonId":5,
             "title":"Civil Command of the Military",
             "sortValue":"Civil Command of the Military",
-            "synopsis":"Placing military power under the control of elected officials",
+            "synopsis":"Definition: Placing military power under the control of elected officials.",
             "releaseStatus":true
         },
         {
             "jsonId":6,
             "title":"Freedom of Religion",
             "sortValue":"Freedom of Religion",
-            "synopsis":"Allowing people to choose their religious affiliation",
+            "synopsis":"Definition: Allowing people to choose their religious affiliation.",
             "releaseStatus":true
         },
         {
             "jsonId":7,
             "title":"Separation of Church and State",
             "sortValue":"Separation of Church and State",
-            "synopsis":"Keeping government's nose out of the Church's business.",
+            "synopsis":"Definition: Preventing government's intrusion in Church/Religious affairs.",
             "releaseStatus":true
         },
         {
             "jsonId":8,
             "title":"Mercantilism",
             "sortValue":"Mercantilism",
-            "synopsis":"The exploitation of a colony for the benefit of the Mother Country",
+            "synopsis":"Definition: The exploitation of a colony for the benefit of the Mother Country",
             "releaseStatus":true
         },
         {
             "jsonId":9,
             "title":"Divine Providence",
             "sortValue":"Divine Providence",
-            "synopsis":"Seeing God's handiwork in history",
+            "synopsis":"Definition: Seeing God's handiwork in history.",
             "releaseStatus":true
         },
         {
@@ -69,13 +69,13 @@
             "title":"Democracies",
             "sortValue":"Democracies",
             "synopsis":"Weakness and Appeal",
-            "releaseStatus":true
+            "releaseStatus":false
         },
         {
             "jsonId":11,
             "title":"Separation of Power",
             "sortValue":"Separation of Power",
-            "synopsis":"Building a Nation with Three Branches of Government",
+            "synopsis":"Definition: Building a Nation with Three Branches of Government.",
             "releaseStatus":true
         },
         {

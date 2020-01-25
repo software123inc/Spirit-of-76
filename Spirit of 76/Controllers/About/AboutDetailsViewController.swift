@@ -11,11 +11,19 @@ import UIKit
 class AboutDetailsViewController: UIViewController {
     private let libertyBell = K.ImageView.libertyBell
     
+    @IBOutlet private weak var aboutTitleLabel: UILabel!
+    @IBOutlet private weak var aboutImageView: UIImageView!
+    @IBOutlet private weak var aboutTextView: UITextView!
+    
+    var aboutText:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setNavBarTitleImageToLibertyBell()
+        
+        self.aboutTextView.text = aboutText
         
         if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)

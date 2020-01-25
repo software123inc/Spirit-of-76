@@ -73,19 +73,51 @@ class PersonDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DDLogVerbose("View did load.")
         self.scrollView.delegate = self
         
         // Do any additional setup after loading the view.
         if let backgroundImage = K.Image.declarationBlurredBkgnd {
             self.view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
+        
+        reformatCardStacks()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        DDLogVerbose("View will appear.")
         
         setNavBarTitleImageToLibertyBell()
-        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        DDLogVerbose("View will layout subviews.")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DDLogVerbose("View did layout subviews.")
+        refreshUI()
+    }
+    
+    //MARK: - IBActions
+    
+    @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
+        if let person = person {
+            person.isFavorite = !person.isFavorite
+            appDelegate.saveContext()
+            
+            showStar()
+            NotificationCenter.default.post(name: Notification.Name.didToggleFavorite, object: person)
+        }
+    }
+    
+    //MARK: - Instance methods
+    
+    private func reformatCardStacks() {
+        DDLogVerbose("Reformatting card stacks.")
         if let dvc = self.educationViewController, let cards = person?.educationCards, cards.count > 0 {
             populateCardViewStack(dvc, summaries: cards)
         }
@@ -114,25 +146,6 @@ class PersonDetailViewController: UIViewController {
             hideQuotesView()
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        refreshUI()
-    }
-    
-    //MARK: - IBActions
-    
-    @IBAction func isFavoriteTapped(_ sender: UIBarButtonItem) {
-        if let person = person {
-            person.isFavorite = !person.isFavorite
-            appDelegate.saveContext()
-            
-            showStar()
-        }
-    }
-    
-    
-    //MARK: - Instance methods
     
     private func populateCardViewStack(_ viewController:CardSummaryStackViewController, summaries:[CardSummary]) {
         DDLogVerbose("Sending \(summaries.count) card summaries.")

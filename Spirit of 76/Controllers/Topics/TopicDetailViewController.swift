@@ -38,6 +38,7 @@ class TopicDetailViewController: UIViewController {
             
             appDelegate.saveContext()
             showFavorite()
+            NotificationCenter.default.post(name: Notification.Name.didToggleFavorite, object: topic)
         }
     }
     
