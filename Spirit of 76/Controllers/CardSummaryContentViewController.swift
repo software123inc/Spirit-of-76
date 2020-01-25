@@ -29,6 +29,8 @@ class CardSummaryContentViewController: UIViewController {
         titleLabel.text = cardSummary?.cardTitle
         detailTextView.text = cardSummary?.cardDetailText
         
+        detailTextView.isScrollEnabled = UserDefaults.standard.bool(forKey: K.PrefKey.scrollMiniTextViews)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

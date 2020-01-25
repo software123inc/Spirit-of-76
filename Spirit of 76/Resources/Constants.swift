@@ -10,6 +10,14 @@ import UIKit
 
 struct K {
     static let appName = "Spirit of '76"
+    static let appURL = URL(string: "https://apps.apple.com/us/app/id441447292")
+    static let facebookURL = URL(string: "https://www.facebook.com/spirit76app")!
+    static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.0"
+    
+    struct PrefKey {
+        static let scrollMiniTextViews = "scrollMiniTextViews"
+        static let showTablesInitially = "showTablesInitially"
+    }
     
     struct Image {
         static let declarationBlurredBkgnd = UIImage(named: "declaration_pale_blurred")

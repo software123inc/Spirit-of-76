@@ -23,8 +23,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JSONHelper.importSeedData()
         
         ThemeManager.applyTheme(theme: .Default)
-                        
+        
+        initializeUserDefaults()
+        
         return true
+    }
+    
+    private func initializeUserDefaults() {
+        let ud = UserDefaults.standard
+        
+        if !ud.contains(key: K.PrefKey.scrollMiniTextViews) {
+            ud.set(true, forKey: K.PrefKey.scrollMiniTextViews)
+        }
+        
+        if !ud.contains(key: K.PrefKey.showTablesInitially) {
+            ud.set(true, forKey: K.PrefKey.showTablesInitially)
+        }
     }
 
     // MARK: UISceneSession Lifecycle

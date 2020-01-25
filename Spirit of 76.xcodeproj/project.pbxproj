@@ -13,6 +13,7 @@
 		C7101BCA23CE7FFA00A91407 /* CardSummaryStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */; };
 		C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */; };
 		C717AB8023D2CE7400B14BB3 /* FavoriteSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C717AB7F23D2CE7400B14BB3 /* FavoriteSummary.swift */; };
+		C722F79C23D5481000C0AE47 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C722F79B23D5481000C0AE47 /* AboutTableViewController.swift */; };
 		C7262E9F23BBCC7700240183 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C7262E9E23BBCC7700240183 /* SwiftyJSON */; };
 		C72C247D23BD39BE0046B09F /* S123Common in Frameworks */ = {isa = PBXBuildFile; productRef = C72C247C23BD39BE0046B09F /* S123Common */; };
 		C756ED1323D516B400F3AA86 /* Notification+Enhancements.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756ED1223D516B400F3AA86 /* Notification+Enhancements.swift */; };
@@ -49,6 +50,7 @@
 		C7DABCA223D28D2E00D210A5 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DABCA123D28D2E00D210A5 /* Themes.swift */; };
 		C7DABCA523D2916300D210A5 /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DABCA423D2916300D210A5 /* FavoriteDetailViewController.swift */; };
 		C7DABCA823D2938C00D210A5 /* AboutDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DABCA723D2938C00D210A5 /* AboutDetailsViewController.swift */; };
+		C7E54A0823DCCDE800D8DC3A /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E54A0723DCCDE800D8DC3A /* AppStoreReviewManager.swift */; };
 		C7EA7F2223BAD5AB00E15CDD /* signerFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1723BAD5A800E15CDD /* signerFacts.json */; };
 		C7EA7F2323BAD5AB00E15CDD /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1823BAD5A800E15CDD /* events.json */; };
 		C7EA7F2423BAD5AB00E15CDD /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = C7EA7F1923BAD5A800E15CDD /* cities.json */; };
@@ -71,6 +73,7 @@
 		C7101BC923CE7FFA00A91407 /* CardSummaryStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryStackViewController.swift; sourceTree = "<group>"; };
 		C7101BCB23CE808A00A91407 /* CardSummaryContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSummaryContentViewController.swift; sourceTree = "<group>"; };
 		C717AB7F23D2CE7400B14BB3 /* FavoriteSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSummary.swift; sourceTree = "<group>"; };
+		C722F79B23D5481000C0AE47 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		C73B199A23BAC65E0047EA7C /* Spirit of 76.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spirit of 76.entitlements"; sourceTree = "<group>"; };
 		C756ED1223D516B400F3AA86 /* Notification+Enhancements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Enhancements.swift"; sourceTree = "<group>"; };
 		C756ED1423D51B8400F3AA86 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		C7DABCA123D28D2E00D210A5 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		C7DABCA423D2916300D210A5 /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
 		C7DABCA723D2938C00D210A5 /* AboutDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailsViewController.swift; sourceTree = "<group>"; };
+		C7E54A0723DCCDE800D8DC3A /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		C7EA7F1723BAD5A800E15CDD /* signerFacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signerFacts.json; sourceTree = "<group>"; };
 		C7EA7F1823BAD5A800E15CDD /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
 		C7EA7F1923BAD5A800E15CDD /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DABCA723D2938C00D210A5 /* AboutDetailsViewController.swift */,
+				C722F79B23D5481000C0AE47 /* AboutTableViewController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				C7C2D13223BE8E07006802C5 /* JSONHelper.swift */,
+				C7E54A0723DCCDE800D8DC3A /* AppStoreReviewManager.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 				C7101BCC23CE808A00A91407 /* CardSummaryContentViewController.swift in Sources */,
 				C75F7CAB23D15D2000657B06 /* Quote+Enhancements.swift in Sources */,
 				C7A250CB23D250A500087163 /* TopicsTableViewController.swift in Sources */,
+				C7E54A0823DCCDE800D8DC3A /* AppStoreReviewManager.swift in Sources */,
 				C7101BC823CE7EE100A91407 /* CardSummary.swift in Sources */,
 				C756ED1323D516B400F3AA86 /* Notification+Enhancements.swift in Sources */,
 				C77C02C823D12B800082E2B7 /* Fact+Enhancements.swift in Sources */,
@@ -442,6 +449,7 @@
 				C7F8D76223C7F1210095E965 /* State+Enhanced.swift in Sources */,
 				C7DABCA223D28D2E00D210A5 /* Themes.swift in Sources */,
 				C78BE04A23C1120C0024FB0E /* PrimaryTabBarViewController.swift in Sources */,
+				C722F79C23D5481000C0AE47 /* AboutTableViewController.swift in Sources */,
 				C7B4FC9E23D23A3000D4206D /* EventsTableViewController.swift in Sources */,
 				C756ED1523D51B8400F3AA86 /* PrimarySplitViewController.swift in Sources */,
 				C761C39923BA945200C062DC /* AppDelegate.swift in Sources */,
@@ -649,7 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -657,8 +665,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "us.eduserve.Spirit-of-76";
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.askeduserve.SpritOf76;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
@@ -672,7 +680,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Spirit of 76/Spirit of 76.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = LT2J4Q2FPW;
 				INFOPLIST_FILE = "Spirit of 76/Info.plist";
@@ -680,8 +688,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "us.eduserve.Spirit-of-76";
+				MARKETING_VERSION = 4.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.askeduserve.SpritOf76;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
