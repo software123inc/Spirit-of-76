@@ -87,7 +87,15 @@ class AboutTableViewController: UITableViewController {
                 activityItems: [appURL],
                 applicationActivities: nil)
             
-            present(activityViewController, animated: true, completion: nil)
+            // iPad support
+            if let popoverController = activityViewController.popoverPresentationController {                
+                popoverController.sourceRect = aboutAppCell.bounds
+                popoverController.sourceRect = CGRect(x: aboutAppCell.bounds.width, y: aboutAppCell.bounds.midY, width: 0, height: 0)
+                popoverController.sourceView = aboutAppCell.contentView
+                popoverController.permittedArrowDirections = .any
+            }
+            
+            self.present(activityViewController, animated: true, completion: nil)
         }
     }
     
